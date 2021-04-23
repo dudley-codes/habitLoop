@@ -12,5 +12,24 @@
 .container--login {
   display: flex;
   justify-content: center;
-  border: 5px black solid;
+  /* border: 5px black solid; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.login--signup {
+  display: flex;
+  padding-bottom: 20px;
+  padding-top: 150px;
+}
+
+.login {
+  padding-right: 10px;
+}
+
+.logout a {
+    color: rgb(213, 209, 209);
+}
+
+.login-btn {
+  width: 100%;
 }
