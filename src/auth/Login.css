@@ -1,0 +1,16 @@
+.dialog {
+  min-width: 15rem;
+  min-height: 5rem;
+}
+.form--login {
+  display: flex;
+  flex-direction: column;
+  /* color: whitesmoke; */
+  /* max-width: 300px; */
+}
+
+.container--login {
+  display: flex;
+  justify-content: center;
+  border: 5px black solid;
+}

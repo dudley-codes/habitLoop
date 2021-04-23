@@ -1,0 +1,20 @@
+{
+  "users": [
+   
+    {
+      "email": "rick@rick.com",
+      "name": "Rick Sanchez",
+      "id": 7
+    },
+    {
+      "email": "summer@s.com",
+      "name": "Summer Smith",
+      "id": 8
+    },
+    {
+      "email": "morty@jessica.com",
+      "name": "Morty Smith",
+      "id": 9
+    }
+  ]
+}
