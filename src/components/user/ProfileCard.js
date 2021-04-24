@@ -14,11 +14,12 @@ export const ProfileCard = () => {
             <img src={ profilePic } alt='profile pic' />
           </div>
           <div className='bio--cont'>
-            <h3>{ currentUser }</h3>
-            <h4>Smartest man in the universe.</h4>
+            <h4>{ currentUser }</h4>
+            <h6>Smartest man in the universe.</h6>
           </div>
+          <hr></hr>
           <div className='btn--cont'>
-            <h2>Even More Test</h2>
+            <button className='btn-primary btn btn--subscribe'>Message</button>
           </div>
         </div>
       </section>
