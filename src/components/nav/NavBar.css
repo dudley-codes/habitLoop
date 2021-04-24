@@ -1,9 +1,13 @@
-nav {
+/* nav {
   font-family: 'Poppins', sans-serif;
   color: #599bd4;
   font-weight: 900;
-}
+} */
 
 nav img {
   max-width: 350px;
+}
+
+nav ul {
+  list-style-type: none !important;
 }
