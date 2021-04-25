@@ -1,20 +1,30 @@
 {
   "users": [
-   
     {
       "email": "rick@rick.com",
       "name": "Rick Sanchez",
+      "tagline": "Smartest man in the universe.",
       "id": 7
     },
     {
       "email": "summer@s.com",
       "name": "Summer Smith",
+      "tagline": "",
       "id": 8
     },
     {
       "email": "morty@jessica.com",
       "name": "Morty Smith",
+      "tagline": "",
+
       "id": 9
+    },
+    {
+      "email": "alexdudley@me.com",
+      "name": "Alex Dudley",
+      "tagline": "",
+
+      "id": 10
     }
   ]
 }

@@ -23,7 +23,8 @@ export const Login = () => {
       .then(exists => {
         if (exists) {
           // The user id is saved under the key habitLoop_user in session Storage. Change below if needed!
-          sessionStorage.setItem("habitLoop_user", exists.id)
+          sessionStorage.setItem("user_id", exists.id)
+
           history.push("/")
         } else {
           setExistDialog(true)

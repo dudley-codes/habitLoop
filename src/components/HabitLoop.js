@@ -1,31 +1,19 @@
 import React from 'react';
 import { Route, Redirect } from "react-router-dom"
-// import { ApplicationViews } from "./ApplicationViews"
+import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "../auth/Login"
 import { Register } from "../auth/Register"
 import { NavBar } from './nav/NavBar'
-
-// export const HabitLoop = () => (
-//   <>
-//     <Route
-//       render={ () => {
-//         <>
-//           <NavBar />
-//         </>
-//       } }
-//     />
-//   </>
-// )
 
 export const HabitLoop = () => (
   <>
     <Route
       render={ () => {
-        if (sessionStorage.getItem('habitLoop_user')) {
+        if (sessionStorage.getItem('user_id')) {
           return (
             <>
               <NavBar />
-              {/* <ApplicationViews /> */ }
+              <ApplicationViews />
             </>
           )
         } else {

@@ -1,0 +1,119 @@
+.profile--cont__outer {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 100px;
+  padding-top: 40px;
+  /* border: 5px black solid; */
+}
+
+hr {
+display: block;
+  width: 100%;
+}
+
+.profile--cont__inner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.pic--cont {
+  display: flex;
+  justify-content: center;
+  /* border: 5px black solid; */
+  /* width: 100px; */
+}
+
+.bio--cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 5px black solid; */
+}
+
+.btn--subscribe{
+  display: grid;
+  justify-content: center;
+  border: 5px black solid;
+}
+
+.btn--cont{
+  display: grid;
+  justify-content: center;
+}
+
+.pic--cont img {
+  border-radius: 50%;
+  object-fit:fill;
+  width: 150px;
+  height: 150px;
+}
+
+html {
+  color: #41403e;
+  color: var(--primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+p,
+a,
+button,
+table,
+thead,
+tbody,
+th,
+tr,
+td,
+input,
+textarea,
+select,
+option {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
