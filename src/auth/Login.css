@@ -33,3 +33,12 @@
 .login-btn {
   width: 100%;
 }
+
+/* TODO Register */
+
+.register__container {
+  display: flex;
+  justify-content: center;
+  /* border: 5px black solid; */
+  font-family: 'Poppins', sans-serif;
+}

@@ -9,7 +9,7 @@ export const HabitLoop = () => (
   <>
     <Route
       render={ () => {
-        if (sessionStorage.getItem('habitLoop_user')) {
+        if (sessionStorage.getItem('user_id')) {
           return (
             <>
               <NavBar />

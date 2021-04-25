@@ -4,10 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
 // import 'papercss/dist/paper.css'
 import logo from './logo.png'
+import { userStorageKey } from "../../auth/authSettings"
 
-const handleSignOut = () => {
-  sessionStorage.setItem('user_name', '')
-  sessionStorage.setItem('habitLoop_user', '')
+const Logout = () => {
+  if (window.confirm("Are you sure you want to log out?")) {
+    sessionStorage.setItem(userStorageKey, "")
+  }
 }
 
 export const NavBar = (props) => {
@@ -29,8 +31,7 @@ export const NavBar = (props) => {
           <Link className="nav-link" to="/about">About</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" onClick={ (handleSignOut) }>Sign Out</Link>
-        </li>
+          <Link className="nav-link" to="" onClick={ Logout }>Logout</Link>        </li>
       </ul>
     </nav>
   )

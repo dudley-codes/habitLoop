@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
 import './ProfileCard.css'
 import profilePic from './images/rick-sanchez.jpeg'
-
-const currentUser = sessionStorage.getItem('user_name')
-
+import { getAllUsers } from '../../modules/UserDataManager';
 
 export const ProfileCard = () => {
+  const [ user, setUser ] = useState('');
+
+
+
+  const getCurrentUser = () => {
+
+    const currentUserId = sessionStorage.getItem('user_id')
+    getAllUsers().then(res => res.filter(user => {
+      if (user.id == currentUserId) {
+        setUser(user)
+      }
+    }))
+  }
+
+  useEffect(() => {
+    getCurrentUser()
+
+  }, [])
+
   return (
     <>
       <section className='profile--cont__outer'>
@@ -14,8 +32,8 @@ export const ProfileCard = () => {
             <img src={ profilePic } alt='profile pic' />
           </div>
           <div className='bio--cont'>
-            <h4>{ currentUser }</h4>
-            <h6>Smartest man in the universe.</h6>
+            <h4>{ user.name }</h4>
+            <h6>{ user?.tagline }</h6>
           </div>
           <hr></hr>
           <div className='btn--cont'>
