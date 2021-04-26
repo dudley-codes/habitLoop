@@ -18,8 +18,8 @@ export const HabitCard = () => {
         </div>
         <div className='habit--progress__cont'>
           <div className='habit--progress'>
-            <div class="progress margin-bottom">
-              <div class="bar danger w-5"></div>
+            <div className="progress margin-bottom">
+              <div className="bar danger w-5"></div>
             </div>
           </div>
           <div className='habit--plus'>

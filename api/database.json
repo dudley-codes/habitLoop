@@ -60,7 +60,7 @@
     {
       "id": 1,
       "habitId": 1,
-      "habitMonth": "April",
+      "habitMonth": 3,
       "monthCount": 14,
       "dayCount": 1,
       "totalCount": 34,
@@ -69,7 +69,7 @@
     {
       "id": 3,
       "habitId": 1,
-      "habitMonth": "March",
+      "habitMonth": 2,
       "monthCount": 20,
       "dayCount": 1,
       "totalCount": 20,
@@ -78,7 +78,7 @@
     {
       "id": 2,
       "habitId": 2,
-      "habitMonth": "April",
+      "habitMonth": 3,
       "monthCount": 10,
       "dayCount": 2,
       "totalCount": 25,

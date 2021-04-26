@@ -4,25 +4,7 @@ import './ProfileCard.css'
 import profilePic from './images/rick-sanchez.jpeg'
 import { getAllUsers } from '../../modules/UserDataManager';
 
-export const ProfileCard = () => {
-  const [ user, setUser ] = useState('');
-
-
-
-  const getCurrentUser = () => {
-
-    const currentUserId = sessionStorage.getItem('user_id')
-    getAllUsers().then(res => res.filter(user => {
-      if (user.id == currentUserId) {
-        setUser(user)
-      }
-    }))
-  }
-
-  useEffect(() => {
-    getCurrentUser()
-
-  }, [])
+export const ProfileCard = ({ user }) => {
 
   return (
     <>
