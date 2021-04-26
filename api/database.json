@@ -33,14 +33,14 @@
   ],
   "habits": [
     {
-      "habit": "work out",
+      "habit": "Work Out",
       "userId": 7,
       "habitStart": 1617295277,
       "goodHabit": true,
       "reward": "feeling healthy",
       "cue": "end of work day",
       "frequencyType": "daily",
-      "frequency": "5",
+      "frequency":5,
       "id": 1
     },
     {
@@ -51,7 +51,7 @@
       "cue": "feeling stressed out",
       "reward": "feeling less stressed",
       "frequencyType": "daily",
-      "frequency": "20",
+      "frequency": 20,
       "replacementHabit": "going for walks",
       "id": 2
     }
@@ -82,7 +82,7 @@
       "monthCount": 10,
       "dayCount": 2,
       "totalCount": 25,
-      "monthGoal": 20
+      "monthGoal": 30
     }
   ]
 }

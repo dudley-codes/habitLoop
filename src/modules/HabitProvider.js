@@ -5,7 +5,7 @@ export const getAllHabits = () => {
     .then(res => res.json())
 }
 
-export const getHabitCounter = () => {
-  return fetch(`${ remoteURL }/count`)
+export const getHabitsByMonth = (month) => {
+  return fetch(`${ remoteURL }/count?_expand=habit&habitMonth=${ month }`)
     .then(res => res.json())
 }

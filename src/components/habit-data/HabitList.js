@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ProfileCard } from '../user/ProfileCard'
 import { HabitCard } from './HabitCard'
 import './Habit.css'
-import { getAllHabits, getHabitCounter } from '../../modules/HabitProvider';
+import { getAllHabits, getHabitsByMonth } from '../../modules/HabitProvider';
 import { getAllUsers } from '../../modules/UserDataManager';
 import { getCurrentMonth } from '../../modules/helpers';
 
@@ -29,9 +29,9 @@ export const HabitList = () => {
   }, [])
 
   const habitTracker = () => {
-    const filterHabits = getAllHabits()
+    const filterHabits = getHabitsByMonth(currentMonth)
       .then(res => res.filter(habitObj => {
-        if (habitObj.userId == currentUserId) {
+        if (habitObj.habit.userId == currentUserId) {
           return habitObj
         }
       })).then(res => { return res })
@@ -44,18 +44,19 @@ export const HabitList = () => {
     })
   }, [])
 
-  const habitCounter = () => {
-    const currentCount = getHabitCounter()
-      .then(res => res.filter(countObj => {
-        console.log('currentMonth', currentMonth)
-        if (countObj.habitMonth === currentMonth) {
-          return countObj
-        }
-      })).then(res => {
-        return res
-      })
-    return currentCount
-  }
+  // console.log('habits', habits)
+
+  // const habitCounter = () => {
+  //   const currentCount = getHabitCounter()
+  //     .then(res => res.filter(countObj => {
+  //       if (countObj.habitMonth === currentMonth) {
+  //         return countObj
+  //       }
+  //     })).then(res => {
+  //       return res
+  //     })
+  //   return currentCount
+  // }
 
   // const getCounter = () => {
   //   return habitCounter().then(counter => {
@@ -67,7 +68,7 @@ export const HabitList = () => {
   //   getCounter()
   // }, [])
 
-  console.log('habitCounter', habits)
+  // console.log('habitCounter', habits)
 
   return (
     <>
@@ -77,7 +78,13 @@ export const HabitList = () => {
         />
         <div className='habit--container'>
           <h3>My Habits</h3>
-          { }
+          { habits.map(habit =>
+            <HabitCard
+              key={ habit.id }
+              habit={ habit }
+
+            />
+          ) }
         </div>
       </section>
     </>
