@@ -37,7 +37,7 @@ export const Register = () => {
             .then(createdUser => {
               if (createdUser.hasOwnProperty("id")) {
                 // The user id is saved under the key habitLoop_user in session Storage. Change below if needed!
-                sessionStorage.setItem("habitLoop_user", createdUser.id)
+                sessionStorage.setItem("user_id", createdUser.id)
                 history.push("/")
               }
             })
