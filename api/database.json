@@ -30,5 +30,59 @@
       "tagline": "Danger Zone",
       "id": 11
     }
+  ],
+  "habits": [
+    {
+      "habit": "work out",
+      "userId": 7,
+      "habitStart": 1617295277,
+      "goodHabit": true,
+      "reward": "feeling healthy",
+      "cue": "end of work day",
+      "frequencyType": "daily",
+      "frequency": "5",
+      "id": 1
+    },
+    {
+      "habit": "Quit Smoking",
+      "userId": 7,
+      "habitStart": 1617295277,
+      "goodHabit": false,
+      "cue": "feeling stressed out",
+      "reward": "feeling less stressed",
+      "frequencyType": "daily",
+      "frequency": "20",
+      "replacementHabit": "going for walks",
+      "id": 2
+    }
+  ],
+  "count": [
+    {
+      "id": 1,
+      "habitId": 1,
+      "habitMonth": "April",
+      "monthCount": 14,
+      "dayCount": 1,
+      "totalCount": 34,
+      "monthGoal": 20
+    },
+    {
+      "id": 3,
+      "habitId": 1,
+      "habitMonth": "March",
+      "monthCount": 20,
+      "dayCount": 1,
+      "totalCount": 20,
+      "monthGoal": 20
+    },
+    {
+      "id": 2,
+      "habitId": 2,
+      "habitMonth": "April",
+      "monthCount": 10,
+      "dayCount": 2,
+      "totalCount": 25,
+      "monthGoal": 20
+    }
   ]
 }
