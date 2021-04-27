@@ -17,10 +17,11 @@ export const NewHabit = () => {
 
   const history = useHistory();
 
-  const currentUserId = sessionStorage.getItem('user_id')
+  const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
   const handleControlledInputChange = (e) => {
     const newHabit = { ...habit };
+    newHabit.userId = currentUserId
     let selectedVal = e.target.value;
     if (e.target.id.includes('Id') || e.target.id.includes('frequency')) {
       selectedVal = parseInt(selectedVal)
@@ -66,8 +67,8 @@ export const NewHabit = () => {
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='frequency'>frequency:</label>
-          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' value={ habit.frequency } /> <label htmlFor='frequency'>x per week</label>
+          <label htmlFor='frequency'>Weekly Goal:</label>
+          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' value={ habit.frequency } />
         </div>
       </fieldset>
       <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>

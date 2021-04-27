@@ -36,15 +36,14 @@ export const HabitList = () => {
           if (habit.count.length === 0) {
             addCounter({
               habitId: habit.id,
-              habitMont: currentMonth,
+              habitMonth: currentMonth,
               monthCount: 0,
               dayCount: 0,
               totalCount: 0,
-              monthGoal: 0
             })
           }
         })
-      })
+      }).then(() => habitTracker())
   }
 
   useEffect(() => {

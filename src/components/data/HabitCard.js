@@ -10,7 +10,8 @@ const currentMonth = getCurrentMonth()
 
 
 export const HabitCard = ({ habit }) => {
-  const habitGoal = Math.floor(habit.monthCount / habit.monthGoal * 100)
+  console.log(habit)
+  const habitGoal = Math.floor(habit.monthCount / (habit.habit.frequency * 4) * 100)
 
   return (
     <>
