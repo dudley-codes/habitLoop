@@ -62,6 +62,31 @@
       "reward": "having a clean kitchen",
       "userId": 7,
       "id": 3
+    },
+    {
+      "habitMonth": 3,
+      "monthCount": 0,
+      "dayCount": 0,
+      "totalCount": 0,
+      "monthGoal": 0,
+      "habit": "Wash dishes",
+      "cue": "after eating a meal",
+      "reward": "having a clean kitchen",
+      "frequency": 5,
+      "id": 4
+    },
+    {
+      "habitMonth": 3,
+      "monthCount": 0,
+      "dayCount": 0,
+      "totalCount": 0,
+      "monthGoal": 0,
+      "habit": "walk",
+      "cue": "end of day",
+      "reward": "feeling better",
+      "frequency": 55,
+      "id": 5,
+      "userId": 7
     }
   ],
   "count": [
@@ -93,13 +118,29 @@
       "monthGoal": 30
     },
     {
-      "id": 4,
-      "habitId": 3,
+      "habitId": 5,
       "habitMonth": 3,
-      "monthCount": 10,
-      "dayCount": 2,
-      "totalCount": 25,
-      "monthGoal": 30
+      "monthCount": 0,
+      "dayCount": 0,
+      "totalCount": 0,
+      "monthGoal": 0,
+      "id": 4
+    },
+    {
+      "habitId": 3,
+      "monthCount": 0,
+      "dayCount": 0,
+      "totalCount": 0,
+      "monthGoal": 12,
+      "id": 6
+    },
+    {
+      "habitId": 4,
+      "monthCount": 0,
+      "dayCount": 0,
+      "totalCount": 0,
+      "monthGoal": 12,
+      "id": 7
     }
   ]
 }

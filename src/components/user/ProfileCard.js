@@ -10,7 +10,7 @@ export const ProfileCard = () => {
 
   const getCurrentUser = () => {
     getAllUsers().then(res => res.filter(user => {
-      if (user.id == currentUserId) {
+      if (user.id === parseInt(currentUserId)) {
         setUser(user)
       }
     }))

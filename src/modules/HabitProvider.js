@@ -19,3 +19,18 @@ export const addHabit = (newHabit) => {
     body: JSON.stringify(newHabit)
   }).then(res => res.json())
 }
+
+export const checkCounter = (count) => {
+  return fetch(`${ remoteURL }/habits?_embed=count`)
+    .then(res => res.json())
+}
+
+export const addCounter = (counter) => {
+  return fetch(`${ remoteURL }/count`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(counter)
+  }).then(res => res.json())
+}

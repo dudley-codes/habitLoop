@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ProfileCard } from '../user/ProfileCard'
 import { HabitCard } from './HabitCard'
 import './Habit.css'
-import { getAllHabits, getHabitsByMonth } from '../../modules/HabitProvider';
-import { getAllUsers } from '../../modules/UserDataManager';
+import { getHabitsByMonth, checkCounter, addCounter } from '../../modules/HabitProvider';
+
 import { getCurrentMonth } from '../../modules/helpers';
 
 const currentMonth = getCurrentMonth()
@@ -12,21 +11,7 @@ export const HabitList = () => {
 
   const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
-  const [ user, setUser ] = useState('');
-  const [ habitCount, setHabitCount ] = useState([])
-
-  // const getCurrentUser = () => {
-  //   getAllUsers().then(res => res.filter(user => {
-  //     if (user.id == currentUserId) {
-  //       setUser(user)
-  //     }
-  //   }))
-  // }
-
-  // useEffect(() => {
-  //   getCurrentUser()
-
-  // }, [])
+  const [ habitCount, setHabitCount ] = useState({})
 
   const habitTracker = () => {
     const filterHabits = getHabitsByMonth(currentMonth)
@@ -44,31 +29,28 @@ export const HabitList = () => {
     })
   }, [])
 
-  // console.log('habits', habits)
+  const createCounter = () => {
+    checkCounter()
+      .then(res => {
+        res.filter(habit => {
+          if (habit.count.length === 0) {
+            addCounter({
+              habitId: habit.id,
+              habitMont: currentMonth,
+              monthCount: 0,
+              dayCount: 0,
+              totalCount: 0,
+              monthGoal: 0
+            })
+          }
+        })
+      })
+  }
 
-  // const habitCounter = () => {
-  //   const currentCount = getHabitCounter()
-  //     .then(res => res.filter(countObj => {
-  //       if (countObj.habitMonth === currentMonth) {
-  //         return countObj
-  //       }
-  //     })).then(res => {
-  //       return res
-  //     })
-  //   return currentCount
-  // }
+  useEffect(() => {
+    createCounter()
+  }, [])
 
-  // const getCounter = () => {
-  //   return habitCounter().then(counter => {
-  //     setHabitCount(counter)
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   getCounter()
-  // }, [])
-
-  // console.log('habitCounter', habits)
 
   return (
     <>
