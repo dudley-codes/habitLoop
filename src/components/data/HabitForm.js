@@ -42,8 +42,17 @@ export const NewHabit = () => {
   }
 
   return (
-    <>
-      <h2>This is a test</h2>
-    </>
+    <form className='habit-form'>
+      <h3 className='habit-form__title'>New Habit</h3>
+      <h6>(Not sure where to start? Try our about section, <br />
+      we promise we won't make you read too much)</h6>
+      <fieldset>
+        <div className='habit-form__group'>
+          <label htmlFor='habit'>Habit:</label>
+          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' value={ habit.habit } />
+
+        </div>
+      </fieldset>
+    </form>
   )
 }
