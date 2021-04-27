@@ -10,12 +10,7 @@ const currentMonth = getCurrentMonth()
 
 
 export const HabitCard = ({ habit }) => {
-  const [ entireHabit, setEntireHabit ] = useState([]);
-  console.log('habit', habit)
-
   const habitGoal = Math.floor(habit.monthCount / habit.monthGoal * 100)
-
-  console.log('habitGoal', habitGoal)
 
   return (
     <>
