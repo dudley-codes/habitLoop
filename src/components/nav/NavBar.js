@@ -49,6 +49,11 @@ export const NavBar = () => {
             <Link className="nav-link" to="/habits">My Habits</Link>
           </li>
           : null }
+        { isAuthenticated
+          ? <li className="nav-item">
+            <Link className="nav-link" to="/new">New Habit</Link>
+          </li>
+          : null }
         <li className="nav-item">
           <Link className="nav-link" to="/about">About</Link>
         </li>

@@ -15,18 +15,18 @@ export const HabitList = () => {
   const [ user, setUser ] = useState('');
   const [ habitCount, setHabitCount ] = useState([])
 
-  const getCurrentUser = () => {
-    getAllUsers().then(res => res.filter(user => {
-      if (user.id == currentUserId) {
-        setUser(user)
-      }
-    }))
-  }
+  // const getCurrentUser = () => {
+  //   getAllUsers().then(res => res.filter(user => {
+  //     if (user.id == currentUserId) {
+  //       setUser(user)
+  //     }
+  //   }))
+  // }
 
-  useEffect(() => {
-    getCurrentUser()
+  // useEffect(() => {
+  //   getCurrentUser()
 
-  }, [])
+  // }, [])
 
   const habitTracker = () => {
     const filterHabits = getHabitsByMonth(currentMonth)
@@ -73,9 +73,9 @@ export const HabitList = () => {
   return (
     <>
       <section className='dashboard--container'>
-        <ProfileCard
+        {/* <ProfileCard
           user={ user }
-        />
+        /> */}
         <div className='habit--container'>
           <h3>My Habits</h3>
           { habits.map(habit =>

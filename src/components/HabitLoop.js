@@ -1,18 +1,32 @@
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
 import { Login } from "../auth/Login"
 import { Register } from "../auth/Register"
 import { NavBar } from './nav/NavBar'
+import { getAllUsers } from '../modules/UserDataManager';
+import { ProfileCard } from './user/ProfileCard';
+
+
+
 
 export const HabitLoop = () => {
-  // const [ isAuthenticated, setIsAuthenticated ] = useState(sessionStorage.getItem("user_id") !== null);
+  // const [ user, setUser ] = useState('');
+  const currentUserId = sessionStorage.getItem('user_id')
 
-  // const setAuthUser = (user) => {
-  //   sessionStorage.setItem("user_id", JSON.stringify(user));
-  //   setIsAuthenticated(sessionStorage.getItem("user_id") !== null);
-  // };
 
+  // const getCurrentUser = () => {
+  //   getAllUsers().then(res => res.filter(user => {
+  //     if (user.id == currentUserId) {
+  //       setUser(user)
+  //     }
+  //   }))
+  // }
+
+  // useEffect(() => {
+  //   getCurrentUser()
+
+  // }, [])
 
   return (
     <>
@@ -22,7 +36,11 @@ export const HabitLoop = () => {
             return (
               <>
                 <NavBar />
-                <ApplicationViews />
+                <section className='dashboard--container'>
+                  {/* <ProfileCard
+                  /> */}
+                  <ApplicationViews />
+                </section>
               </>
             )
           } else {
