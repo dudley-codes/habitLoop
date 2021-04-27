@@ -40,7 +40,7 @@
       "reward": "feeling healthy",
       "cue": "end of work day",
       "frequencyType": "daily",
-      "frequency":5,
+      "frequency": 5,
       "id": 1
     },
     {
@@ -54,6 +54,14 @@
       "frequency": 20,
       "replacementHabit": "going for walks",
       "id": 2
+    },
+    {
+      "frequency": 21,
+      "habit": "Wash dishes",
+      "cue": "after eating a meal",
+      "reward": "having a clean kitchen",
+      "userId": 7,
+      "id": 3
     }
   ],
   "count": [
@@ -78,6 +86,15 @@
     {
       "id": 2,
       "habitId": 2,
+      "habitMonth": 3,
+      "monthCount": 10,
+      "dayCount": 2,
+      "totalCount": 25,
+      "monthGoal": 30
+    },
+    {
+      "id": 4,
+      "habitId": 3,
       "habitMonth": 3,
       "monthCount": 10,
       "dayCount": 2,
