@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Route } from 'react-router-dom'
 import { addHabit } from '../../modules/HabitProvider'
 import './Habit.css'
 import { getCurrentMonth } from '../../modules/helpers'
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import { GoodHabit } from './GoodHabit'
 
 
 export const NewHabit = () => {
@@ -13,7 +16,10 @@ export const NewHabit = () => {
     habitMonth: currentMonth,
   })
 
+  const [ radioValue, setRadioValue ] = useState('1');
   const [ isLoading, setIsLoading ] = useState(false);
+
+  let isGoodHabit = { ...radioValue }
 
   const history = useHistory();
 
@@ -42,36 +48,65 @@ export const NewHabit = () => {
       .then(() => history.push('/'))
   }
 
+
+  // todo testing site
+  const HabitToggle = () => {
+
+    const radios = [
+      { name: 'Good 😇', value: '1' },
+      { name: 'Bad 😈', value: '2' }
+    ];
+
+    return (
+      <>
+        <ButtonGroup toggle>
+          { radios.map((radio, idx) => (
+            <ToggleButton
+              key={ idx }
+              type="radio"
+              variant="primary"
+              name="radio"
+              value={ radio.value }
+              checked={ radioValue === radio.value }
+              onChange={ (e) => {
+
+                setRadioValue(e.currentTarget.value)
+              }
+              }
+            >
+              { radio.name }
+            </ToggleButton>
+          )) }
+        </ButtonGroup>
+      </>
+    );
+  }
+
+  useEffect(() => {
+    HabitToggle()
+  })
+
+
+  // todo testing site
+
   return (
-    <form className='habit-form'>
-      <h3 className='habit-form__title'>New Habit</h3>
-      <h6>(Not sure where to start? Try our about section, <br />
-      we promise we won't make you read too much)</h6>
-      <fieldset>
-        <div className='habit-form__group'>
-          <label htmlFor='habit'>Habit:</label>
-          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' value={ habit.habit } />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className='habit-form__group'>
-          <label htmlFor='cue'>Cue:</label>
-          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. after waking up' value={ habit.cue } />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className='habit-form__group'>
-          <label htmlFor='reward'>Reward:</label>
-          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. endorphins from working out' value={ habit.reward } />
-        </div>
-      </fieldset>
-      <fieldset>
-        <div className='habit-form__group'>
-          <label htmlFor='frequency'>Weekly Goal:</label>
-          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' value={ habit.frequency } />
-        </div>
-      </fieldset>
-      <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>
-    </form>
+    <>
+      <div className='habit-form'>
+        <h3 className='habit-form__title'>New Habit</h3>
+        <HabitToggle />
+
+        <Route path='/new'>
+          <GoodHabit
+            handleControlledInputChange={ handleControlledInputChange }
+            handleClickSaveHabit={ handleClickSaveHabit }
+            HabitToggle={ HabitToggle }
+            habit={ habit }
+            isLoading={ isLoading }
+          />
+        </Route>
+      </div>
+
+
+    </>
   )
 }

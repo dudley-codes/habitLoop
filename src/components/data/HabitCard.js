@@ -41,9 +41,9 @@ export const HabitCard = ({ habit }) => {
             <div className='habit--plus'>
               <img src={ plusIcon } alt='add to habit icon' />
             </div>
-            <div className='habit--minus'>
+            {/* <div className='habit--minus'>
               <img src={ minusIcon } alt='subtract from habit icon' />
-            </div>
+            </div> */}
           </div>
         </div>
       </>
@@ -63,9 +63,7 @@ export const HabitCard = ({ habit }) => {
                 <ProgressBar now={ badHabitFreq() } variant='danger' />
               </div>
             </div>
-            <div className='habit--plus'>
-              <img src={ plusIcon } alt='add to habit icon' />
-            </div>
+
             <div className='habit--minus'>
               <img src={ minusIcon } alt='subtract from habit icon' />
             </div>
