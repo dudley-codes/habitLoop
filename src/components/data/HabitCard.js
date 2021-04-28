@@ -4,7 +4,7 @@ import plusIcon from './images/plus.svg';
 import minusIcon from './images/minus.svg';
 import './Habit.css'
 import { getCurrentMonth, daysInMonth } from '../../modules/helpers';
-
+import ProgressBar from 'react-bootstrap/ProgressBar'
 const currentMonth = getCurrentMonth()
 
 
@@ -25,10 +25,8 @@ export const HabitCard = ({ habit }) => {
         </div>
         <div className='habit--progress__cont'>
           <div className='habit--progress'>
-            <div className="progress margin-bottom">
-              <div className={ `bar danger w-${ habitGoal }` } >
-
-              </div>
+            <div>
+              <ProgressBar now={ habitGoal } variant='success' />
             </div>
           </div>
           <div className='habit--plus'>
