@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useHistory } from 'react-router-dom'
+import { getCurrentMonth } from '../../modules/helpers'
+import { addHabit } from '../../modules/HabitProvider'
 
-export const GoodHabit = ({ handleControlledInputChange, handleClickSaveHabit, HabitToggle, habit, isLoading }) => {
+export const GoodHabit = () => {
+  const [ habit, setHabit ] = useState({})
+
+  // const currentMonth = getCurrentMonth()
+
+
+
+  const [ isLoading, setIsLoading ] = useState(false);
+
+
+
+
+  const history = useHistory();
+
+  const currentUserId = parseInt(sessionStorage.getItem('user_id'))
+
+  const handleControlledInputChange = (e) => {
+    const newHabit = { ...habit };
+    newHabit.userId = currentUserId
+    let selectedVal = e.target.value;
+    if (e.target.id.includes('Id') || e.target.value.includes('frequency')) {
+      selectedVal = parseInt(selectedVal)
+    }
+
+    newHabit[ e.target.id ] = selectedVal
+
+    setHabit(newHabit)
+  }
+
+  const handleClickSaveHabit = (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    let newHabit = { ...habit }
+    newHabit.goodHabit = true;
+
+
+    setIsLoading(true)
+    addHabit(newHabit)
+      .then(() => history.push('/'))
+  }
+
   return (
-    <form className='habit-form'>
+    <>
 
       {/* <h6>(Not sure where to start? Try our about section, <br />
 we promise we won't make you read too much)</h6> */}
@@ -31,6 +74,7 @@ we promise we won't make you read too much)</h6> */}
         </div>
       </fieldset>
       <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>
-    </form>
+
+    </>
   )
 }

@@ -12,45 +12,45 @@ import { render } from '@testing-library/react'
 
 
 export const NewHabit = () => {
-  const currentMonth = getCurrentMonth()
-  const [ habit, setHabit ] = useState({})
-  const [ count, setCount ] = useState({
-    habitId: '',
-    habitMonth: currentMonth,
-  })
+  // const currentMonth = getCurrentMonth()
+  // const [ habit, setHabit ] = useState({})
+  // const [ count, setCount ] = useState({
+  //   habitId: '',
+  //   habitMonth: currentMonth,
+  // })
 
   const [ radioValue, setRadioValue ] = useState(1);
-  const [ isLoading, setIsLoading ] = useState(false);
-  const [ boolean, setBoolean ] = useState(true)
+  // const [ isLoading, setIsLoading ] = useState(false);
+  // const [ boolean, setBoolean ] = useState(true)
 
-  let isGoodHabit = { ...radioValue }
+  // let isGoodHabit = { ...radioValue }
 
-  const history = useHistory();
+  // const history = useHistory();
 
-  const currentUserId = parseInt(sessionStorage.getItem('user_id'))
+  // const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
-  const handleControlledInputChange = (e) => {
-    const newHabit = { ...habit };
-    newHabit.userId = currentUserId
-    let selectedVal = e.target.value;
-    if (e.target.id.includes('Id') || e.target.id.includes('frequency')) {
-      selectedVal = parseInt(selectedVal)
-    }
+  // const handleControlledInputChange = (e) => {
+  //   const newHabit = { ...habit };
+  //   newHabit.userId = currentUserId
+  //   let selectedVal = e.target.value;
+  //   if (e.target.id.includes('Id')) {
+  //     selectedVal = parseInt(selectedVal)
+  //   }
 
-    newHabit[ e.target.id ] = selectedVal
+  //   newHabit[ e.target.id ] = selectedVal
 
-    setHabit(newHabit)
-  }
+  //   setHabit(newHabit)
+  // }
 
-  const handleClickSaveHabit = (e) => {
-    e.preventDefault();
-    setIsLoading(true);
+  // const handleClickSaveHabit = (e) => {
+  //   e.preventDefault();
+  //   setIsLoading(true);
 
 
-    setIsLoading(true)
-    addHabit(habit)
-      .then(() => history.push('/'))
-  }
+  //   setIsLoading(true)
+  //   addHabit(habit)
+  //     .then(() => history.push('/'))
+  // }
 
 
   // todo testing site
@@ -90,26 +90,16 @@ export const NewHabit = () => {
     HabitToggle()
   }, [])
 
+
+
   const RenderForm = () => {
     // eslint-disable-next-line default-case
     switch (radioValue) {
       case 1:
-        return <GoodHabit
-          handleControlledInputChange={ handleControlledInputChange }
-          handleClickSaveHabit={ handleClickSaveHabit }
-          HabitToggle={ HabitToggle }
-          habit={ habit }
-          isLoading={ isLoading }
-        />
+        return <GoodHabit />
         break;
       case 2:
-        return <BadHabit
-          handleControlledInputChange={ handleControlledInputChange }
-          handleClickSaveHabit={ handleClickSaveHabit }
-          HabitToggle={ HabitToggle }
-          habit={ habit }
-          isLoading={ isLoading }
-        />
+        return <BadHabit />
 
 
     }
@@ -126,7 +116,10 @@ export const NewHabit = () => {
       <div className='habit-form'>
         <h3 className='habit-form__title'>New Habit</h3>
         <HabitToggle />
-        <RenderForm />
+        <form className='habit-form'>
+          <RenderForm />
+
+        </form>
         {/* <RenderForm /> */ }
         {/* <Route path='/new'>
           <GoodHabit
