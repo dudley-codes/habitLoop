@@ -51,7 +51,7 @@
       "cue": "feeling stressed out",
       "reward": "feeling less stressed",
       "frequencyType": "daily",
-      "frequency": 20,
+      "frequency": 10,
       "replacementHabit": "going for walks",
       "id": 2
     },
@@ -64,14 +64,6 @@
       "reward": "feeling better",
       "frequency": 5,
       "id": 3
-    },
-    {
-      "userId": 7,
-      "habit": "Test",
-      "cue": "Test",
-      "reward": "Test",
-      "frequency": 7,
-      "id": 4
     }
   ],
   "count": [
