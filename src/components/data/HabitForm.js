@@ -6,6 +6,8 @@ import { getCurrentMonth } from '../../modules/helpers'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { GoodHabit } from './GoodHabit'
+import { BadHabit } from './BadHabit'
+
 import { render } from '@testing-library/react'
 
 
@@ -101,14 +103,20 @@ export const NewHabit = () => {
         />
         break;
       case 2:
-        return <h2>It worked!!!!</h2>
+        return <BadHabit
+          handleControlledInputChange={ handleControlledInputChange }
+          handleClickSaveHabit={ handleClickSaveHabit }
+          HabitToggle={ HabitToggle }
+          habit={ habit }
+          isLoading={ isLoading }
+        />
 
 
     }
 
   }
 
-  console.log('render', RenderForm())
+  // console.log('render', RenderForm())
 
 
   // todo testing site
