@@ -33,14 +33,14 @@
   ],
   "habits": [
     {
-      "habit": "work out",
+      "habit": "Work Out",
       "userId": 7,
       "habitStart": 1617295277,
       "goodHabit": true,
       "reward": "feeling healthy",
       "cue": "end of work day",
       "frequencyType": "daily",
-      "frequency": "5",
+      "frequency": 20,
       "id": 1
     },
     {
@@ -51,38 +51,89 @@
       "cue": "feeling stressed out",
       "reward": "feeling less stressed",
       "frequencyType": "daily",
-      "frequency": "20",
+      "frequency": 10,
       "replacementHabit": "going for walks",
       "id": 2
+    },
+    {
+      "userId": 7,
+      "habit": "walk",
+      "goodHabit": true,
+      "habitStart": 1617295277,
+      "cue": "after eating a meal",
+      "reward": "feeling better",
+      "frequency": 5,
+      "id": 3
+    },
+    {
+      "userId": 7,
+      "habit": "test",
+      "cue": "test",
+      "reward": "test",
+      "frequency": 6,
+      "id": 4
     }
   ],
   "count": [
     {
       "id": 1,
       "habitId": 1,
-      "habitMonth": "April",
-      "monthCount": 14,
-      "dayCount": 1,
-      "totalCount": 34,
-      "monthGoal": 20
+      "date": 1617292503,
+      "count": 1
     },
     {
-      "id": 3,
+      "id": 1,
       "habitId": 1,
-      "habitMonth": "March",
-      "monthCount": 20,
-      "dayCount": 1,
-      "totalCount": 20,
-      "monthGoal": 20
+      "date": 1617378903,
+      "count": 2
     },
     {
-      "id": 2,
+      "id": 1,
+      "habitId": 1,
+      "date": 1617638103,
+      "count": 3
+    },
+    {
+      "id": 1,
+      "habitId": 1,
+      "date": 1617894000,
+      "count": 4
+    },
+    {
+      "id": 1,
+      "habitId": 1,
+      "date": 1617982447,
+      "count": 5
+    },
+    {
+      "id": 1,
       "habitId": 2,
-      "habitMonth": "April",
-      "monthCount": 10,
-      "dayCount": 2,
-      "totalCount": 25,
-      "monthGoal": 20
+      "datetime": 1617292503,
+      "count": 1
+    },
+    {
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617378903,
+      "count": 2
+    },
+    {
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617638103,
+      "count": 3
+    },
+    {
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617894000,
+      "count": 4
+    },
+    {
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617982447,
+      "count": 5
     }
   ]
 }

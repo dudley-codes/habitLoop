@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
-import 'papercss/dist/paper.css'
+// import 'papercss/dist/paper.css'
 import logo from './logo.png'
 import { userStorageKey } from "../../auth/authSettings"
 
@@ -46,7 +46,12 @@ export const NavBar = () => {
           : null }
         { isAuthenticated
           ? <li className="nav-item">
-            <Link className="nav-link" to="/habits">My Habits</Link>
+            <Link className="nav-link" to="/Details">Details</Link>
+          </li>
+          : null }
+        { isAuthenticated
+          ? <li className="nav-item">
+            <Link className="nav-link" to="/new">New Habit</Link>
           </li>
           : null }
         <li className="nav-item">
