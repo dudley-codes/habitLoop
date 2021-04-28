@@ -66,142 +66,74 @@
       "id": 3
     },
     {
-      "habit": "Quit Smoking x2",
       "userId": 7,
-      "habitStart": 1617295277,
-      "goodHabit": false,
-      "cue": "feeling stressed out",
-      "reward": "feeling less stressed",
-      "frequencyType": "daily",
-      "frequency": 20,
-      "replacementHabit": "going for walks",
-      "id": 14
-    },
-    {
-      "userId": 7,
-      "habit": "walk",
-      "cue": "test",
-      "reward": "feeling better",
-      "frequency": 55,
-      "id": 15
-    },
-    {
-      "userId": 7,
-      "habit": "Walk the dog",
-      "cue": "end of day",
-      "reward": "happy puppers",
+      "habit": "Test",
+      "cue": "Test",
+      "reward": "Test",
       "frequency": 7,
-      "id": 16
-    },
-    {
-      "userId": 7,
-      "habit": "Wash dishes",
-      "cue": "after eating a meal",
-      "reward": "having a clean kitchen",
-      "frequency": 21,
-      "id": 17
-    },
-    {
-      "userId": 7,
-      "habit": "Walk the dog",
-      "cue": "end of day",
-      "reward": "happy puppers",
-      "frequency": 7,
-      "id": 18
-    },
-    {
-      "userId": 7,
-      "habit": "test",
-      "cue": "test",
-      "reward": "test",
-      "frequency": 21,
-      "id": 19
+      "id": 4
     }
   ],
   "count": [
     {
       "id": 1,
       "habitId": 1,
-      "habitMonth": 3,
-      "monthCount": 14,
-      "dayCount": 1,
-      "totalCount": 34,
-      "monthGoal": 20
+      "date": 1617292503,
+      "count": 1
     },
     {
-      "id": 3,
+      "id": 1,
       "habitId": 1,
-      "habitMonth": 2,
-      "monthCount": 20,
-      "dayCount": 1,
-      "totalCount": 20,
-      "monthGoal": 20
+      "date": 1617378903,
+      "count": 2
     },
     {
-      "id": 2,
+      "id": 1,
+      "habitId": 1,
+      "date": 1617638103,
+      "count": 3
+    },
+    {
+      "id": 1,
+      "habitId": 1,
+      "date": 1617894000,
+      "count": 4
+    },
+    {
+      "id": 1,
+      "habitId": 1,
+      "date": 1617982447,
+      "count": 5
+    },
+    {
+      "id": 1,
       "habitId": 2,
-      "habitMonth": 3,
-      "monthCount": 10,
-      "dayCount": 2,
-      "totalCount": 25,
-      "monthGoal": 30
+      "datetime": 1617292503,
+      "count": 1
     },
     {
-      "habitId": 3,
-      "habitMonth": 3,
-      "monthCount": 4,
-      "dayCount": 3,
-      "totalCount": 7,
-      "monthGoal": 12,
-      "id": 4
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617378903,
+      "count": 2
     },
     {
-      "habitId": 14,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 5
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617638103,
+      "count": 3
     },
     {
-      "habitId": 15,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 6
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617894000,
+      "count": 4
     },
     {
-      "habitId": 16,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 7
-    },
-    {
-      "habitId": 17,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 8
-    },
-    {
-      "habitId": 18,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 9
-    },
-    {
-      "habitId": 19,
-      "habitMonth": 3,
-      "monthCount": 0,
-      "dayCount": 0,
-      "totalCount": 0,
-      "id": 10
+      "id": 1,
+      "habitId": 2,
+      "datetime": 1617982447,
+      "count": 5
     }
   ]
 }

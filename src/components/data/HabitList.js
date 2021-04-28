@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HabitCard } from './HabitCard'
 import './Habit.css'
-import { getHabitsByMonth, checkCounter, addCounter } from '../../modules/HabitProvider';
+import { getHabitsByMonth, checkCounter, addCounter, getHabitsByUser } from '../../modules/HabitProvider';
 
 import { getCurrentMonth } from '../../modules/helpers';
 
@@ -23,32 +23,38 @@ export const HabitList = () => {
     return filterHabits
   }
 
-  useEffect(() => {
-    habitTracker().then(res => {
-      setHabits(res)
-    })
-  }, [])
-
-  const createCounter = () => {
-    checkCounter()
-      .then(res => {
-        res.filter(habit => {
-          if (habit.count.length === 0) {
-            addCounter({
-              habitId: habit.id,
-              habitMonth: currentMonth,
-              monthCount: 0,
-              dayCount: 0,
-              totalCount: 0,
-            })
-          }
-        })
-      }).then(() => habitTracker())
+  const fetchHabits = () => {
+    const filterHabits = getHabitsByUser(currentUserId)
+      .then(res => setHabits(res))
+    return filterHabits
   }
 
+
+
   useEffect(() => {
-    createCounter()
+    fetchHabits()
   }, [])
+
+  // const createCounter = () => {
+  //   checkCounter()
+  //     .then(res => {
+  //       res.filter(habit => {
+  //         if (habit.count.length === 0) {
+  //           addCounter({
+  //             habitId: habit.id,
+  //             habitMonth: currentMonth,
+  //             monthCount: 0,
+  //             dayCount: 0,
+  //             totalCount: 0,
+  //           })
+  //         }
+  //       })
+  //     }).then(() => habitTracker())
+  // }
+
+  // useEffect(() => {
+  //   createCounter()
+  // }, [])
 
 
   return (

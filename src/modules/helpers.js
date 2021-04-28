@@ -5,6 +5,15 @@ export const getCurrentMonth = () => {
   return currentMonth
 }
 
+export const getCurrentYear = () => {
+  const today = new Date();
+  const currentYear = today.getFullYear()
+
+  return currentYear
+}
+
+
+console.log('monthYear', getCurrentYear())
 // instantiate a date object
 const dt = new Date();
 

@@ -10,6 +10,12 @@ export const getHabitsByMonth = (month) => {
     .then(res => res.json())
 }
 
+// todo refactor
+export const getHabitsByUser = (userId) => {
+  return fetch(`${ remoteURL }/habits?_embed=count&userId=${ userId }`)
+    .then(res => res.json())
+}
+
 export const addHabit = (newHabit) => {
   return fetch(`${ remoteURL }/habits`, {
     method: 'POST',

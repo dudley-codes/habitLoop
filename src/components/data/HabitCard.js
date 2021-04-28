@@ -3,22 +3,25 @@ import editIcon from './images/edit-icon.svg';
 import plusIcon from './images/plus.svg';
 import minusIcon from './images/minus.svg';
 import './Habit.css'
-import { getCurrentMonth, daysInMonth } from '../../modules/helpers';
+import { getCurrentMonth, getCurrentYear } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
-const currentMonth = getCurrentMonth()
 
 
 
 export const HabitCard = ({ habit }) => {
-  console.log(habit)
-  const habitGoal = Math.floor(habit.monthCount / (habit.habit.frequency * 4) * 100)
+
+  console.log('habit count', habit.count)
+
+  const habitGoal = Math.floor((habit.count.length) / (habit.frequency * 4) * 100)
+
+  console.log('habitGoal', habitGoal)
 
   return (
     <>
       <div className='habit--card'>
         <div className='habit--card__details'>
           <div className='habit--card__habit'>
-            <div>{ habit.habit.habit }</div>
+            <div>{ habit.habit }</div>
             <img src={ editIcon } alt='edit icon' className='edit--icon' />
           </div>
           <div className='habit--card__percent'>{ habitGoal }%</div>
