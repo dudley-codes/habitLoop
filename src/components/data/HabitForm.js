@@ -6,6 +6,7 @@ import { getCurrentMonth } from '../../modules/helpers'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { GoodHabit } from './GoodHabit'
+import { render } from '@testing-library/react'
 
 
 export const NewHabit = () => {
@@ -16,8 +17,9 @@ export const NewHabit = () => {
     habitMonth: currentMonth,
   })
 
-  const [ radioValue, setRadioValue ] = useState('1');
+  const [ radioValue, setRadioValue ] = useState(1);
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ boolean, setBoolean ] = useState(true)
 
   let isGoodHabit = { ...radioValue }
 
@@ -67,10 +69,10 @@ export const NewHabit = () => {
               variant="primary"
               name="radio"
               value={ radio.value }
-              checked={ radioValue === radio.value }
+              checked={ radioValue === parseInt(radio.value) }
               onChange={ (e) => {
 
-                setRadioValue(e.currentTarget.value)
+                setRadioValue(parseInt(e.currentTarget.value))
               }
               }
             >
@@ -84,7 +86,29 @@ export const NewHabit = () => {
 
   useEffect(() => {
     HabitToggle()
-  })
+  }, [])
+
+  const RenderForm = () => {
+    // eslint-disable-next-line default-case
+    switch (radioValue) {
+      case 1:
+        return <GoodHabit
+          handleControlledInputChange={ handleControlledInputChange }
+          handleClickSaveHabit={ handleClickSaveHabit }
+          HabitToggle={ HabitToggle }
+          habit={ habit }
+          isLoading={ isLoading }
+        />
+        break;
+      case 2:
+        return <h2>It worked!!!!</h2>
+
+
+    }
+
+  }
+
+  console.log('render', RenderForm())
 
 
   // todo testing site
@@ -94,8 +118,9 @@ export const NewHabit = () => {
       <div className='habit-form'>
         <h3 className='habit-form__title'>New Habit</h3>
         <HabitToggle />
-
-        <Route path='/new'>
+        <RenderForm />
+        {/* <RenderForm /> */ }
+        {/* <Route path='/new'>
           <GoodHabit
             handleControlledInputChange={ handleControlledInputChange }
             handleClickSaveHabit={ handleClickSaveHabit }
@@ -103,7 +128,7 @@ export const NewHabit = () => {
             habit={ habit }
             isLoading={ isLoading }
           />
-        </Route>
+        </Route> */}
       </div>
 
 
