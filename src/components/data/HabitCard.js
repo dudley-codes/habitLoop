@@ -59,7 +59,9 @@ export const HabitCard = ({ habit }) => {
           <div className='habit--card__details'>
             <div className='habit--card__habit'>
               <div>{ habit.habit }</div>
-              <HabitEditModal />
+              <HabitEditModal
+                habitId={ habit.id }
+              />
             </div>
             <div className='habit--card__percent'>{ badHabitFreq() }%</div>
           </div>

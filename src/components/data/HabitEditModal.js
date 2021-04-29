@@ -20,7 +20,6 @@ export const HabitEditModal = ({ habitId }) => {
   // getHabitById(5)
   //   .then(res => console.log('get habit by Id', res))
 
-  console.log("useParams", useParams())
 
 
   const handleFieldChange = (e) => {
@@ -38,6 +37,8 @@ export const HabitEditModal = ({ habitId }) => {
       userId: habit.userId,
       habit: habit.habit,
       frequency: habit.frequency,
+      habitStart: habit.habitStart,
+      goodHabit: habit.goodHabit,
       cue: habit.cue,
       reward: habit.reward
     };
@@ -77,6 +78,48 @@ export const HabitEditModal = ({ habitId }) => {
                   autoFocus
                   className='form-control'
                   defaultValue={ habit.habit }
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div className='habit-form__group'>
+                <label htmlFor='cue'>Cue:</label>
+                <input
+                  type='text'
+                  required
+                  id='cue'
+                  onChange={ handleFieldChange }
+                  autoFocus
+                  className='form-control'
+                  defaultValue={ habit.cue }
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div className='habit-form__group'>
+                <label htmlFor='reward'>Reward:</label>
+                <input
+                  type='text'
+                  required
+                  id='reward'
+                  onChange={ handleFieldChange }
+                  autoFocus
+                  className='form-control'
+                  defaultValue={ habit.reward }
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div className='habit-form__group'>
+                <label htmlFor='frequency'>Weekly Goal:</label>
+                <input
+                  type='text'
+                  required
+                  id='frequency'
+                  onChange={ handleFieldChange }
+                  autoFocus
+                  className='form-control'
+                  defaultValue={ habit.frequency }
                 />
               </div>
             </fieldset>
