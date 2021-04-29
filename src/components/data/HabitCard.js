@@ -5,10 +5,9 @@ import minusIcon from './images/minus.svg';
 import './Habit.css'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import { HabitEditModal } from './HabitEditModal';
 
-console.log('days', daysInMonth)
-
-export const HabitCard = ({ habit }) => {
+export const HabitCard = ({ habit, fetchHabits }) => {
   const goodHabit = habit.goodHabit
   const habitGoal = Math.floor((habit.count.length) / (habit.frequency * 4) * 100)
 
@@ -19,8 +18,6 @@ export const HabitCard = ({ habit }) => {
     return habitTotal
   }
 
-  console.log('habitGoal', badHabitFreq())
-
   return (
     goodHabit ?
       <>
@@ -28,11 +25,17 @@ export const HabitCard = ({ habit }) => {
           <div className='habit--card__details'>
             <div className='habit--card__habit'>
               <div>{ habit.habit }</div>
-              <img src={ editIcon } alt='edit icon' className='edit--icon' />
+              <HabitEditModal
+                habitId={ habit.id }
+                fetchHabits={ fetchHabits }
+              />
             </div>
             <div className='habit--card__percent'>{ habitGoal }%</div>
           </div>
           <div className='habit--progress__cont'>
+            {/* <div className='habit--minus'>
+              <img src={ minusIcon } alt='subtract from habit icon' />
+            </div> */}
             <div className='habit--progress'>
               <div>
                 <ProgressBar now={ habitGoal } variant='success' />
@@ -53,11 +56,17 @@ export const HabitCard = ({ habit }) => {
           <div className='habit--card__details'>
             <div className='habit--card__habit'>
               <div>{ habit.habit }</div>
-              <img src={ editIcon } alt='edit icon' className='edit--icon' />
+              <HabitEditModal
+                habitId={ habit.id }
+                fetchHabits={ fetchHabits }
+              />
             </div>
             <div className='habit--card__percent'>{ badHabitFreq() }%</div>
           </div>
           <div className='habit--progress__cont'>
+            {/* <div className='habit--plus'>
+              <img src={ plusIcon } alt='add to habit icon' />
+            </div> */}
             <div className='habit--progress'>
               <div>
                 <ProgressBar now={ badHabitFreq() } variant='danger' />

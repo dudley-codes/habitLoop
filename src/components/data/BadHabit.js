@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom'
-import { getCurrentMonth } from '../../modules/helpers'
 import { addHabit } from '../../modules/HabitProvider'
 
-export const GoodHabit = () => {
+export const BadHabit = () => {
+
   const [ habit, setHabit ] = useState({})
+
+  // const currentMonth = getCurrentMonth()
+
+
+
   const [ isLoading, setIsLoading ] = useState(false);
+
+
+
 
   const history = useHistory();
 
@@ -28,10 +36,9 @@ export const GoodHabit = () => {
     e.preventDefault();
     setIsLoading(true);
     let newHabit = { ...habit }
+    newHabit.goodHabit = false;
     newHabit.habitStart = Date.now()
-    newHabit.goodHabit = true;
     newHabit.frequency = parseInt(newHabit.frequency)
-
 
     setIsLoading(true)
     addHabit(newHabit)
@@ -46,25 +53,25 @@ we promise we won't make you read too much)</h6> */}
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='habit'>Habit:</label>
-          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' defaultValue={ habit.habit } />
+          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Quit Smoking' defaultValue={ habit.habit } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='cue'>Cue:</label>
-          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. after waking up' defaultValue={ habit.cue } />
+          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. feeling stressed out' defaultValue={ habit.cue } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='reward'>Reward:</label>
-          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. endorphins from working out' defaultValue={ habit.reward } />
+          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. feeling less stressed out' defaultValue={ habit.reward } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='frequency'>Weekly Goal:</label>
-          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' defaultValue={ habit.frequency } />
+          <label htmlFor='frequency'>Average Daily Total:</label>
+          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 10' defaultValue={ habit.frequency } />
         </div>
       </fieldset>
       <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>

@@ -33,27 +33,24 @@
   ],
   "habits": [
     {
-      "habit": "Work Out",
+      "id": 1,
       "userId": 7,
+      "habit": "Work Out",
+      "frequency": 20,
       "habitStart": 1617295277,
       "goodHabit": true,
-      "reward": "feeling healthy",
       "cue": "end of work day",
-      "frequencyType": "daily",
-      "frequency": 20,
-      "id": 1
+      "reward": "feeling healthy"
     },
     {
-      "habit": "Quit Smoking",
+      "id": 2,
       "userId": 7,
+      "habit": "Quit Smoking",
+      "frequency": 10,
       "habitStart": 1617295277,
       "goodHabit": false,
       "cue": "feeling stressed out",
-      "reward": "feeling less stressed",
-      "frequencyType": "daily",
-      "frequency": 10,
-      "replacementHabit": "going for walks",
-      "id": 2
+      "reward": "feeling less stressed"
     },
     {
       "userId": 7,
@@ -66,12 +63,34 @@
       "id": 3
     },
     {
+      "id": 4,
       "userId": 7,
-      "habit": "test",
+      "habit": "Stop biting nails",
+      "frequency": "10",
+      "habitStart": 1619656748517,
+      "goodHabit": false,
+      "cue": "feeling stressed",
+      "reward": "feeling less stressed"
+    },
+    {
+      "id": 5,
+      "userId": 7,
+      "habit": "Wash Dishes",
+      "frequency": "21",
+      "habitStart": 1619656766787,
+      "goodHabit": true,
+      "cue": "after eating a meal",
+      "reward": "having a clean kitchen"
+    },
+    {
+      "userId": 7,
+      "frequency": 21,
+      "habit": "Test",
       "cue": "test",
       "reward": "test",
-      "frequency": 6,
-      "id": 4
+      "habitStart": 1619656907274,
+      "goodHabit": true,
+      "id": 6
     }
   ],
   "count": [
