@@ -11,17 +11,17 @@ export const HabitList = () => {
 
   const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
-  const [ habitCount, setHabitCount ] = useState({})
+  // const [ habitCount, setHabitCount ] = useState({})
 
-  const habitTracker = () => {
-    const filterHabits = getHabitsByMonth(currentMonth)
-      .then(res => res.filter(habitObj => {
-        if (habitObj.habit.userId == currentUserId) {
-          return habitObj
-        }
-      })).then(res => { return res })
-    return filterHabits
-  }
+  // const habitTracker = () => {
+  //   const filterHabits = getHabitsByMonth(currentMonth)
+  //     .then(res => res.filter(habitObj => {
+  //       if (habitObj.habit.userId == currentUserId) {
+  //         return habitObj
+  //       }
+  //     })).then(res => { return res })
+  //   return filterHabits
+  // }
 
   const fetchHabits = () => {
     const filterHabits = getHabitsByUser(currentUserId)
@@ -69,6 +69,7 @@ export const HabitList = () => {
             <HabitCard
               key={ habit.id }
               habit={ habit }
+              fetchHabits={ fetchHabits }
 
             />
           ) }

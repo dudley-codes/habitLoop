@@ -7,15 +7,19 @@ import { useHistory, useParams } from 'react-router-dom';
 import { HabitEdit } from './HabitEdit';
 import { updateHabit, getHabitById } from '../../modules/HabitProvider';
 
-export const HabitEditModal = ({ habitId }) => {
+export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ show, setShow ] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const [ habit, setHabit ] = useState({ habit: '' });
   const [ isLoading, setIsLoading ] = useState(false);
 
   const history = useHistory();
 
+  const handleClose = () => {
+    fetchHabits()
+      .then(() => setShow(false))
+  };
+
+  const handleShow = () => setShow(true);
 
   // getHabitById(5)
   //   .then(res => console.log('get habit by Id', res))
@@ -44,6 +48,7 @@ export const HabitEditModal = ({ habitId }) => {
     };
 
     updateHabit(editedHabit)
+
       .then(() => handleClose())
   }
 

@@ -7,9 +7,7 @@ import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/help
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 
-console.log('days', daysInMonth)
-
-export const HabitCard = ({ habit }) => {
+export const HabitCard = ({ habit, fetchHabits }) => {
   const goodHabit = habit.goodHabit
   const habitGoal = Math.floor((habit.count.length) / (habit.frequency * 4) * 100)
 
@@ -29,9 +27,8 @@ export const HabitCard = ({ habit }) => {
               <div>{ habit.habit }</div>
               <HabitEditModal
                 habitId={ habit.id }
-
+                fetchHabits={ fetchHabits }
               />
-              {/* <img src={ editIcon } alt='edit icon' className='edit--icon' /> */ }
             </div>
             <div className='habit--card__percent'>{ habitGoal }%</div>
           </div>
