@@ -43,7 +43,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
             <IncreaseCount
-              habitId={ habit.id }
+              habit={ habit }
               fetchHabits={ fetchHabits } />
             {/* <div className='habit--plus'>
               <img src={ plusIcon } alt='add to habit icon' />
@@ -61,7 +61,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             <div className='habit--card__habit'>
               <div>{ habit.habit }</div>
               <HabitEditModal
-                habitId={ habit.id }
+                habit={ habit }
                 fetchHabits={ fetchHabits }
               />
             </div>

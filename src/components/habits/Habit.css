@@ -28,6 +28,10 @@
   padding-left: 5px;
 }
 
+.habit--plus img {
+  width: 20px;
+}
+
 .habit--card__details {
   display: flex;
   justify-content: space-between;
