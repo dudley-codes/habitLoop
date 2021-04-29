@@ -43,16 +43,14 @@
       "reward": "feeling healthy"
     },
     {
-      "habit": "Quit Smoking",
+      "id": 2,
       "userId": 7,
+      "habit": "Quit Smoking!!!",
+      "frequency": 10,
       "habitStart": 1617295277,
       "goodHabit": false,
       "cue": "feeling stressed out",
-      "reward": "feeling less stressed",
-      "frequencyType": "daily",
-      "frequency": 10,
-      "replacementHabit": "going for walks",
-      "id": 2
+      "reward": "feeling less stressed"
     },
     {
       "userId": 7,
@@ -75,14 +73,14 @@
       "id": 4
     },
     {
+      "id": 5,
       "userId": 7,
-      "habit": "Wash dishes",
-      "cue": "after eating a meal",
-      "reward": "having a clean kitchen",
+      "habit": "Wash Dishes",
       "frequency": "21",
       "habitStart": 1619656766787,
       "goodHabit": true,
-      "id": 5
+      "cue": "after eating a meal",
+      "reward": "having a clean kitchen"
     },
     {
       "userId": 7,

@@ -3,8 +3,6 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import editIcon from './images/edit-icon.svg';
 import { Link } from 'react-router-dom';
-import { useHistory, useParams } from 'react-router-dom';
-import { HabitEdit } from './HabitEdit';
 import { updateHabit, getHabitById } from '../../modules/HabitProvider';
 
 export const HabitEditModal = ({ habitId, fetchHabits }) => {
@@ -12,19 +10,12 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ habit, setHabit ] = useState({ habit: '' });
   const [ isLoading, setIsLoading ] = useState(false);
 
-  const history = useHistory();
-
   const handleClose = () => {
     fetchHabits()
       .then(() => setShow(false))
   };
 
   const handleShow = () => setShow(true);
-
-  // getHabitById(5)
-  //   .then(res => console.log('get habit by Id', res))
-
-
 
   const handleFieldChange = (e) => {
     const habitToChange = { ...habit };

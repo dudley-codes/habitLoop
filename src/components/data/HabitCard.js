@@ -58,6 +58,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               <div>{ habit.habit }</div>
               <HabitEditModal
                 habitId={ habit.id }
+                fetchHabits={ fetchHabits }
               />
             </div>
             <div className='habit--card__percent'>{ badHabitFreq() }%</div>
