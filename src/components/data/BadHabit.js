@@ -36,8 +36,8 @@ export const BadHabit = () => {
     e.preventDefault();
     setIsLoading(true);
     let newHabit = { ...habit }
-    newHabit.goodHabit = true;
-
+    newHabit.goodHabit = false;
+    newHabit.habitStart = Date.now()
 
     setIsLoading(true)
     addHabit(newHabit)
@@ -52,26 +52,25 @@ we promise we won't make you read too much)</h6> */}
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='habit'>Habit:</label>
-          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' value={ habit.habit } />
+          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Quit Smoking' defaultValue={ habit.habit } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='cue'>Cue:</label>
-          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. after waking up' value={ habit.cue } />
+          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. feeling stressed out' defaultValue={ habit.cue } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='reward'>Reward:</label>
-          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. endorphins from working out' value={ habit.reward } />
+          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. feeling less stressed out' defaultValue={ habit.reward } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='frequency'>Frequency:</label>
-          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' value={ habit.frequency } />
-          <label htmlFor='frequency'>Frequency:</label>
+          <label htmlFor='frequency'>Daily Total:</label>
+          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 10' defaultValue={ habit.frequency } />
         </div>
       </fieldset>
       <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>

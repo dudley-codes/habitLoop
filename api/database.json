@@ -67,50 +67,33 @@
     },
     {
       "userId": 7,
-      "habit": "test",
-      "cue": "test",
-      "reward": "test",
-      "frequency": 6,
+      "habit": "Quit Smoking",
+      "cue": "feeling stressed",
+      "reward": "feeling less stressed",
+      "frequency": "10",
+      "goodHabit": false,
+      "habitStart": 1619656748517,
       "id": 4
     },
     {
+      "userId": 7,
+      "habit": "Wash dishes",
+      "cue": "after eating a meal",
+      "reward": "having a clean kitchen",
+      "frequency": "21",
+      "habitStart": 1619656766787,
+      "goodHabit": true,
       "id": 5
     },
     {
-      "id": 6
-    },
-    {
       "userId": 7,
-      "habit": "Walk the dog",
+      "frequency": 21,
+      "habit": "Test",
       "cue": "test",
       "reward": "test",
-      "frequency": "21",
-      "id": 7
-    },
-    {
-      "userId": 7,
-      "habit": "Wash dishes",
-      "cue": "after eating a meal",
-      "reward": "having a clean kitchen",
-      "frequency": "21",
-      "id": 8
-    },
-    {
-      "userId": 7,
-      "habit": "Walk the dog",
-      "cue": "end of day",
-      "reward": "happy puppers",
-      "frequency": "6",
-      "id": 9
-    },
-    {
-      "userId": 7,
-      "habit": "Wash dishes",
-      "cue": "after eating a meal",
-      "reward": "having a clean kitchen",
-      "frequency": "21",
+      "habitStart": 1619656907274,
       "goodHabit": true,
-      "id": 10
+      "id": 6
     }
   ],
   "count": [
