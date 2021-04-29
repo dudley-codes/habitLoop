@@ -12,6 +12,7 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
 
   const handleClose = () => {
     fetchHabits()
+      .then(() => setIsLoading(false))
       .then(() => setShow(false))
   };
 

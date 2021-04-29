@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking!!!",
+      "habit": "Quit Smoking",
       "frequency": 10,
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -63,14 +63,14 @@
       "id": 3
     },
     {
+      "id": 4,
       "userId": 7,
-      "habit": "Quit Smoking",
-      "cue": "feeling stressed",
-      "reward": "feeling less stressed",
+      "habit": "Stop biting nails",
       "frequency": "10",
-      "goodHabit": false,
       "habitStart": 1619656748517,
-      "id": 4
+      "goodHabit": false,
+      "cue": "feeling stressed",
+      "reward": "feeling less stressed"
     },
     {
       "id": 5,
