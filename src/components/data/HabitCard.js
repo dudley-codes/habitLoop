@@ -12,7 +12,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   const habitGoal = Math.floor((habit.count.length) / (habit.frequency * 4) * 100)
 
   const badHabitFreq = () => {
-    const habitDays = habit.frequency * daysInMonth
+    const habitDays = habit.frequency / 7 * daysInMonth
     const habitTotal = Math.floor(((habitDays - habit.count.length) / habitDays) * 100)
 
     return habitTotal

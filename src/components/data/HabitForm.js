@@ -1,59 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory, Route } from 'react-router-dom'
-import { addHabit } from '../../modules/HabitProvider'
 import './Habit.css'
-import { getCurrentMonth } from '../../modules/helpers'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { GoodHabit } from './GoodHabit'
 import { BadHabit } from './BadHabit'
 
-import { render } from '@testing-library/react'
-
-
 export const NewHabit = () => {
-  // const currentMonth = getCurrentMonth()
-  // const [ habit, setHabit ] = useState({})
-  // const [ count, setCount ] = useState({
-  //   habitId: '',
-  //   habitMonth: currentMonth,
-  // })
 
   const [ radioValue, setRadioValue ] = useState(1);
-  // const [ isLoading, setIsLoading ] = useState(false);
-  // const [ boolean, setBoolean ] = useState(true)
 
-  // let isGoodHabit = { ...radioValue }
-
-  // const history = useHistory();
-
-  // const currentUserId = parseInt(sessionStorage.getItem('user_id'))
-
-  // const handleControlledInputChange = (e) => {
-  //   const newHabit = { ...habit };
-  //   newHabit.userId = currentUserId
-  //   let selectedVal = e.target.value;
-  //   if (e.target.id.includes('Id')) {
-  //     selectedVal = parseInt(selectedVal)
-  //   }
-
-  //   newHabit[ e.target.id ] = selectedVal
-
-  //   setHabit(newHabit)
-  // }
-
-  // const handleClickSaveHabit = (e) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-
-
-  //   setIsLoading(true)
-  //   addHabit(habit)
-  //     .then(() => history.push('/'))
-  // }
-
-
-  // todo testing site
   const HabitToggle = () => {
 
     const radios = [
@@ -106,11 +61,6 @@ export const NewHabit = () => {
 
   }
 
-  // console.log('render', RenderForm())
-
-
-  // todo testing site
-
   return (
     <>
       <div className='habit-form'>
@@ -118,21 +68,8 @@ export const NewHabit = () => {
         <HabitToggle />
         <form className='habit-form'>
           <RenderForm />
-
         </form>
-        {/* <RenderForm /> */ }
-        {/* <Route path='/new'>
-          <GoodHabit
-            handleControlledInputChange={ handleControlledInputChange }
-            handleClickSaveHabit={ handleClickSaveHabit }
-            HabitToggle={ HabitToggle }
-            habit={ habit }
-            isLoading={ isLoading }
-          />
-        </Route> */}
       </div>
-
-
     </>
   )
 }

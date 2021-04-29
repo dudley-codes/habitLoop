@@ -46,7 +46,7 @@
       "id": 2,
       "userId": 7,
       "habit": "Quit Smoking",
-      "frequency": 10,
+      "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
       "cue": "feeling stressed out",
@@ -66,7 +66,7 @@
       "id": 4,
       "userId": 7,
       "habit": "Stop biting nails",
-      "frequency": "10",
+      "frequency": "20",
       "habitStart": 1619656748517,
       "goodHabit": false,
       "cue": "feeling stressed",
@@ -91,18 +91,28 @@
       "habitStart": 1619656907274,
       "goodHabit": true,
       "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 7,
+      "habit": "test",
+      "frequency": "40",
+      "habitStart": 1619722906073,
+      "goodHabit": true,
+      "cue": "test",
+      "reward": "test"
     }
   ],
   "count": [
     {
       "id": 1,
-      "habitId": 1,
+      "habitId": 7,
       "date": 1617292503,
       "count": 1
     },
     {
       "id": 1,
-      "habitId": 1,
+      "habitId": 7,
       "date": 1617378903,
       "count": 2
     },
