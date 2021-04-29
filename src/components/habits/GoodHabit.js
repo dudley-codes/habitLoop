@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom'
-import { getCurrentMonth } from '../../modules/helpers'
 import { addHabit } from '../../modules/HabitProvider'
 
 export const GoodHabit = () => {
@@ -31,7 +30,6 @@ export const GoodHabit = () => {
     newHabit.habitStart = Date.now()
     newHabit.goodHabit = true;
     newHabit.frequency = parseInt(newHabit.frequency)
-
 
     setIsLoading(true)
     addHabit(newHabit)

@@ -6,6 +6,7 @@ import './Habit.css'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
+import { IncreaseCount } from './HabitCount';
 
 export const HabitCard = ({ habit, fetchHabits }) => {
   const goodHabit = habit.goodHabit
@@ -41,9 +42,12 @@ export const HabitCard = ({ habit, fetchHabits }) => {
                 <ProgressBar now={ habitGoal } variant='success' />
               </div>
             </div>
-            <div className='habit--plus'>
+            <IncreaseCount
+              habitId={ habit.id }
+              fetchHabits={ fetchHabits } />
+            {/* <div className='habit--plus'>
               <img src={ plusIcon } alt='add to habit icon' />
-            </div>
+            </div> */}
             {/* <div className='habit--minus'>
               <img src={ minusIcon } alt='subtract from habit icon' />
             </div> */}

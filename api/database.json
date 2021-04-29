@@ -35,7 +35,7 @@
     {
       "id": 1,
       "userId": 7,
-      "habit": "Work Out",
+      "habit": "Work Out!!!!",
       "frequency": 20,
       "habitStart": 1617295277,
       "goodHabit": true,
@@ -101,68 +101,153 @@
       "goodHabit": true,
       "cue": "test",
       "reward": "test"
+    },
+    {
+      "userId": 7,
+      "habit": "Test",
+      "cue": "test",
+      "reward": "test",
+      "frequency": 7,
+      "habitStart": 1619723481578,
+      "goodHabit": true,
+      "id": 8
     }
   ],
   "count": [
     {
-      "id": 1,
+      "date": 1619726887035,
+      "habitId": 1,
+      "id": 1
+    },
+    {
+      "date": 1619726888080,
+      "habitId": 1,
+      "id": 2
+    },
+    {
+      "date": 1619726890015,
+      "habitId": 3,
+      "id": 3
+    },
+    {
+      "date": 1619726891984,
+      "habitId": 5,
+      "id": 4
+    },
+    {
+      "date": 1619726893547,
+      "habitId": 6,
+      "id": 5
+    },
+    {
+      "date": 1619726894515,
+      "habitId": 6,
+      "id": 6
+    },
+    {
+      "date": 1619726895719,
+      "habitId": 6,
+      "id": 7
+    },
+    {
+      "date": 1619726897901,
       "habitId": 7,
-      "date": 1617292503,
-      "count": 1
+      "id": 8
     },
     {
-      "id": 1,
+      "date": 1619726898700,
       "habitId": 7,
-      "date": 1617378903,
-      "count": 2
+      "id": 9
     },
     {
-      "id": 1,
-      "habitId": 1,
-      "date": 1617638103,
-      "count": 3
+      "date": 1619726899162,
+      "habitId": 7,
+      "id": 10
     },
     {
-      "id": 1,
-      "habitId": 1,
-      "date": 1617894000,
-      "count": 4
+      "date": 1619726899679,
+      "habitId": 7,
+      "id": 11
     },
     {
-      "id": 1,
-      "habitId": 1,
-      "date": 1617982447,
-      "count": 5
+      "date": 1619726899893,
+      "habitId": 7,
+      "id": 12
     },
     {
-      "id": 1,
-      "habitId": 2,
-      "datetime": 1617292503,
-      "count": 1
+      "date": 1619726900050,
+      "habitId": 7,
+      "id": 13
     },
     {
-      "id": 1,
-      "habitId": 2,
-      "datetime": 1617378903,
-      "count": 2
+      "date": 1619726900219,
+      "habitId": 7,
+      "id": 14
     },
     {
-      "id": 1,
-      "habitId": 2,
-      "datetime": 1617638103,
-      "count": 3
+      "date": 1619726900388,
+      "habitId": 7,
+      "id": 15
     },
     {
-      "id": 1,
-      "habitId": 2,
-      "datetime": 1617894000,
-      "count": 4
+      "date": 1619726900590,
+      "habitId": 7,
+      "id": 16
     },
     {
-      "id": 1,
-      "habitId": 2,
-      "datetime": 1617982447,
-      "count": 5
+      "date": 1619726900747,
+      "habitId": 7,
+      "id": 17
+    },
+    {
+      "date": 1619726900905,
+      "habitId": 7,
+      "id": 18
+    },
+    {
+      "date": 1619726901075,
+      "habitId": 7,
+      "id": 19
+    },
+    {
+      "date": 1619726901243,
+      "habitId": 7,
+      "id": 20
+    },
+    {
+      "date": 1619726901400,
+      "habitId": 7,
+      "id": 21
+    },
+    {
+      "date": 1619726902143,
+      "habitId": 7,
+      "id": 22
+    },
+    {
+      "date": 1619726902729,
+      "habitId": 7,
+      "id": 23
+    },
+    {
+      "date": 1619726903596,
+      "habitId": 7,
+      "id": 24
+    },
+    {
+      "date": 1619726904336,
+      "habitId": 7,
+      "id": 25
+    },
+    {
+      "date": 1619726905091,
+      "habitId": 7,
+      "id": 26
+    },
+    {
+      "date": 1619726907003,
+      "habitId": 8,
+      "id": 27
     }
   ]
 }
