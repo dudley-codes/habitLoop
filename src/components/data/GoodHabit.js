@@ -5,15 +5,7 @@ import { addHabit } from '../../modules/HabitProvider'
 
 export const GoodHabit = () => {
   const [ habit, setHabit ] = useState({})
-
-  // const currentMonth = getCurrentMonth()
-
-
-
   const [ isLoading, setIsLoading ] = useState(false);
-
-
-
 
   const history = useHistory();
 

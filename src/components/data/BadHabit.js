@@ -38,6 +38,7 @@ export const BadHabit = () => {
     let newHabit = { ...habit }
     newHabit.goodHabit = false;
     newHabit.habitStart = Date.now()
+    newHabit.frequency = parseInt(newHabit.frequency)
 
     setIsLoading(true)
     addHabit(newHabit)
@@ -69,7 +70,7 @@ we promise we won't make you read too much)</h6> */}
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='frequency'>Daily Total:</label>
+          <label htmlFor='frequency'>Average Daily Total:</label>
           <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 10' defaultValue={ habit.frequency } />
         </div>
       </fieldset>

@@ -33,15 +33,12 @@
   ],
   "habits": [
     {
-      "habit": "Work Out",
+      "id": 1,
       "userId": 7,
-      "habitStart": 1617295277,
-      "goodHabit": true,
-      "reward": "feeling healthy",
-      "cue": "end of work day",
-      "frequencyType": "daily",
+      "habit": "Work Out!!",
       "frequency": 20,
-      "id": 1
+      "cue": "end of work day",
+      "reward": "feeling healthy"
     },
     {
       "habit": "Quit Smoking",

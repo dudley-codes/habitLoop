@@ -40,3 +40,18 @@ export const addCounter = (counter) => {
     body: JSON.stringify(counter)
   }).then(res => res.json())
 }
+
+export const getHabitById = (id) => {
+  return fetch(`${ remoteURL }/habits/${ id }?_embed=count`)
+    .then(res => res.json())
+}
+
+export const updateHabit = (editedHabit) => {
+  return fetch(`${ remoteURL }/habits/${ editedHabit.id }`, {
+    method: "PUT",
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(editedHabit)
+  }).then(data => data.json())
+}
