@@ -9,12 +9,29 @@ import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
 
 export const HabitCard = ({ habit, fetchHabits }) => {
+  const habitCount = habit.count.length
   const goodHabit = habit.goodHabit
-  const habitGoal = Math.floor((habit.count.length) / (habit.frequency * 4) * 100)
+
+  // console.log('habit.count', habit.count)
+
+  const filterHabits = () => {
+    const filter = habit.count.filter(count => {
+      let date = new Date(count.date)
+      if (date.getMonth() === getCurrentMonth() &
+        date.getFullYear() === getCurrentYear() || count.length === 0) {
+
+        return count
+      }
+    })
+    return filter.length
+  }
+
+  const monthlyCount = Math.floor((filterHabits()) / (habit.frequency * 4) * 100)
+
 
   const badHabitFreq = () => {
     const habitDays = habit.frequency / 7 * daysInMonth
-    const habitTotal = Math.floor(((habitDays - habit.count.length) / habitDays) * 100)
+    const habitTotal = Math.floor(((habitDays - filterHabits()) / habitDays) * 100)
 
     return habitTotal
   }
@@ -39,12 +56,13 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             </div> */}
             <div className='habit--progress'>
               <div>
-                <ProgressBar now={ habitGoal } variant='success' />
+                <ProgressBar now={ monthlyCount } variant='success' />
               </div>
             </div>
             <IncreaseCount
               habit={ habit }
-              fetchHabits={ fetchHabits } />
+              fetchHabits={ fetchHabits }
+              monthlyCount={ monthlyCount } />
             {/* <div className='habit--plus'>
               <img src={ plusIcon } alt='add to habit icon' />
             </div> */}

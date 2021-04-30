@@ -5,8 +5,10 @@ import plusIcon from './images/plus.svg';
 import { Link } from 'react-router-dom';
 import greenUp from './images/green-up.png'
 import redUp from './images/red-up.png'
+import greenDwn from './images/green-dwn.png'
+import redDwn from './images/red-dwn.png'
 
-export const IncreaseCount = ({ habit, fetchHabits }) => {
+export const IncreaseCount = ({ habit, fetchHabits, monthlyCount }) => {
   const [ count, setCount ] = useState({});
   const [ isLoading, setIsLoading ] = useState(false);
 
@@ -14,6 +16,12 @@ export const IncreaseCount = ({ habit, fetchHabits }) => {
     if (habit.goodHabit === true) {
       return greenUp
     } else { return redUp }
+  }
+
+  const redOrGreenDwn = () => {
+    if (habit.goodHabit === true) {
+      return redDwn
+    } else { return greenDwn }
   }
 
   const currentUserId = parseInt(sessionStorage.getItem('user_id'))
@@ -30,11 +38,19 @@ export const IncreaseCount = ({ habit, fetchHabits }) => {
 
   return (
     <>
-      <Link onClick={ handleIncreaseCount } to=''>
-        <div className='habit--plus'>
-          <img src={ redOrGreenUp() } alt='add to habit icon' />
-        </div>
-      </Link>
+      <div>
+        <Link onClick={ handleIncreaseCount } to=''>
+          <div className='habit--plus'>
+            <img src={ redOrGreenUp() } alt='add to habit icon' />
+          </div>
+        </Link>
+        <h6>{ monthlyCount }</h6>
+        <Link onClick={ handleIncreaseCount } to=''>
+          <div className='habit--plus'>
+            <img src={ redOrGreenDwn() } alt='subtract from habit icon' />
+          </div>
+        </Link>
+      </div>
     </>
   )
 }
