@@ -71,16 +71,6 @@
       "goodHabit": false,
       "cue": "feeling stressed",
       "reward": "feeling less stressed"
-    },
-    {
-      "id": 5,
-      "userId": 7,
-      "habit": "Wash Dishes",
-      "frequency": "21",
-      "habitStart": 1619656766787,
-      "goodHabit": true,
-      "cue": "after eating a meal",
-      "reward": "having a clean kitchen"
     }
   ],
   "count": [
@@ -98,11 +88,6 @@
       "date": 1585527375,
       "habitId": 3,
       "id": 3
-    },
-    {
-      "date": 1619726891984,
-      "habitId": 5,
-      "id": 4
     },
     {
       "date": 1619728730555,
@@ -748,26 +733,6 @@
       "id": 178
     },
     {
-      "date": 1619744760477,
-      "habitId": 5,
-      "id": 193
-    },
-    {
-      "date": 1619744760657,
-      "habitId": 5,
-      "id": 194
-    },
-    {
-      "date": 1619744760837,
-      "habitId": 5,
-      "id": 195
-    },
-    {
-      "date": 1619744761006,
-      "habitId": 5,
-      "id": 196
-    },
-    {
       "date": 1619747126490,
       "habitId": 2,
       "id": 197
@@ -1136,111 +1101,6 @@
       "date": 1619747472017,
       "habitId": 3,
       "id": 270
-    },
-    {
-      "date": 1619747474455,
-      "habitId": 5,
-      "id": 271
-    },
-    {
-      "date": 1619747474616,
-      "habitId": 5,
-      "id": 272
-    },
-    {
-      "date": 1619747474785,
-      "habitId": 5,
-      "id": 273
-    },
-    {
-      "date": 1619747474977,
-      "habitId": 5,
-      "id": 274
-    },
-    {
-      "date": 1619747475167,
-      "habitId": 5,
-      "id": 275
-    },
-    {
-      "date": 1619747475371,
-      "habitId": 5,
-      "id": 276
-    },
-    {
-      "date": 1619747475707,
-      "habitId": 5,
-      "id": 277
-    },
-    {
-      "date": 1619747475945,
-      "habitId": 5,
-      "id": 278
-    },
-    {
-      "date": 1619747476136,
-      "habitId": 5,
-      "id": 279
-    },
-    {
-      "date": 1619747476339,
-      "habitId": 5,
-      "id": 280
-    },
-    {
-      "date": 1619747476518,
-      "habitId": 5,
-      "id": 281
-    },
-    {
-      "date": 1619747476710,
-      "habitId": 5,
-      "id": 282
-    },
-    {
-      "date": 1619747476914,
-      "habitId": 5,
-      "id": 283
-    },
-    {
-      "date": 1619747477126,
-      "habitId": 5,
-      "id": 284
-    },
-    {
-      "date": 1619747477307,
-      "habitId": 5,
-      "id": 285
-    },
-    {
-      "date": 1619747477498,
-      "habitId": 5,
-      "id": 286
-    },
-    {
-      "date": 1619747477711,
-      "habitId": 5,
-      "id": 287
-    },
-    {
-      "date": 1619747478690,
-      "habitId": 5,
-      "id": 288
-    },
-    {
-      "date": 1619747479117,
-      "habitId": 5,
-      "id": 289
-    },
-    {
-      "date": 1619747479444,
-      "habitId": 5,
-      "id": 290
-    },
-    {
-      "date": 1619747479680,
-      "habitId": 5,
-      "id": 291
     },
     {
       "date": 1619747654709,
