@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking",
+      "habit": "Quit Smoking!!",
       "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -53,14 +53,14 @@
       "reward": "feeling less stressed"
     },
     {
+      "id": 3,
       "userId": 7,
-      "habit": "walk",
-      "goodHabit": true,
-      "habitStart": 1617295277,
-      "cue": "after eating a meal",
-      "reward": "feeling better",
+      "habit": "walk!!",
       "frequency": 5,
-      "id": 3
+      "habitStart": 1617295277,
+      "goodHabit": true,
+      "cue": "after eating a meal",
+      "reward": "feeling better"
     },
     {
       "id": 4,
@@ -1676,6 +1676,21 @@
       "date": 1619748002916,
       "habitId": 1,
       "id": 333
+    },
+    {
+      "date": 1619798286099,
+      "habitId": 1,
+      "id": 334
+    },
+    {
+      "date": 1619798286672,
+      "habitId": 1,
+      "id": 335
+    },
+    {
+      "date": 1619798287920,
+      "habitId": 2,
+      "id": 336
     }
   ]
 }

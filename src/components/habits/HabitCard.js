@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import editIcon from './images/edit-icon.svg';
-import plusIcon from './images/plus.svg';
-import minusIcon from './images/minus.svg';
+import React from 'react';
 import './Habit.css'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -9,10 +6,8 @@ import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
 
 export const HabitCard = ({ habit, fetchHabits }) => {
-  const habitCount = habit.count.length
-  const goodHabit = habit.goodHabit
 
-  // console.log('habit.count', habit.count)
+  const goodHabit = habit.goodHabit
 
   const filterHabits = () => {
     const filter = habit.count.filter(count => {
@@ -73,16 +68,12 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               <div className='habit--card__habit'>
                 <div>{ habit.habit }</div>
                 <HabitEditModal
-                  habit={ habit }
+                  habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
               </div>
-              <div className='habit--card__percent'>{ badHabitFreq() }%</div>
             </div>
             <div className='habit--progress__cont'>
-              {/* <div className='habit--plus'>
-              <img src={ plusIcon } alt='add to habit icon' />
-            </div> */}
               <div className='habit--progress'>
                 <div>
                   <ProgressBar now={ badHabitFreq() } variant='danger' />
