@@ -81,3 +81,9 @@ padding-bottom: 15px;
   /* border: black 1px solid; */
   /* flex-wrap: wrap; */
 }
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

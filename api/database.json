@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking!!",
+      "habit": "Quit Smoking",
       "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -1691,6 +1691,11 @@
       "date": 1619798287920,
       "habitId": 2,
       "id": 336
+    },
+    {
+      "date": 1619798469924,
+      "habitId": 1,
+      "id": 337
     }
   ]
 }

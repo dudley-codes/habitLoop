@@ -124,16 +124,31 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={ handleClose }>
-            Close
+          <div className='button-container'>
+            <div className='button-container__delete'>
+              <Button
+                variant='danger'
+                onClick={ handleClose }
+                disabled={ isLoading }>
+                Delete
+                </Button>
+            </div>
+
+            <div className='button-container__save'>
+              <Button
+                variant="secondary"
+                onClick={ handleClose }>
+                Close
           </Button>
-          <Button
-            variant="primary"
-            onClick={ updateExistingHabit }
-            disabled={ isLoading }
-          >
-            Save Changes
+              <Button
+                variant="primary"
+                onClick={ updateExistingHabit }
+                disabled={ isLoading }
+              >
+                Save Changes
           </Button>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
     </>
