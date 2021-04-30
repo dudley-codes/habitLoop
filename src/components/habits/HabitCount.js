@@ -9,7 +9,6 @@ import greenDwn from './images/green-dwn.png'
 import redDwn from './images/red-dwn.png'
 
 export const IncreaseCount = ({ habit, fetchHabits, filterHabits }) => {
-  console.log(filterHabits())
   const [ count, setCount ] = useState({});
   const [ isLoading, setIsLoading ] = useState(false);
 
