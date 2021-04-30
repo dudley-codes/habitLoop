@@ -4,10 +4,17 @@ import { addCounter } from '../../modules/HabitProvider'
 import plusIcon from './images/plus.svg';
 import { Link } from 'react-router-dom';
 import greenUp from './images/green-up.png'
+import redUp from './images/red-up.png'
 
 export const IncreaseCount = ({ habit, fetchHabits }) => {
   const [ count, setCount ] = useState({});
   const [ isLoading, setIsLoading ] = useState(false);
+
+  const redOrGreenUp = () => {
+    if (habit.goodHabit === true) {
+      return greenUp
+    } else { return redUp }
+  }
 
   const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
@@ -25,7 +32,7 @@ export const IncreaseCount = ({ habit, fetchHabits }) => {
     <>
       <Link onClick={ handleIncreaseCount } to=''>
         <div className='habit--plus'>
-          <img src={ greenUp } alt='add to habit icon' />
+          <img src={ redOrGreenUp() } alt='add to habit icon' />
         </div>
       </Link>
     </>

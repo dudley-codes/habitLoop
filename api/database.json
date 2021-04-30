@@ -35,7 +35,7 @@
     {
       "id": 1,
       "userId": 7,
-      "habit": "Work Out!!!!",
+      "habit": "Work Out",
       "frequency": 20,
       "habitStart": 1617295277,
       "goodHabit": true,
@@ -111,6 +111,16 @@
       "habitStart": 1619723481578,
       "goodHabit": true,
       "id": 8
+    },
+    {
+      "userId": 7,
+      "habit": "test",
+      "cue": "test",
+      "reward": "test",
+      "frequency": 21,
+      "habitStart": 1619730574747,
+      "goodHabit": true,
+      "id": 9
     }
   ],
   "count": [
@@ -786,6 +796,111 @@
       "date": 1619729945896,
       "habitId": 1,
       "id": 157
+    },
+    {
+      "date": 1619730531803,
+      "habitId": 1,
+      "id": 158
+    },
+    {
+      "date": 1619730534064,
+      "habitId": 1,
+      "id": 159
+    },
+    {
+      "date": 1619730534638,
+      "habitId": 1,
+      "id": 160
+    },
+    {
+      "date": 1619730534909,
+      "habitId": 1,
+      "id": 161
+    },
+    {
+      "date": 1619730535054,
+      "habitId": 1,
+      "id": 162
+    },
+    {
+      "date": 1619730535201,
+      "habitId": 1,
+      "id": 163
+    },
+    {
+      "date": 1619730535370,
+      "habitId": 1,
+      "id": 164
+    },
+    {
+      "date": 1619730535572,
+      "habitId": 1,
+      "id": 165
+    },
+    {
+      "date": 1619730535842,
+      "habitId": 1,
+      "id": 166
+    },
+    {
+      "date": 1619730536021,
+      "habitId": 1,
+      "id": 167
+    },
+    {
+      "date": 1619730561031,
+      "habitId": 1,
+      "id": 168
+    },
+    {
+      "date": 1619730561412,
+      "habitId": 1,
+      "id": 169
+    },
+    {
+      "date": 1619730561751,
+      "habitId": 1,
+      "id": 170
+    },
+    {
+      "date": 1619730561976,
+      "habitId": 1,
+      "id": 171
+    },
+    {
+      "date": 1619730562156,
+      "habitId": 1,
+      "id": 172
+    },
+    {
+      "date": 1619730562370,
+      "habitId": 1,
+      "id": 173
+    },
+    {
+      "date": 1619730562549,
+      "habitId": 1,
+      "id": 174
+    },
+    {
+      "date": 1619730562740,
+      "habitId": 1,
+      "id": 175
+    },
+    {
+      "date": 1619730562946,
+      "habitId": 1,
+      "id": 176
+    },
+    {
+      "date": 1619730563134,
+      "habitId": 1,
+      "id": 177
+    },
+    {
+      "date": 1619730563371,
+      "habitId": 1,
+      "id": 178
     }
   ]
 }

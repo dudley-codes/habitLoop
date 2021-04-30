@@ -31,7 +31,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
                 fetchHabits={ fetchHabits }
               />
             </div>
-            <div className='habit--card__percent'>{ habitGoal }%</div>
+            {/* <div className='habit--card__percent'>Goal: { habit.frequency }x/week</div> */ }
           </div>
           <div className='habit--progress__cont'>
             {/* <div className='habit--minus'>
@@ -77,9 +77,9 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
 
-            <div className='habit--minus'>
-              <img src={ minusIcon } alt='subtract from habit icon' />
-            </div>
+            <IncreaseCount
+              habit={ habit }
+              fetchHabits={ fetchHabits } />
           </div>
         </div>
       </>
