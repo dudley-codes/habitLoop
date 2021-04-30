@@ -8,7 +8,6 @@ import { updateHabit, getHabitById, deleteHabit } from '../../modules/HabitProvi
 export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ show, setShow ] = useState(false);
   const [ habit, setHabit ] = useState({ habit: '' });
-  const [ habits, setHabits ] = useState({})
   const [ isLoading, setIsLoading ] = useState(false);
 
   // When called, closes the Modal
@@ -23,7 +22,6 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
     deleteHabit(id)
       .then(fetchHabits())
       .then(handleClose)
-
   }
 
   // Executes the modal

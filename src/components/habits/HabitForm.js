@@ -10,6 +10,7 @@ import { HabitGraphic } from './HabitGraphic'
 export const NewHabit = () => {
   const [ radioValue, setRadioValue ] = useState(1);
 
+  let currentRadioValue = { ...radioValue }
   // Names toggle buttons
   const HabitToggle = () => {
     const radios = [
@@ -68,7 +69,7 @@ export const NewHabit = () => {
           <h3 className='habit-form__title'>New Habit</h3>
           <HabitToggle />
           <form className='habit-form'>
-            <RenderForm />
+            <GoodHabit />
           </form>
         </div>
 

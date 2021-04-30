@@ -3,9 +3,9 @@ import './ProfileCard.css'
 import profilePic from './images/rick-sanchez.jpeg'
 import { getAllUsers } from '../../modules/UserDataManager';
 
-const currentUserId = sessionStorage.getItem('user_id')
 export const ProfileCard = () => {
   const [ user, setUser ] = useState('');
+  const currentUserId = sessionStorage.getItem('user_id')
 
 
   const getCurrentUser = () => {

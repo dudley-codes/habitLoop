@@ -3,7 +3,6 @@
 }
 
 .habit--container {
-  /* border: solid black 2px; */
   margin: 30px 0 0 30px;
   width: 400px;
   justify-content: center;
@@ -20,14 +19,7 @@
 
 .habit--progress__cont {
   display: flex;
-  /* border: black 1px solid; */
 }
-
-/* .habit--plus, .habit--minus {
-  margin: -5px 0 20px 5px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-} */
 
 .habit--plus img {
   width: 20px;
@@ -37,13 +29,10 @@
   display: flex;
   justify-content: space-between;
   width: 300px;
-  /* border: black 1px solid; */
 }
 
 .habit--card__habit {
   display: flex;
-  /* margin-bottom: -10px; */
-  /* border: black 1px solid; */
 }
 
 .edit--icon {
@@ -59,27 +48,22 @@
   flex-direction: column;
   width: 50px;
   margin-top: 15px;
-  /* border: black 1px solid; */
 
 }
 
 .up-down__count {
   text-align: center;
-  /* border: black 1px solid; */
 }
 
 .habit--plus, .habit--minus {
   display: flex;
   justify-content: center;
-
 }
 
 .habit--card {
   display: flex;
 padding-bottom: 15px;
   align-content: center;
-  /* border: black 1px solid; */
-  /* flex-wrap: wrap; */
 }
 
 .button-container {

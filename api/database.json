@@ -35,7 +35,7 @@
     {
       "id": 1,
       "userId": 7,
-      "habit": "Work Out",
+      "habit": "Work Out!!",
       "frequency": 20,
       "habitStart": 1617295277,
       "goodHabit": true,
@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking!!!!",
+      "habit": "Quit Smoking",
       "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -71,6 +71,50 @@
       "goodHabit": false,
       "habitStart": 1619809291659,
       "id": 5
+    },
+    {
+      "userId": 11,
+      "habit": "habit",
+      "cue": "sdfsdf",
+      "frequency": 6,
+      "habitStart": 1619811881360,
+      "goodHabit": true,
+      "id": 6
+    },
+    {
+      "userId": 11,
+      "habit": "bad",
+      "cue": "sdfds",
+      "reward": "sdfs",
+      "frequency": 8,
+      "habitStart": 1619811896827,
+      "goodHabit": true,
+      "id": 7
+    },
+    {
+      "userId": 7,
+      "habit": "Good Habit",
+      "frequency": 56,
+      "habitStart": 1619814875239,
+      "goodHabit": true,
+      "id": 8
+    },
+    {
+      "userId": 7,
+      "habit": "Good habit",
+      "frequency": 7,
+      "habitStart": 1619814999531,
+      "goodHabit": true,
+      "id": 9
+    },
+    {
+      "userId": 7,
+      "habit": "Quit Smoking",
+      "cue": "after eating a meal",
+      "frequency": 8,
+      "habitStart": 1619815017416,
+      "goodHabit": true,
+      "id": 10
     }
   ],
   "count": [
@@ -1246,6 +1290,336 @@
       "date": 1619809242495,
       "habitId": 2,
       "id": 404
+    },
+    {
+      "date": 1619811883868,
+      "habitId": 6,
+      "id": 405
+    },
+    {
+      "date": 1619811884051,
+      "habitId": 6,
+      "id": 406
+    },
+    {
+      "date": 1619811884228,
+      "habitId": 6,
+      "id": 407
+    },
+    {
+      "date": 1619811884409,
+      "habitId": 6,
+      "id": 408
+    },
+    {
+      "date": 1619811884600,
+      "habitId": 6,
+      "id": 409
+    },
+    {
+      "date": 1619811884802,
+      "habitId": 6,
+      "id": 410
+    },
+    {
+      "date": 1619811884970,
+      "habitId": 6,
+      "id": 411
+    },
+    {
+      "date": 1619814762332,
+      "habitId": 2,
+      "id": 412
+    },
+    {
+      "date": 1619814763447,
+      "habitId": 2,
+      "id": 413
+    },
+    {
+      "date": 1619814765065,
+      "habitId": 2,
+      "id": 414
+    },
+    {
+      "date": 1619814766055,
+      "habitId": 2,
+      "id": 415
+    },
+    {
+      "date": 1619814769216,
+      "habitId": 2,
+      "id": 416
+    },
+    {
+      "date": 1619814851140,
+      "habitId": 5,
+      "id": 417
+    },
+    {
+      "date": 1619814877296,
+      "habitId": 8,
+      "id": 418
+    },
+    {
+      "date": 1619814878703,
+      "habitId": 8,
+      "id": 419
+    },
+    {
+      "date": 1619814879411,
+      "habitId": 8,
+      "id": 420
+    },
+    {
+      "date": 1619814879962,
+      "habitId": 8,
+      "id": 421
+    },
+    {
+      "date": 1619814880548,
+      "habitId": 8,
+      "id": 422
+    },
+    {
+      "date": 1619814880772,
+      "habitId": 8,
+      "id": 423
+    },
+    {
+      "date": 1619814880975,
+      "habitId": 8,
+      "id": 424
+    },
+    {
+      "date": 1619814881144,
+      "habitId": 8,
+      "id": 425
+    },
+    {
+      "date": 1619814881335,
+      "habitId": 8,
+      "id": 426
+    },
+    {
+      "date": 1619814881516,
+      "habitId": 8,
+      "id": 427
+    },
+    {
+      "date": 1619814881694,
+      "habitId": 8,
+      "id": 428
+    },
+    {
+      "date": 1619814881920,
+      "habitId": 8,
+      "id": 429
+    },
+    {
+      "date": 1619814882212,
+      "habitId": 8,
+      "id": 430
+    },
+    {
+      "date": 1619814882685,
+      "habitId": 8,
+      "id": 431
+    },
+    {
+      "date": 1619814883157,
+      "habitId": 8,
+      "id": 432
+    },
+    {
+      "date": 1619814883642,
+      "habitId": 8,
+      "id": 433
+    },
+    {
+      "date": 1619814884080,
+      "habitId": 8,
+      "id": 434
+    },
+    {
+      "date": 1619814884564,
+      "habitId": 8,
+      "id": 435
+    },
+    {
+      "date": 1619814885014,
+      "habitId": 8,
+      "id": 436
+    },
+    {
+      "date": 1619814885452,
+      "habitId": 8,
+      "id": 437
+    },
+    {
+      "date": 1619814885914,
+      "habitId": 8,
+      "id": 438
+    },
+    {
+      "date": 1619814918224,
+      "habitId": 1,
+      "id": 439
+    },
+    {
+      "date": 1619814918505,
+      "habitId": 1,
+      "id": 440
+    },
+    {
+      "date": 1619814918809,
+      "habitId": 1,
+      "id": 441
+    },
+    {
+      "date": 1619814919035,
+      "habitId": 1,
+      "id": 442
+    },
+    {
+      "date": 1619814919968,
+      "habitId": 2,
+      "id": 443
+    },
+    {
+      "date": 1619814920237,
+      "habitId": 2,
+      "id": 444
+    },
+    {
+      "date": 1619814920496,
+      "habitId": 2,
+      "id": 445
+    },
+    {
+      "date": 1619814920721,
+      "habitId": 2,
+      "id": 446
+    },
+    {
+      "date": 1619814921048,
+      "habitId": 2,
+      "id": 447
+    },
+    {
+      "date": 1619814921239,
+      "habitId": 2,
+      "id": 448
+    },
+    {
+      "date": 1619814921533,
+      "habitId": 2,
+      "id": 449
+    },
+    {
+      "date": 1619814921712,
+      "habitId": 2,
+      "id": 450
+    },
+    {
+      "date": 1619814921891,
+      "habitId": 2,
+      "id": 451
+    },
+    {
+      "date": 1619814947485,
+      "habitId": 2,
+      "id": 452
+    },
+    {
+      "date": 1619814948048,
+      "habitId": 2,
+      "id": 453
+    },
+    {
+      "date": 1619814948250,
+      "habitId": 2,
+      "id": 454
+    },
+    {
+      "date": 1619814948520,
+      "habitId": 2,
+      "id": 455
+    },
+    {
+      "date": 1619814956812,
+      "habitId": 1,
+      "id": 456
+    },
+    {
+      "date": 1619814957261,
+      "habitId": 1,
+      "id": 457
+    },
+    {
+      "date": 1619814957442,
+      "habitId": 1,
+      "id": 458
+    },
+    {
+      "date": 1619814957622,
+      "habitId": 1,
+      "id": 459
+    },
+    {
+      "date": 1619814957813,
+      "habitId": 1,
+      "id": 460
+    },
+    {
+      "date": 1619814957982,
+      "habitId": 1,
+      "id": 461
+    },
+    {
+      "date": 1619814958185,
+      "habitId": 1,
+      "id": 462
+    },
+    {
+      "date": 1619814958387,
+      "habitId": 1,
+      "id": 463
+    },
+    {
+      "date": 1619814958559,
+      "habitId": 1,
+      "id": 464
+    },
+    {
+      "date": 1619814958728,
+      "habitId": 1,
+      "id": 465
+    },
+    {
+      "date": 1619814958904,
+      "habitId": 1,
+      "id": 466
+    },
+    {
+      "date": 1619814959095,
+      "habitId": 1,
+      "id": 467
+    },
+    {
+      "date": 1619814959275,
+      "habitId": 1,
+      "id": 468
+    },
+    {
+      "date": 1619814959456,
+      "habitId": 1,
+      "id": 469
+    },
+    {
+      "date": 1619814959635,
+      "habitId": 1,
+      "id": 470
     }
   ]
 }

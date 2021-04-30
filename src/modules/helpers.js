@@ -1,7 +1,6 @@
 export const getCurrentMonth = () => {
   const today = new Date();
   const currentMonth = today.getMonth()
-
   return currentMonth
 }
 
@@ -12,8 +11,6 @@ export const getCurrentYear = () => {
   return currentYear
 }
 
-
-console.log('monthYear', getCurrentYear())
 // instantiate a date object
 const dt = new Date();
 
