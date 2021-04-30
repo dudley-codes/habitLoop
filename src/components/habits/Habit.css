@@ -87,3 +87,12 @@ padding-bottom: 15px;
   justify-content: space-between;
   width: 100%;
 }
+
+.habit-graphic img {
+  height: 500px;
+}
+
+.new-habit__container {
+  display: flex;
+  margin-right: 20px;
+}

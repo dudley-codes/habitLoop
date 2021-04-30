@@ -11,12 +11,14 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ habits, setHabits ] = useState({})
   const [ isLoading, setIsLoading ] = useState(false);
 
+  // When called, closes the Modal
   const handleClose = () => {
     fetchHabits()
       .then(() => setIsLoading(false))
       .then(() => setShow(false))
   };
 
+  // Deletes a habit, fetches updated habit list, and then closes the modal.
   const handleDelete = (id) => {
     deleteHabit(id)
       .then(fetchHabits())
@@ -24,14 +26,17 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
 
   }
 
+  // Executes the modal
   const handleShow = () => setShow(true);
 
+  // Sets the habit to be edited
   const handleFieldChange = (e) => {
     const habitToChange = { ...habit };
     habitToChange[ e.target.id ] = e.target.value
     setHabit(habitToChange)
   }
 
+  // Writes the updated habit to the JSON server
   const updateExistingHabit = (e) => {
     e.preventDefault();
     setIsLoading(true)
@@ -60,6 +65,7 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
       })
   }, [])
 
+  // Returns edit modal with form filled out with info to be edited.
   return (
     <>
       <Link onClick={ handleShow } to=''>
