@@ -40,65 +40,60 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     goodHabit ?
       <>
         <div className='habit--card'>
-          <div className='habit--card__details'>
-            <div className='habit--card__habit'>
-              <div>{ habit.habit }</div>
-              <HabitEditModal
-                habitId={ habit.id }
-                fetchHabits={ fetchHabits }
-              />
-            </div>
-            {/* <div className='habit--card__percent'>Goal: { habit.frequency }x/week</div> */ }
-          </div>
-          <div className='habit--progress__cont'>
-            {/* <div className='habit--minus'>
-              <img src={ minusIcon } alt='subtract from habit icon' />
-            </div> */}
-            <div className='habit--progress'>
-              <div>
-                <ProgressBar now={ monthlyCount } variant='success' />
+          <div className='habit--card__outer'>
+            <div className='habit--card__details'>
+              <div className='habit--card__habit'>
+                <div>{ habit.habit }</div>
+                <HabitEditModal
+                  habitId={ habit.id }
+                  fetchHabits={ fetchHabits }
+                />
               </div>
             </div>
-            <IncreaseCount
-              habit={ habit }
-              fetchHabits={ fetchHabits }
-              monthlyCount={ monthlyCount } />
-            {/* <div className='habit--plus'>
-              <img src={ plusIcon } alt='add to habit icon' />
-            </div> */}
-            {/* <div className='habit--minus'>
-              <img src={ minusIcon } alt='subtract from habit icon' />
-            </div> */}
+            <div className='habit--progress__cont'>
+              <div className='habit--progress'>
+                <div>
+                  <ProgressBar now={ monthlyCount } variant='success' />
+                </div>
+              </div>
+            </div>
           </div>
+          <IncreaseCount
+            habit={ habit }
+            fetchHabits={ fetchHabits }
+            filterHabits={ filterHabits } />
         </div>
       </>
       :
       <>
         <div className='habit--card'>
-          <div className='habit--card__details'>
-            <div className='habit--card__habit'>
-              <div>{ habit.habit }</div>
-              <HabitEditModal
-                habit={ habit }
-                fetchHabits={ fetchHabits }
-              />
+          <div className='habit--card__outer'>
+
+            <div className='habit--card__details'>
+              <div className='habit--card__habit'>
+                <div>{ habit.habit }</div>
+                <HabitEditModal
+                  habit={ habit }
+                  fetchHabits={ fetchHabits }
+                />
+              </div>
+              <div className='habit--card__percent'>{ badHabitFreq() }%</div>
             </div>
-            <div className='habit--card__percent'>{ badHabitFreq() }%</div>
-          </div>
-          <div className='habit--progress__cont'>
-            {/* <div className='habit--plus'>
+            <div className='habit--progress__cont'>
+              {/* <div className='habit--plus'>
               <img src={ plusIcon } alt='add to habit icon' />
             </div> */}
-            <div className='habit--progress'>
-              <div>
-                <ProgressBar now={ badHabitFreq() } variant='danger' />
+              <div className='habit--progress'>
+                <div>
+                  <ProgressBar now={ badHabitFreq() } variant='danger' />
+                </div>
               </div>
             </div>
-
-            <IncreaseCount
-              habit={ habit }
-              fetchHabits={ fetchHabits } />
           </div>
+          <IncreaseCount
+            habit={ habit }
+            fetchHabits={ fetchHabits }
+            filterHabits={ filterHabits } />
         </div>
       </>
   )
