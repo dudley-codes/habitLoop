@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { HabitCard } from './HabitCard'
 import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
-import { getCurrentMonth, getCurrentYear } from '../../modules/helpers';
 
 export const HabitList = () => {
 
   const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
 
+  // fetches all habits that belong to the current signed in user
   const fetchHabits = () => {
     const filterHabits = getHabitsByUser(currentUserId)
       .then(res => setHabits(res))
@@ -18,7 +18,7 @@ export const HabitList = () => {
   useEffect(() => {
     fetchHabits()
   }, [])
-
+  // Returns habit cards for all user habits
   return (
     <>
       <section className='dashboard--container'>

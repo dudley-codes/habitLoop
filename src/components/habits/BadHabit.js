@@ -3,22 +3,13 @@ import { useHistory } from 'react-router-dom'
 import { addHabit } from '../../modules/HabitProvider'
 
 export const BadHabit = () => {
-
   const [ habit, setHabit ] = useState({})
-
-  // const currentMonth = getCurrentMonth()
-
-
-
   const [ isLoading, setIsLoading ] = useState(false);
-
-
-
-
   const history = useHistory();
 
   const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
+  // Parses ID and frequency
   const handleControlledInputChange = (e) => {
     const newHabit = { ...habit };
     newHabit.userId = currentUserId
@@ -32,6 +23,7 @@ export const BadHabit = () => {
     setHabit(newHabit)
   }
 
+  // Saves new habit to JSON server then renders dashboard
   const handleClickSaveHabit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -45,6 +37,8 @@ export const BadHabit = () => {
       .then(() => history.push('/'))
   }
 
+  // renders bad habit form
+  // TODO: I need to do some rafactoring so that this is combined with GoodHabit.js
   return (
     <>
 

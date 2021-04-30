@@ -9,6 +9,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
 
   const goodHabit = habit.goodHabit
 
+  // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
     const filter = habit.count.filter(count => {
       let date = new Date(count.date)
@@ -21,9 +22,15 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     return filter.length
   }
 
-  const monthlyCount = Math.floor((filterHabits()) / (habit.frequency * 4) * 100)
+  // Takes habit.frequency (weekly habit goal) and divides by 7. This gives us a daily average number that we multiply times the 
+  // number of days in the month. We then divide our current monthly count by this number and multiply times 100 to give us the 
+  // current progress towards a particular goal.
+  const monthlyPercentage = Math.floor((filterHabits()) / (habit.frequency / 7 * daysInMonth) * 100)
 
-
+  // Calculates the bad habit frequency in the same manner as above. In a bad habit, habit.frequency represents 
+  // a users average habit count per week. Again, we divide this number by 7 and multiply times the number of days in the month
+  // in order to get our monthly total. Because NOT doing the habit means success, we subtract current habit.count.length from
+  // this number. Meaning we start at 100% and every time the habit is performed, the user approaches zero. 
   const badHabitFreq = () => {
     const habitDays = habit.frequency / 7 * daysInMonth
     const habitTotal = Math.floor(((habitDays - filterHabits()) / habitDays) * 100)
@@ -31,6 +38,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     return habitTotal
   }
 
+  // returns the habit card that contains the habit name, current progress and allows the user to increase or decrease a habit count.
   return (
     goodHabit ?
       <>
@@ -48,7 +56,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
                 <div>
-                  <ProgressBar now={ monthlyCount } variant='success' />
+                  <ProgressBar now={ monthlyPercentage } variant='success' />
                 </div>
               </div>
             </div>

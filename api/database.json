@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking",
+      "habit": "Quit Smoking!!!!",
       "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -63,14 +63,14 @@
       "reward": "feeling better"
     },
     {
-      "id": 5,
       "userId": 7,
-      "habit": "Quit Smoking",
-      "frequency": "300",
-      "habitStart": 1619801717960,
+      "habit": "Bad Habit",
+      "cue": "test",
+      "reward": "test",
+      "frequency": 7,
       "goodHabit": false,
-      "cue": "feeling stressed",
-      "reward": "feeling better"
+      "habitStart": 1619809291659,
+      "id": 5
     }
   ],
   "count": [
@@ -818,11 +818,6 @@
       "id": 213
     },
     {
-      "date": 1619747353451,
-      "habitId": 1,
-      "id": 214
-    },
-    {
       "date": 1619747354933,
       "habitId": 2,
       "id": 215
@@ -1103,44 +1098,9 @@
       "id": 270
     },
     {
-      "date": 1619748001635,
-      "habitId": 1,
-      "id": 330
-    },
-    {
-      "date": 1619748002264,
-      "habitId": 1,
-      "id": 331
-    },
-    {
-      "date": 1619748002791,
-      "habitId": 1,
-      "id": 332
-    },
-    {
-      "date": 1619748002916,
-      "habitId": 1,
-      "id": 333
-    },
-    {
-      "date": 1619798286099,
-      "habitId": 1,
-      "id": 334
-    },
-    {
-      "date": 1619798286672,
-      "habitId": 1,
-      "id": 335
-    },
-    {
       "date": 1619798287920,
       "habitId": 2,
       "id": 336
-    },
-    {
-      "date": 1619798469924,
-      "habitId": 1,
-      "id": 337
     },
     {
       "date": 1619800802462,
@@ -1148,194 +1108,144 @@
       "id": 338
     },
     {
-      "date": 1619801729649,
-      "habitId": 5,
-      "id": 339
+      "date": 1619809227928,
+      "habitId": 1,
+      "id": 377
     },
     {
-      "date": 1619801730369,
-      "habitId": 5,
-      "id": 340
+      "date": 1619809228140,
+      "habitId": 1,
+      "id": 378
     },
     {
-      "date": 1619801730594,
-      "habitId": 5,
-      "id": 341
+      "date": 1619809228579,
+      "habitId": 1,
+      "id": 379
     },
     {
-      "date": 1619801730765,
-      "habitId": 5,
-      "id": 342
+      "date": 1619809228860,
+      "habitId": 1,
+      "id": 380
     },
     {
-      "date": 1619801730954,
-      "habitId": 5,
-      "id": 343
+      "date": 1619809230334,
+      "habitId": 1,
+      "id": 381
     },
     {
-      "date": 1619801731133,
-      "habitId": 5,
-      "id": 344
+      "date": 1619809230481,
+      "habitId": 1,
+      "id": 382
     },
     {
-      "date": 1619801731304,
-      "habitId": 5,
-      "id": 345
+      "date": 1619809230660,
+      "habitId": 1,
+      "id": 383
     },
     {
-      "date": 1619801731505,
-      "habitId": 5,
-      "id": 346
+      "date": 1619809230896,
+      "habitId": 1,
+      "id": 384
     },
     {
-      "date": 1619801731686,
-      "habitId": 5,
-      "id": 347
+      "date": 1619809231269,
+      "habitId": 1,
+      "id": 385
     },
     {
-      "date": 1619801731854,
-      "habitId": 5,
-      "id": 348
+      "date": 1619809231763,
+      "habitId": 1,
+      "id": 386
     },
     {
-      "date": 1619801732067,
-      "habitId": 5,
-      "id": 349
+      "date": 1619809232696,
+      "habitId": 1,
+      "id": 387
     },
     {
-      "date": 1619801732205,
-      "habitId": 5,
-      "id": 350
+      "date": 1619809232921,
+      "habitId": 1,
+      "id": 388
     },
     {
-      "date": 1619801732371,
-      "habitId": 5,
-      "id": 351
+      "date": 1619809233304,
+      "habitId": 1,
+      "id": 389
     },
     {
-      "date": 1619801732551,
-      "habitId": 5,
-      "id": 352
+      "date": 1619809238401,
+      "habitId": 2,
+      "id": 390
     },
     {
-      "date": 1619801732708,
-      "habitId": 5,
-      "id": 353
+      "date": 1619809238603,
+      "habitId": 2,
+      "id": 391
     },
     {
-      "date": 1619801732877,
-      "habitId": 5,
-      "id": 354
+      "date": 1619809238805,
+      "habitId": 2,
+      "id": 392
     },
     {
-      "date": 1619801733035,
-      "habitId": 5,
-      "id": 355
+      "date": 1619809240268,
+      "habitId": 2,
+      "id": 393
     },
     {
-      "date": 1619801733192,
-      "habitId": 5,
-      "id": 356
+      "date": 1619809240504,
+      "habitId": 2,
+      "id": 394
     },
     {
-      "date": 1619801733372,
-      "habitId": 5,
-      "id": 357
+      "date": 1619809240853,
+      "habitId": 2,
+      "id": 395
     },
     {
-      "date": 1619801733542,
-      "habitId": 5,
-      "id": 358
+      "date": 1619809241033,
+      "habitId": 2,
+      "id": 396
     },
     {
-      "date": 1619801735488,
-      "habitId": 5,
-      "id": 359
+      "date": 1619809241201,
+      "habitId": 2,
+      "id": 397
     },
     {
-      "date": 1619801735634,
-      "habitId": 5,
-      "id": 360
+      "date": 1619809241359,
+      "habitId": 2,
+      "id": 398
     },
     {
-      "date": 1619801735802,
-      "habitId": 5,
-      "id": 361
+      "date": 1619809241550,
+      "habitId": 2,
+      "id": 399
     },
     {
-      "date": 1619801735960,
-      "habitId": 5,
-      "id": 362
+      "date": 1619809241731,
+      "habitId": 2,
+      "id": 400
     },
     {
-      "date": 1619801736117,
-      "habitId": 5,
-      "id": 363
+      "date": 1619809241922,
+      "habitId": 2,
+      "id": 401
     },
     {
-      "date": 1619801736286,
-      "habitId": 5,
-      "id": 364
+      "date": 1619809242102,
+      "habitId": 2,
+      "id": 402
     },
     {
-      "date": 1619801736445,
-      "habitId": 5,
-      "id": 365
+      "date": 1619809242293,
+      "habitId": 2,
+      "id": 403
     },
     {
-      "date": 1619801736602,
-      "habitId": 5,
-      "id": 366
-    },
-    {
-      "date": 1619801736759,
-      "habitId": 5,
-      "id": 367
-    },
-    {
-      "date": 1619801736929,
-      "habitId": 5,
-      "id": 368
-    },
-    {
-      "date": 1619801743059,
-      "habitId": 5,
-      "id": 369
-    },
-    {
-      "date": 1619801743238,
-      "habitId": 5,
-      "id": 370
-    },
-    {
-      "date": 1619801743407,
-      "habitId": 5,
-      "id": 371
-    },
-    {
-      "date": 1619801743565,
-      "habitId": 5,
-      "id": 372
-    },
-    {
-      "date": 1619801743745,
-      "habitId": 5,
-      "id": 373
-    },
-    {
-      "date": 1619801743914,
-      "habitId": 5,
-      "id": 374
-    },
-    {
-      "date": 1619801744071,
-      "habitId": 5,
-      "id": 375
-    },
-    {
-      "date": 1619801744219,
-      "habitId": 5,
-      "id": 376
+      "date": 1619809242495,
+      "habitId": 2,
+      "id": 404
     }
   ]
 }

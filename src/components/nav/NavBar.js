@@ -7,10 +7,8 @@ import logo from './logo.png'
 import { userStorageKey } from "../../auth/authSettings"
 
 const Logout = () => {
+  sessionStorage.setItem(userStorageKey, "")
 
-  if (window.confirm("Are you sure you want to log out?")) {
-    sessionStorage.setItem(userStorageKey, "")
-  }
 }
 
 

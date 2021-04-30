@@ -10,6 +10,7 @@ export const GoodHabit = () => {
 
   const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
+  // Parses ID and frequency
   const handleControlledInputChange = (e) => {
     const newHabit = { ...habit };
     newHabit.userId = currentUserId
@@ -22,7 +23,7 @@ export const GoodHabit = () => {
 
     setHabit(newHabit)
   }
-
+  // Saves new habit to JSON server then renders dashboard
   const handleClickSaveHabit = (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -35,6 +36,8 @@ export const GoodHabit = () => {
     addHabit(newHabit)
       .then(() => history.push('/'))
   }
+  // renders bad habit form
+  // TODO: I need to do some rafactoring so that this is combined with BadHabit.js
 
   return (
     <>
