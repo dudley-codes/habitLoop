@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from 'react-router-dom'
-import { addCounter } from '../../modules/HabitProvider'
+import { addCounter, decreaseCount } from '../../modules/HabitProvider'
 import plusIcon from './images/plus.svg';
 import { Link } from 'react-router-dom';
 import greenUp from './images/green-up.png'
@@ -24,6 +24,15 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits }) => {
     } else { return greenDwn }
   }
 
+  const handleDecreaseCount = () => {
+    setIsLoading(true)
+    decreaseCount(habit.count[ habit.count.length - 1 ].id)
+      .then(() => setIsLoading(false))
+      .then(() => fetchHabits())
+  }
+
+  // console.log('habitCount', habit.count)
+
   const currentUserId = parseInt(sessionStorage.getItem('user_id'))
 
   const handleIncreaseCount = (e) => {
@@ -45,7 +54,7 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits }) => {
           </div>
         </Link>
         <div className='up-down__count'>{ filterHabits() }</div>
-        <Link onClick={ handleIncreaseCount } to='' disabled={ isLoading } >
+        <Link onClick={ handleDecreaseCount } to='' disabled={ isLoading } >
           <div className='habit--plus'>
             <img src={ redOrGreenDwn() } alt='subtract from habit icon' />
           </div>

@@ -65,3 +65,15 @@ export const updateHabit = (editedHabit) => {
     body: JSON.stringify(editedHabit)
   }).then(data => data.json())
 }
+
+export const deleteHabit = (id) => {
+  return fetch(`${ remoteURL }/habits/${ id }`, {
+    method: "DELETE",
+  }).then(res => res.json())
+}
+
+export const decreaseCount = (id) => {
+  return fetch(`${ remoteURL }/count/${ id }`, {
+    method: "DELETE",
+  }).then(res => res.json())
+}

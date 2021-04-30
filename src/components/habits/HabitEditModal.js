@@ -3,11 +3,12 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import editIcon from './images/edit-icon.svg';
 import { Link } from 'react-router-dom';
-import { updateHabit, getHabitById } from '../../modules/HabitProvider';
+import { updateHabit, getHabitById, deleteHabit } from '../../modules/HabitProvider';
 
 export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ show, setShow ] = useState(false);
   const [ habit, setHabit ] = useState({ habit: '' });
+  const [ habits, setHabits ] = useState({})
   const [ isLoading, setIsLoading ] = useState(false);
 
   const handleClose = () => {
@@ -15,6 +16,13 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
       .then(() => setIsLoading(false))
       .then(() => setShow(false))
   };
+
+  const handleDelete = (id) => {
+    deleteHabit(id)
+      .then(fetchHabits())
+      .then(handleClose)
+
+  }
 
   const handleShow = () => setShow(true);
 
@@ -124,16 +132,31 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
 
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={ handleClose }>
-            Close
+          <div className='button-container'>
+            <div className='button-container__delete'>
+              <Button
+                variant='danger'
+                onClick={ () => handleDelete(habitId) }
+                disabled={ isLoading }>
+                Delete
+                </Button>
+            </div>
+
+            <div className='button-container__save'>
+              <Button
+                variant="secondary"
+                onClick={ handleClose }>
+                Close
           </Button>
-          <Button
-            variant="primary"
-            onClick={ updateExistingHabit }
-            disabled={ isLoading }
-          >
-            Save Changes
+              <Button
+                variant="primary"
+                onClick={ updateExistingHabit }
+                disabled={ isLoading }
+              >
+                Save Changes
           </Button>
+            </div>
+          </div>
         </Modal.Footer>
       </Modal>
     </>
