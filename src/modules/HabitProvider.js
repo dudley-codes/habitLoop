@@ -71,3 +71,9 @@ export const deleteHabit = (id) => {
     method: "DELETE",
   }).then(res => res.json())
 }
+
+export const decreaseCount = (id) => {
+  return fetch(`${ remoteURL }/count/${ id }`, {
+    method: "DELETE",
+  }).then(res => res.json())
+}
