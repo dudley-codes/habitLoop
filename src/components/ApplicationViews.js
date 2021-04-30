@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route } from "react-router-dom";
-import { NewHabit } from './data/HabitForm';
-import { HabitList } from './data/HabitList';
+import { NewHabit } from './habits/HabitForm';
+import { HabitList } from './habits/HabitList';
 import { ProfileCard } from './user/ProfileCard'
 
 

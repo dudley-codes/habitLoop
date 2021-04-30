@@ -26,6 +26,16 @@ export const addHabit = (newHabit) => {
   }).then(res => res.json())
 }
 
+export const addCount = (count) => {
+  return fetch(`${ remoteURL }/count`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    },
+    body: JSON.stringify(count)
+  }).then(res => res.json())
+}
+
 export const checkCounter = (count) => {
   return fetch(`${ remoteURL }/habits?_embed=count`)
     .then(res => res.json())
