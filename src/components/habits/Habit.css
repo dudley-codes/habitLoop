@@ -58,7 +58,7 @@
   display: flex;
   flex-direction: column;
   width: 50px;
-  margin-top: 15px;
+  margin-top: 18px;
   /* border: black 1px solid; */
 
 }
@@ -95,4 +95,24 @@ padding-bottom: 15px;
 .new-habit__container {
   display: flex;
   margin-right: 20px;
+}
+
+/* Progress Bars */
+.bg-good {
+  background-color: #007bff !important;
+  color: white !important;
+}
+
+.progress-habit {
+  padding: 10rem 1.5rem;
+  margin: 100px;
+  height: 50px !important;
+}
+
+.btn-flat {
+  background-color: blueviolet !important;
+}
+
+.bg-bad {
+  background-color: darkred !important;
 }

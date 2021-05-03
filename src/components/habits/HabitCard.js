@@ -4,6 +4,7 @@ import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/help
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
+import { Redirect } from 'react-router';
 
 export const HabitCard = ({ habit, fetchHabits }) => {
 
@@ -38,6 +39,23 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     return habitTotal
   }
 
+  const progStyle = {
+    height: '30px',
+    color: 'red'
+  }
+
+  // If progress in bad habit is over 50%, set to good color, if between 
+  // 25% and 50%, set to yellow. Below 50%, set to red.
+  const goodOrBadProg = () => {
+    if (badHabitFreq() >= 75) {
+      return 'good'
+    } else if (badHabitFreq() >= 25 & badHabitFreq() < 75) {
+      return 'warning'
+    } else {
+      return 'danger'
+    }
+  }
+
   // returns the habit card that contains the habit name, current progress and allows the user to increase or decrease a habit count.
   return (
     goodHabit ?
@@ -55,8 +73,9 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             </div>
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
+
                 <div>
-                  <ProgressBar now={ monthlyPercentage } variant='success' />
+                  <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } />
                 </div>
               </div>
             </div>
@@ -84,7 +103,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
                 <div>
-                  <ProgressBar now={ badHabitFreq() } variant='danger' />
+                  <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } />
                 </div>
               </div>
             </div>
