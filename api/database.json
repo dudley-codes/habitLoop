@@ -45,7 +45,7 @@
     {
       "id": 2,
       "userId": 7,
-      "habit": "Quit Smoking!!!!",
+      "habit": "Quit Smoking",
       "frequency": "70",
       "habitStart": 1617295277,
       "goodHabit": false,
@@ -63,14 +63,20 @@
       "reward": "feeling better"
     },
     {
+      "id": 5,
       "userId": 7,
-      "habit": "Bad Habit",
-      "cue": "test",
-      "reward": "test",
-      "frequency": 7,
-      "goodHabit": false,
-      "habitStart": 1619809291659,
-      "id": 5
+      "habit": "Bad Habit!!!",
+      "frequency": 54,
+      "habitStart": 1619823455618,
+      "goodHabit": false
+    },
+    {
+      "id": 6,
+      "userId": 7,
+      "habit": "test",
+      "frequency": "7",
+      "habitStart": 1620053022987,
+      "goodHabit": true
     }
   ],
   "count": [
@@ -1246,6 +1252,81 @@
       "date": 1619809242495,
       "habitId": 2,
       "id": 404
+    },
+    {
+      "date": 1619815385718,
+      "habitId": 1,
+      "id": 405
+    },
+    {
+      "date": 1619815386675,
+      "habitId": 1,
+      "id": 406
+    },
+    {
+      "date": 1619822342129,
+      "habitId": 3,
+      "id": 423
+    },
+    {
+      "date": 1619823457217,
+      "habitId": 5,
+      "id": 424
+    },
+    {
+      "date": 1619823457464,
+      "habitId": 5,
+      "id": 425
+    },
+    {
+      "date": 1619823457666,
+      "habitId": 5,
+      "id": 426
+    },
+    {
+      "date": 1619823457913,
+      "habitId": 5,
+      "id": 427
+    },
+    {
+      "date": 1619823458127,
+      "habitId": 5,
+      "id": 428
+    },
+    {
+      "date": 1619823458599,
+      "habitId": 5,
+      "id": 429
+    },
+    {
+      "date": 1619823458802,
+      "habitId": 5,
+      "id": 430
+    },
+    {
+      "date": 1619823458993,
+      "habitId": 5,
+      "id": 431
+    },
+    {
+      "date": 1619823459162,
+      "habitId": 5,
+      "id": 432
+    },
+    {
+      "date": 1619823459331,
+      "habitId": 5,
+      "id": 433
+    },
+    {
+      "date": 1619823459499,
+      "habitId": 5,
+      "id": 434
+    },
+    {
+      "date": 1619823459657,
+      "habitId": 5,
+      "id": 435
     }
   ]
 }
