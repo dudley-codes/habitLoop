@@ -37,8 +37,7 @@ export const HabitLoop = () => {
               <>
                 <NavBar />
                 <section className='dashboard--container'>
-                  <ProfileCard
-                  />
+                  <ProfileCard />
                   <ApplicationViews />
                 </section>
               </>
