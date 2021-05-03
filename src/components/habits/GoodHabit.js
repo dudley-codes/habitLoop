@@ -69,7 +69,6 @@ we promise we won't make you read too much)</h6> */}
         </div>
       </fieldset>
       <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>
-
     </>
   )
 }
