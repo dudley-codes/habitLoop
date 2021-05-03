@@ -30,9 +30,13 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits }) => {
   // Deletes the most recent habit.count from the array
   const handleDecreaseCount = () => {
     setIsLoading(true)
-    decreaseCount(habit.count[ habit.count.length - 1 ].id)
-      .then(() => setIsLoading(false))
-      .then(() => fetchHabits())
+    if (filterHabits() === 0) {
+      window.alert("You're already at zero. You can't get to more zero.")
+    } else {
+      decreaseCount(habit.count[ habit.count.length - 1 ].id)
+        .then(() => setIsLoading(false))
+        .then(() => fetchHabits())
+    }
   }
 
   // Executes a fetch post call to JSON server that creates a new count object that contains the datetime stamp and habit ID. 
