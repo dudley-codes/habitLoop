@@ -4,10 +4,8 @@ import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/help
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
-import { Redirect } from 'react-router';
 
 export const HabitCard = ({ habit, fetchHabits }) => {
-
   const goodHabit = habit.goodHabit
 
   // Fetches habits and then creats a new array with only habit counts from the current month.

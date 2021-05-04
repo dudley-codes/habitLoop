@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { HabitCard } from './HabitCard'
 import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
+import { HabitDetailsCard } from './HabitDetailsCard';
 
 export const HabitList = () => {
-
   const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
 

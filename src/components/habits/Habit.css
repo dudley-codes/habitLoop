@@ -99,7 +99,7 @@ padding-bottom: 15px;
 
 /* Progress Bars */
 .bg-good {
-  background-color: blueviolet !important;
+  background-color: #007bff !important;
   color: white !important;
 }
 
@@ -115,4 +115,23 @@ padding-bottom: 15px;
 
 .bg-bad {
   background-color: darkred !important;
+}
+
+/* Details Page */
+
+.details--info {
+  font-size: 15px;
+}
+
+.habit--details {
+  margin-left: 40px;
+}
+
+.habit--details h3 {
+text-align: center;
+}
+
+.habit--details__cont {
+  display: flex;
+  flex-wrap: wrap;
 }

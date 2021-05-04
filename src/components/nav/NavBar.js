@@ -44,7 +44,7 @@ export const NavBar = () => {
           : null }
         { isAuthenticated
           ? <li className="nav-item">
-            <Link className="nav-link" to="/Details">Details</Link>
+            <Link className="nav-link" to="/details">Details</Link>
           </li>
           : null }
         { isAuthenticated

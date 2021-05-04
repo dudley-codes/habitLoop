@@ -15,7 +15,7 @@ export const ApplicationViews = () => {
       <Route path='/new'>
         <NewHabit />
       </Route>
-      <Route exact path='/Details'>
+      <Route exact path='/details'>
         <HabitDetails />
       </Route>
     </>
