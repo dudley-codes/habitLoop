@@ -8,7 +8,7 @@ import redUp from './images/red-up.png'
 import greenDwn from './images/green-dwn.png'
 import redDwn from './images/red-dwn.png'
 
-export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncreaseCount }) => {
+export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncreaseCount, handleDecreaseCount }) => {
   const [ count, setCount ] = useState({});
   const history = useHistory()
   const [ isLoading, setIsLoading ] = useState(false);
@@ -29,18 +29,18 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncrease
 
   // Executes a fetch delete call to the JSON server.
   // Deletes the most recent habit.count from the array
-  const handleDecreaseCount = (e) => {
-    e.preventDefault()
-    setIsLoading(true)
-    if (filterHabits() === 0) {
-      window.alert("You're already at zero. You can't get to more zero.")
-    } else {
-      decreaseCount(habit.count[ habit.count.length - 1 ].id)
-        .then(() => setIsLoading(false))
-        .then(() => fetchHabits())
-        .then(() => history.push('/details'))
-    }
-  }
+  // const handleDecreaseCount = (e) => {
+  //   e.preventDefault()
+  //   setIsLoading(true)
+  //   if (filterHabits() === 0) {
+  //     window.alert("You're already at zero. You can't get to more zero.")
+  //   } else {
+  //     decreaseCount(habit.count[ habit.count.length - 1 ].id)
+  //       .then(() => setIsLoading(false))
+  //       .then(() => fetchHabits())
+  //       .then(() => history.push('/details'))
+  //   }
+  // }
 
   // Executes a fetch post call to JSON server that creates a new count object that contains the datetime stamp and habit ID. 
   // Operates like a 'like' button...
