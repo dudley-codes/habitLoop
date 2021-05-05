@@ -12,7 +12,7 @@ export const getHabitsByMonth = (month) => {
 
 // todo refactor
 export const getHabitsByUser = (userId) => {
-  return fetch(`${ remoteURL }/habits?_embed=count&userId=${ userId }`)
+  return fetch(`${ remoteURL }/habits?_embed=count&userId=${ userId }`,)
     .then(res => res.json())
 }
 

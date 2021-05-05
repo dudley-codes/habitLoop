@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
@@ -7,11 +7,12 @@ import { IncreaseCount } from './HabitCount';
 import { addCounter, decreaseCount } from '../../modules/HabitProvider'
 import './Habit.css'
 
-export const HabitCard = ({ habit, fetchHabits }) => {
+export const HabitDetailsCard = ({ habit, fetchHabits }) => {
+  const history = useHistory()
   const [ isLoading, setIsLoading ] = useState(false);
-  const history = useHistory();
-  const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
+
+  const goodHabit = habit.goodHabit
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -19,7 +20,6 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       let date = new Date(count.date)
       if (date.getMonth() === getCurrentMonth() &
         date.getFullYear() === getCurrentYear() || count.length === 0) {
-
         return count
       }
     })
@@ -70,7 +70,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       decreaseCount(habit.count[ habit.count.length - 1 ].id)
         .then(() => setIsLoading(false))
         .then(() => fetchHabits())
-        .then(() => history.push('/'))
+        .then(() => history.push('/details'))
     }
   }
 
@@ -85,32 +85,40 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     addCounter(newCount)
       .then(() => setIsLoading(false))
       .then(() => fetchHabits())
-      .then(() => history.push('/'))
+      .then(() => history.push('/details'))
   }
 
   // returns the habit card that contains the habit name, current progress and allows the user to increase or decrease a habit count.
   return (
     goodHabit ?
+      // If goodHabit=true, good habit card is displayed
       <>
         <div className='habit--card'>
           <div className='habit--card__outer'>
             <div className='habit--card__details'>
               <div className='habit--card__habit'>
-                <div>{ habit.habit }</div>
+                <div><b>{ habit.habit }</b></div>
                 <HabitEditModal
                   habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
               </div>
             </div>
+            <div className='details--info'>
+              <div className='details--info__title'><b>Cue:</b> { habit?.cue }</div>
+              <div className='details--info__title'><b>Reward:</b> { habit?.reward }</div>
+              <div className='details--info__title'><b>Goal:</b> { habit?.frequency }x per week</div>
+            </div>
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
 
                 <div>
-                  <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } />
+                  <ProgressBar now={ monthlyPercentage } variant='good'
+                    style={ progStyle } />
                 </div>
               </div>
             </div>
+
           </div>
           <IncreaseCount
             habit={ habit }
@@ -120,6 +128,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             handleIncreaseCount={ handleIncreaseCount } />
         </div>
       </>
+      // If goodHabit=false, bad habit is displayed
       :
       <>
         <div className='habit--card'>
@@ -127,12 +136,17 @@ export const HabitCard = ({ habit, fetchHabits }) => {
 
             <div className='habit--card__details'>
               <div className='habit--card__habit'>
-                <div>{ habit.habit }</div>
+                <div><b>{ habit.habit }</b></div>
                 <HabitEditModal
                   habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
               </div>
+            </div>
+            <div className='details--info'>
+              <div className='details--info__title'><b>Cue:</b> { habit?.cue }</div>
+              <div className='details--info__title'><b>Reward:</b> { habit?.reward }</div>
+              <div className='details--info__title'><b>Estimated Total:</b> { habit?.frequency }x per week</div>
             </div>
             <div className='habit--progress__cont'>
               <div className='habit--progress'>

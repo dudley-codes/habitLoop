@@ -23,7 +23,6 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
     deleteHabit(id)
       .then(fetchHabits())
       .then(handleClose)
-
   }
 
   // Executes the modal

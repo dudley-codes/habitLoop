@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { HabitCard } from './HabitCard'
 import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
+import { HabitDetailsCard } from './HabitDetailsCard';
+import { JournalList } from '../journal/JournalList';
 
 export const HabitList = () => {
-
   const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
 
@@ -32,6 +33,7 @@ export const HabitList = () => {
             />
           ) }
         </div>
+        <JournalList />
       </section>
     </>
   )
