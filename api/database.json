@@ -77,6 +77,24 @@
       "goodHabit": false,
       "habitStart": 1620059484067,
       "id": 7
+    },
+    {
+      "userId": 7,
+      "habit": "testing",
+      "frequency": 7,
+      "habitStart": 1620231018252,
+      "goodHabit": true,
+      "id": 8
+    },
+    {
+      "userId": 7,
+      "habit": "Bad Habit",
+      "cue": "test",
+      "reward": "test",
+      "frequency": 21,
+      "goodHabit": false,
+      "habitStart": 1620231028805,
+      "id": 9
     }
   ],
   "count": [
@@ -99,6 +117,176 @@
       "date": 1620226577845,
       "habitId": 6,
       "id": 4
+    },
+    {
+      "date": 1620231030863,
+      "habitId": 9,
+      "id": 5
+    },
+    {
+      "date": 1620231031336,
+      "habitId": 9,
+      "id": 6
+    },
+    {
+      "date": 1620231031787,
+      "habitId": 9,
+      "id": 7
+    },
+    {
+      "date": 1620231031978,
+      "habitId": 9,
+      "id": 8
+    },
+    {
+      "date": 1620231032168,
+      "habitId": 9,
+      "id": 9
+    },
+    {
+      "date": 1620231032394,
+      "habitId": 9,
+      "id": 10
+    },
+    {
+      "date": 1620231032573,
+      "habitId": 9,
+      "id": 11
+    },
+    {
+      "date": 1620231032742,
+      "habitId": 9,
+      "id": 12
+    },
+    {
+      "date": 1620231032911,
+      "habitId": 9,
+      "id": 13
+    },
+    {
+      "date": 1620231033068,
+      "habitId": 9,
+      "id": 14
+    },
+    {
+      "date": 1620231033249,
+      "habitId": 9,
+      "id": 15
+    },
+    {
+      "date": 1620231033417,
+      "habitId": 9,
+      "id": 16
+    },
+    {
+      "date": 1620231033598,
+      "habitId": 9,
+      "id": 17
+    },
+    {
+      "date": 1620231033777,
+      "habitId": 9,
+      "id": 18
+    },
+    {
+      "date": 1620231033982,
+      "habitId": 9,
+      "id": 19
+    },
+    {
+      "date": 1620231034215,
+      "habitId": 9,
+      "id": 20
+    },
+    {
+      "date": 1620231035521,
+      "habitId": 9,
+      "id": 21
+    },
+    {
+      "date": 1620231035825,
+      "habitId": 9,
+      "id": 22
+    },
+    {
+      "date": 1620231036015,
+      "habitId": 9,
+      "id": 23
+    },
+    {
+      "date": 1620231036252,
+      "habitId": 9,
+      "id": 24
+    },
+    {
+      "date": 1620231036478,
+      "habitId": 9,
+      "id": 25
+    },
+    {
+      "date": 1620231036692,
+      "habitId": 9,
+      "id": 26
+    },
+    {
+      "date": 1620231036915,
+      "habitId": 9,
+      "id": 27
+    },
+    {
+      "date": 1620231037131,
+      "habitId": 9,
+      "id": 28
+    },
+    {
+      "date": 1620231037365,
+      "habitId": 9,
+      "id": 29
+    },
+    {
+      "date": 1620231037849,
+      "habitId": 9,
+      "id": 30
+    },
+    {
+      "date": 1620231038041,
+      "habitId": 9,
+      "id": 31
+    },
+    {
+      "date": 1620231038244,
+      "habitId": 9,
+      "id": 32
+    },
+    {
+      "date": 1620231038660,
+      "habitId": 9,
+      "id": 33
+    },
+    {
+      "date": 1620231039099,
+      "habitId": 9,
+      "id": 34
+    },
+    {
+      "date": 1620231039875,
+      "habitId": 9,
+      "id": 35
+    },
+    {
+      "date": 1620231040214,
+      "habitId": 9,
+      "id": 36
+    },
+    {
+      "date": 1620231040515,
+      "habitId": 9,
+      "id": 37
+    },
+    {
+      "date": 1620231040742,
+      "habitId": 9,
+      "id": 38
     }
   ],
   "journal": [
@@ -106,14 +294,14 @@
       "id": 1,
       "date": 1620226577845,
       "userId": 7,
-      "subject": "Quit Smoking",
+      "habit": "Quit Smoking",
       "entry": "Today, I was craving a cigarette but went for a walk instead."
     },
     {
       "id": 2,
       "date": 1620226577845,
       "userId": 7,
-      "subject": "Walking",
+      "habit": "Walking",
       "entry": "Today, I walked 4 miles and felt much less stressed after."
     }
   ]

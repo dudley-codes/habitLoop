@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import './Habit.css'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import { GoodHabit } from './GoodHabit'
 import { BadHabit } from './BadHabit'
 import { HabitGraphic } from './HabitGraphic'
+import './Habit.css'
 
 
 export const NewHabit = () => {
   const [ radioValue, setRadioValue ] = useState(1);
 
+  let currentRadioValue = { ...radioValue }
   // Names toggle buttons
   const HabitToggle = () => {
     const radios = [
