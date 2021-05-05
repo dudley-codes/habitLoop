@@ -72,7 +72,6 @@ export const NewHabit = () => {
             <RenderForm />
           </form>
         </div>
-
         <HabitGraphic />
       </section>
     </>
