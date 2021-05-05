@@ -70,10 +70,6 @@ we promise we won't make you read too much)</h6> */}
         </div>
       </fieldset>
       <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="flat" onClick={ handleClickSaveHabit }>Save Habit</Button>
-
-      <Button variant="flat" size="xxl">
-        flat button
-  </Button>
     </>
   )
 }

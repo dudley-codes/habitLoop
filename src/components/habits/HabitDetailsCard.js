@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
@@ -20,7 +20,6 @@ export const HabitDetailsCard = ({ habit, fetchHabits }) => {
       let date = new Date(count.date)
       if (date.getMonth() === getCurrentMonth() &
         date.getFullYear() === getCurrentYear() || count.length === 0) {
-
         return count
       }
     })

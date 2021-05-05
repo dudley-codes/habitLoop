@@ -1,12 +1,17 @@
-import React from 'react';
-import './Habit.css'
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
+import { addCounter, decreaseCount } from '../../modules/HabitProvider'
+import './Habit.css'
 
 export const HabitCard = ({ habit, fetchHabits }) => {
+  const [ isLoading, setIsLoading ] = useState(false);
+  const history = useHistory();
   const goodHabit = habit.goodHabit
+  const [ count, setCount ] = useState({});
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -54,6 +59,35 @@ export const HabitCard = ({ habit, fetchHabits }) => {
     }
   }
 
+  // Executes a fetch delete call to the JSON server.
+  // Deletes the most recent habit.count from the array
+  const handleDecreaseCount = (e) => {
+    e.preventDefault()
+    setIsLoading(true)
+    if (filterHabits() === 0) {
+      window.alert("You're already at zero. You can't get to more zero.")
+    } else {
+      decreaseCount(habit.count[ habit.count.length - 1 ].id)
+        .then(() => setIsLoading(false))
+        .then(() => fetchHabits())
+        .then(() => history.push('/'))
+    }
+  }
+
+  // Executes a fetch post call to JSON server that creates a new count object that contains the datetime stamp and habit ID. 
+  // Operates like a 'like' button...
+  const handleIncreaseCount = (e) => {
+    e.preventDefault()
+    setIsLoading(true);
+    let newCount = { ...count };
+    newCount.date = Date.now()
+    newCount.habitId = habit.id
+    addCounter(newCount)
+      .then(() => setIsLoading(false))
+      .then(() => fetchHabits())
+      .then(() => history.push('/'))
+  }
+
   // returns the habit card that contains the habit name, current progress and allows the user to increase or decrease a habit count.
   return (
     goodHabit ?
@@ -81,7 +115,9 @@ export const HabitCard = ({ habit, fetchHabits }) => {
           <IncreaseCount
             habit={ habit }
             fetchHabits={ fetchHabits }
-            filterHabits={ filterHabits } />
+            filterHabits={ filterHabits }
+            handleDecreaseCount={ handleDecreaseCount }
+            handleIncreaseCount={ handleIncreaseCount } />
         </div>
       </>
       :
@@ -109,7 +145,9 @@ export const HabitCard = ({ habit, fetchHabits }) => {
           <IncreaseCount
             habit={ habit }
             fetchHabits={ fetchHabits }
-            filterHabits={ filterHabits } />
+            filterHabits={ filterHabits }
+            handleDecreaseCount={ handleDecreaseCount }
+            handleIncreaseCount={ handleIncreaseCount } />
         </div>
       </>
   )
