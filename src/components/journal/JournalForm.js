@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom";
+import { addEntry } from '../../modules/JournalProvider';
 
 export const JournalForm = ({ fetchEntries, userId }) => {
   const [ isLoading, setIsLoading ] = useState(false)
@@ -29,11 +30,22 @@ export const JournalForm = ({ fetchEntries, userId }) => {
   const handleClickSaveEntry = e => {
     e.preventDefault()
     setIsLoading(true)
-    let completeEntry = { ...entry }
-    completeEntry.date = Date.now()
+    let newEntry = { ...entry }
+    newEntry.date = Date.now()
+
+    setIsLoading(true)
+    addEntry(newEntry)
+      .then(() => history.push('/'))
   }
 
   return (
-    <div>Test</div>
+    <>
+      <fieldset>
+        <div className='journal-form__entry'>
+          <label htmlFor='habit'>Habit:</label>
+          <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. work out' defaultValue={ entry.habit } />
+        </div>
+      </fieldset>
+    </>
   )
 }
