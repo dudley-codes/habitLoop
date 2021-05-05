@@ -4,7 +4,7 @@ import './Journal.css';
 import { JournalCard } from './JournalCard';
 import { JournalForm } from './JournalForm'
 
-export const JournalList = () => {
+export const JournalList = ({ habitList }) => {
   const currentUserId = sessionStorage.getItem('user_id')
   const [ entries, setEntries ] = useState([])
 
@@ -26,6 +26,7 @@ export const JournalList = () => {
         <section className='journal--submit'>
           <JournalForm
             userId={ currentUserId }
+            habitList={ habitList }
             fetchEntries={ fetchEntries }
           />
         </section>

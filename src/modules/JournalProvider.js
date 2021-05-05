@@ -14,3 +14,8 @@ export const addEntry = (newEntry) => {
     body: JSON.stringify(newEntry)
   }).then(res => res.json())
 }
+
+export const getHabitsByUserId = (userId) => {
+  return fetch(`${ remoteURL }/habits?Id=${ userId }`,)
+    .then(res => res.json())
+}

@@ -16,6 +16,8 @@ export const HabitList = () => {
     return filterHabits
   }
 
+  let habitList = { ...habits }
+
   useEffect(() => {
     fetchHabits()
   }, [])
@@ -33,7 +35,8 @@ export const HabitList = () => {
             />
           ) }
         </div>
-        <JournalList />
+        <JournalList
+          habitList={ habitList } />
       </section>
     </>
   )
