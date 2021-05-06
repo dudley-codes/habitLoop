@@ -4,14 +4,15 @@ import './Journal.css';
 import { JournalCard } from './JournalCard';
 import { JournalForm } from './JournalForm'
 
-export const JournalList = () => {
+export const JournalList = ({ fetchHabits }) => {
   const currentUserId = sessionStorage.getItem('user_id')
   const [ entries, setEntries ] = useState([])
 
   // Fetch journal entries from data manager
   const fetchEntries = () => {
-    getEntryByUserId(currentUserId)
+    const getEntries = getEntryByUserId(currentUserId)
       .then(res => setEntries(res))
+    return getEntries
   }
 
   useEffect(() => {
@@ -26,7 +27,9 @@ export const JournalList = () => {
         <section className='journal--submit'>
           <JournalForm
             userId={ currentUserId }
+            fetchHabits={ fetchHabits }
             fetchEntries={ fetchEntries }
+            key={ 7 }
           />
         </section>
         { entries.map(entry =>

@@ -4,9 +4,9 @@ import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
 import { HabitDetailsCard } from './HabitDetailsCard';
 import { JournalList } from '../journal/JournalList';
+import { currentUserId } from '../../modules/helpers';
 
 export const HabitList = () => {
-  const currentUserId = sessionStorage.getItem('user_id')
   const [ habits, setHabits ] = useState([])
 
   // fetches all habits that belong to the current signed in user
@@ -15,6 +15,8 @@ export const HabitList = () => {
       .then(res => setHabits(res))
     return filterHabits
   }
+
+  let habitList = { ...habits }
 
   useEffect(() => {
     fetchHabits()
@@ -33,7 +35,9 @@ export const HabitList = () => {
             />
           ) }
         </div>
-        <JournalList />
+        <JournalList
+          fetchHabits={ fetchHabits }
+          habitList={ habitList } />
       </section>
     </>
   )

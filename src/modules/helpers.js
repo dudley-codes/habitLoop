@@ -25,3 +25,6 @@ const year = dt.getFullYear();
 
 // this line does the magic (in collab with the lines above)
 export const daysInMonth = new Date(year, month, 0).getDate();
+
+
+export const currentUserId = sessionStorage.getItem('user_id')
