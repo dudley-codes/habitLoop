@@ -67,8 +67,11 @@ export const JournalForm = ({ fetchEntries, userId }) => {
       date: Date.now(),
       userId: currentUserId
     })
-      .then(() => fetchEntries())
-      .then(() => setHabitSelect('Select a Habit'))
+      .then(() => {
+        setHabitSelect('Select a Habit')
+        fetchEntries()
+      })
+
       .then(() => setIsLoading(false))
       .then(() => setEntry({
         habit: '',
@@ -76,8 +79,8 @@ export const JournalForm = ({ fetchEntries, userId }) => {
         date: Date.now(),
         userId: currentUserId
       }))
-      // .then(() => handleReset())
-      .then(() => history.push('/'))
+    // .then(() => handleReset())
+    // .then(() => history.push('/'))
   }
 
   useEffect(() => {
@@ -98,7 +101,12 @@ export const JournalForm = ({ fetchEntries, userId }) => {
               title='Select A Habit' >{ habitSelect }</Dropdown.Toggle>
             <Dropdown.Menu>
               { habitList.map(h => (
-                <Dropdown.Item eventKey={ h.id } onClick={ () => setHabitSelect(`${ h.habit }`) }>{ h.habit }</Dropdown.Item >
+                <Dropdown.Item
+                  eventKey={ h.id }
+                  key={ h.id * Math.random() }
+                  onClick={ () => setHabitSelect(`${ h.habit }`) }>
+                  { h.habit }
+                </Dropdown.Item >
               )) }
             </Dropdown.Menu>
           </Dropdown>

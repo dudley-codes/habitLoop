@@ -120,3 +120,8 @@ color: rgb(218, 217, 217);
 .message__send {
   width: 100px;
 }
+
+/* Edit Icon */
+.entry--habit__title {
+  display: flex;
+}

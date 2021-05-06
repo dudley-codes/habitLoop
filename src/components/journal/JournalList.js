@@ -28,6 +28,7 @@ export const JournalList = ({ fetchHabits }) => {
             userId={ currentUserId }
             fetchHabits={ fetchHabits }
             fetchEntries={ fetchEntries }
+            key={ 7 }
           />
         </section>
         { entries.map(entry =>

@@ -19,3 +19,18 @@ export const getHabitsByUserId = (userId) => {
   return fetch(`${ remoteURL }/habits?Id=${ userId }`,)
     .then(res => res.json())
 }
+
+export const updateEntry = (editedEntry) => {
+  return fetch(`${ remoteURL }/journal/${ editedEntry.id }`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(editedEntry)
+  }).then(res => res.json())
+}
+
+export const getEntryById = (id) => {
+  return fetch(`${ remoteURL }/journal/${ id }`)
+    .then(res => res.json())
+}

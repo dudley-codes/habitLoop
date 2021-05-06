@@ -63,7 +63,7 @@ export const updateHabit = (editedHabit) => {
       'content-type': 'application/json'
     },
     body: JSON.stringify(editedHabit)
-  }).then(data => data.json())
+  }).then(res => res.json())
 }
 
 export const deleteHabit = (id) => {
