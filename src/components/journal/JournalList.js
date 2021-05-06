@@ -10,8 +10,9 @@ export const JournalList = ({ fetchHabits }) => {
 
   // Fetch journal entries from data manager
   const fetchEntries = () => {
-    getEntryByUserId(currentUserId)
+    const getEntries = getEntryByUserId(currentUserId)
       .then(res => setEntries(res))
+    return getEntries
   }
 
   useEffect(() => {

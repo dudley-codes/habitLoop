@@ -34,3 +34,9 @@ export const getEntryById = (id) => {
   return fetch(`${ remoteURL }/journal/${ id }`)
     .then(res => res.json())
 }
+
+export const deleteEntry = (id) => {
+  return fetch(`${ remoteURL }/journal/${ id }`, {
+    method: "DELETE"
+  }).then(res => res.json())
+}

@@ -125,3 +125,11 @@ color: rgb(218, 217, 217);
 .entry--habit__title {
   display: flex;
 }
+
+.edit--icon {
+  height: 20px;
+}
+
+.journal--cont {
+  margin: 30px 0 0 30px
+}

@@ -13,6 +13,7 @@ export const JournalCard = ({ entry, fetchEntries }) => {
         <div className='entry--habit'><b>{ entry.habit }</b></div>
         <EntryEdit
           fetchEntries={ fetchEntries }
+          entryId={ entry.id }
         />
       </div>
       <div className='entry--body'>{ entry.entry }</div>
