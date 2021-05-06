@@ -34,14 +34,14 @@ export const NavBar = () => {
         { isAuthenticated
           ?
           <li className="nav-item">
-            <Link className="nav-link" to="/">Dashboard</Link>
+            <Link className="nav-link" to="/">Home</Link>
           </li>
           : null }
-        { isAuthenticated
+        {/* { isAuthenticated
           ? <li className="nav-item">
             <Link className="nav-link" to="/social">Social</Link>
           </li>
-          : null }
+          : null } */}
         { isAuthenticated
           ? <li className="nav-item">
             <Link className="nav-link" to="/details">Details</Link>
@@ -52,9 +52,9 @@ export const NavBar = () => {
             <Link className="nav-link" to="/new">New Habit</Link>
           </li>
           : null }
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link className="nav-link" to="/about">About</Link>
-        </li>
+        </li> */}
         { isAuthenticated
           ? <li className="nav-item">
             <Link className="nav-link" to="" onClick={ Logout }>Logout</Link>

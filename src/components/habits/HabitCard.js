@@ -9,6 +9,7 @@ import './Habit.css'
 
 export const HabitCard = ({ habit, fetchHabits }) => {
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ showDetails, setShowDetails ] = useState(0)
   const history = useHistory();
   const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
@@ -19,7 +20,6 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       let date = new Date(count.date)
       if (date.getMonth() === getCurrentMonth() &
         date.getFullYear() === getCurrentYear() || count.length === 0) {
-
         return count
       }
     })
@@ -88,6 +88,20 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       .then(() => history.push('/'))
   }
 
+  //  Shows and hides details for the habit
+  const ShowDetails = () => {
+    switch (showDetails) {
+      case 0: return null
+        break;
+      case habit.id: return (
+        <div>{ habit.reward }</div>
+      )
+        break;
+      default:
+        break;
+    }
+  }
+
   // returns the habit card that contains the habit name, current progress and allows the user to increase or decrease a habit count.
   return (
     goodHabit ?
@@ -101,6 +115,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
                   habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
+                <ShowDetails />
               </div>
             </div>
             <div className='habit--progress__cont'>
