@@ -10,16 +10,11 @@ import Button from 'react-bootstrap/Button';
 
 export const JournalForm = ({ fetchEntries, userId }) => {
   const [ habitSelect, setHabitSelect ] = useState('Select a Habit')
+  const [ entry, setEntry ] = useState({})
   const [ habitList, setHabitList ] = useState([ '' ])
   const [ isLoading, setIsLoading ] = useState(false)
   const history = useHistory()
   // Set state with empty data
-  const [ entry, setEntry ] = useState({
-    habit: 0,
-    entry: '',
-    userId: userId,
-    date: ''
-  })
 
   // fetch list of habits so that we can display them as a dropdown list
   useEffect(() => {
@@ -29,10 +24,14 @@ export const JournalForm = ({ fetchEntries, userId }) => {
       })
   }, [])
 
+  // useEffect(() => {
+
+  // })
+
 
   // Handle input changes and parse user ID
   const handleControlledInputChange = (e) => {
-    const newEntry = { ...entry }
+    let newEntry = { ...entry }
     let selectedVal = e.target.value
 
     if (e.target.id.includes('Id')) {
@@ -44,6 +43,20 @@ export const JournalForm = ({ fetchEntries, userId }) => {
     setEntry(newEntry)
   }
 
+  // reset form after submittting
+  const resetForm = () => (
+    setEntry({})
+  )
+
+  // const handleReset = () => {
+  //   Array.from(document.querySelectorAll("input")).forEach(
+  //     input => (input.value = "")
+  //   );
+  //   this.setState({
+  //     itemvalues: [ {} ]
+  //   });
+  // };
+
   const handleClickSaveEntry = e => {
     e.preventDefault()
     setIsLoading(true)
@@ -51,20 +64,25 @@ export const JournalForm = ({ fetchEntries, userId }) => {
     addEntry({
       habit: habitSelect,
       entry: newEntry.entry,
-      date: Date.now()
+      date: Date.now(),
+      userId: currentUserId
     })
       .then(() => fetchEntries())
       .then(() => setHabitSelect('Select a Habit'))
-      .then(() => setEntry({
-        habit: habitSelect,
-        entry: '',
-        date: ''
-      }))
-      .then(res => console.log('entry', entry))
       .then(() => setIsLoading(false))
+      .then(() => setEntry({
+        habit: '',
+        entry: '',
+        date: Date.now(),
+        userId: currentUserId
+      }))
+      // .then(() => handleReset())
       .then(() => history.push('/'))
   }
 
+  useEffect(() => {
+    resetForm()
+  }, [ habitSelect ])
 
   return (
     <>
@@ -94,7 +112,7 @@ export const JournalForm = ({ fetchEntries, userId }) => {
         </div>
         <div className='journal-form__entry'>
           <label htmlFor='habit'>Entry:</label>
-          <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' defaultValue={ entry.entry } />
+          <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' value={ entry.entry } />
         </div>
       </fieldset>
       <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveEntry }>Save Habit</Button>

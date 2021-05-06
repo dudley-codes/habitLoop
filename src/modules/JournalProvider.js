@@ -9,7 +9,7 @@ export const addEntry = (newEntry) => {
   return fetch(`${ remoteURL }/journal`, {
     method: 'POST',
     headers: {
-      'content-type': 'application/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(newEntry)
   }).then(res => res.json())
