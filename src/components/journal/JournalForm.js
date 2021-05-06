@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 
 export const JournalForm = ({ fetchEntries, userId }) => {
+  const [ habitSelect, setHabitSelect ] = useState('Select a Habit')
   const [ habitList, setHabitList ] = useState([ '' ])
   const [ isLoading, setIsLoading ] = useState(false)
   const history = useHistory()
@@ -48,13 +49,14 @@ export const JournalForm = ({ fetchEntries, userId }) => {
     setIsLoading(true)
     let newEntry = { ...entry }
     addEntry({
-      habit: newEntry.habit,
+      habit: habitSelect,
       entry: newEntry.entry,
       date: Date.now()
     })
       .then(() => fetchEntries())
+      .then(() => setHabitSelect('Select a Habit'))
       .then(() => setEntry({
-        habit: 0,
+        habit: habitSelect,
         entry: '',
         date: ''
       }))
@@ -75,10 +77,10 @@ export const JournalForm = ({ fetchEntries, userId }) => {
               id='habit'
               onChange={ handleControlledInputChange }
               className='form-control'
-              title='Select A Habit' >Select a Habit</Dropdown.Toggle>
+              title='Select A Habit' >{ habitSelect }</Dropdown.Toggle>
             <Dropdown.Menu>
               { habitList.map(h => (
-                <Dropdown.Item eventKey={ h.id } onClick={ () => console.log('h', h) }>{ h.habit }</Dropdown.Item >
+                <Dropdown.Item eventKey={ h.id } onClick={ () => setHabitSelect(`${ h.habit }`) }>{ h.habit }</Dropdown.Item >
               )) }
             </Dropdown.Menu>
           </Dropdown>
@@ -95,7 +97,7 @@ export const JournalForm = ({ fetchEntries, userId }) => {
           <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' defaultValue={ entry.entry } />
         </div>
       </fieldset>
-      <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="flat" onClick={ handleClickSaveEntry }>Save Habit</Button>
+      <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveEntry }>Save Habit</Button>
     </>
   )
 }
