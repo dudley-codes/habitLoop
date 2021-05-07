@@ -10,30 +10,39 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
   const [ isLoading, setIsLoading ] = useState(false)
   const [ show, setShow ] = useState(false)
   const [ entry, setEntry ] = useState({})
+  const [ showConfirm, setShowConfirm ] = useState(false)
 
   // When called, closes the Modal
   const handleClose = () => {
     fetchEntries()
-      .then(res => console.log(res))
       .then(() => setIsLoading(false))
       .then(() => setShow(false))
   };
 
-  // Handles delete
-  const HandleDelete = () => {
-    const handleDelete = () => {
-      deleteEntry(entryId)
-        .then(fetchEntries)
-    }
+  // Opens dialog asking user to confirm they want to delete an entry
+  const confirmDelete = () => {
+    setShowConfirm(true)
+  }
+
+  const handleCancel = () => setShowConfirm(false)
+  // Confirms delete
+  const DeleteButton = () => {
+    // deleteEntry(entryId)
+    //   .then(fetchEntries)
     return (
       <>
-        <Link onClick={ () => handleDelete() } to=''>
+        <Link onClick={ () => confirmDelete() } to=''>
           <img src={ trashCan } alt='delete icon' className='edit--icon' />
         </Link>
       </>
     )
   }
 
+  // Delete has been confirmed, delete item
+  const handleDelete = () => {
+    deleteEntry(entryId)
+      .then(fetchEntries)
+  }
 
 
   // Executes the modal
@@ -77,7 +86,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
         <img src={ editIcon } alt='edit icon' className='edit--icon' />
       </Link>
 
-      <HandleDelete />
+      <DeleteButton />
 
       <Modal show={ show } onHide={ handleClose }>
         <Modal.Header closeButton>
@@ -102,7 +111,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
             <fieldset>
               <div className='habit-form__group'>
                 <label htmlFor='cue'>Entry:</label>
-                <input
+                <textarea
                   type='text'
                   required
                   id='entry'
@@ -144,6 +153,31 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
           </div>
         </Modal.Footer>
       </Modal>
+
+      {/* <Button variant="primary" onClick={ handleShow }>
+        Launch demo modal
+      </Button> */}
+
+      <Modal show={ showConfirm } onHide={ handleCancel }>
+        <Modal.Header closeButton>
+          <Modal.Title>Are you sure?</Modal.Title>
+        </Modal.Header>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={ handleCancel }>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={ handleDelete }>
+            Yes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* <Modal show={ setShow } onHide={ handleClose }>
+        <Modal.Dialog >Are you sure you want to delete this entry?
+        <Button className='delete--button' onClick={ () => deleteConfirmed() }>Yes</Button>
+          <Button className='delete--button' onClick={ () => setShowConfirm(false) }>Cancel</Button>
+        </Modal.Dialog>
+      </Modal> */}
 
     </>
   )

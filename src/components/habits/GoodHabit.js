@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useHistory } from 'react-router-dom'
 import { addHabit } from '../../modules/HabitProvider'
 import Button from 'react-bootstrap/Button'
@@ -69,7 +69,9 @@ we promise we won't make you read too much)</h6> */}
           <input type='number' id='frequency' min={ 0 } onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' defaultValue={ habit.frequency } />
         </div>
       </fieldset>
-      <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="flat" onClick={ handleClickSaveHabit }>Save Habit</Button>
+      <div className='btn-cont'>
+        <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveHabit }>Save Habit</Button>
+      </div>
     </>
   )
 }

@@ -23,7 +23,7 @@ export const JournalList = ({ fetchHabits }) => {
   return (
     <>
       <section className='journal--cont'>
-        <h3>Journal Entries</h3>
+        <h3>Daily Journal</h3>
         <section className='journal--submit'>
           <JournalForm
             userId={ currentUserId }

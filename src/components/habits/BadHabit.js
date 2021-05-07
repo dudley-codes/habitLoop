@@ -65,10 +65,12 @@ we promise we won't make you read too much)</h6> */}
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='frequency'>Estimated Weekly Total:</label>
-          <input type='text' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 10' defaultValue={ habit.frequency } />
+          <input type='number' id='frequency' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 10' defaultValue={ habit.frequency } />
         </div>
       </fieldset>
-      <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>
+      <div className='btn-cont'>
+        <button className='btn btn-primary' type='button' disabled={ isLoading } onClick={ handleClickSaveHabit }>Save Habit</button>
+      </div>
 
     </>
   )

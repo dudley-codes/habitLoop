@@ -4,11 +4,16 @@ import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
 import { HabitDetailsCard } from './HabitDetailsCard';
 import { JournalList } from '../journal/JournalList';
-import { currentUserId } from '../../modules/helpers';
+import { getAllUsers } from '../../modules/UserDataManager';
+
 
 export const HabitList = () => {
   const [ habits, setHabits ] = useState([])
-
+  const [ user, setUser ] = useState({
+    name: ''
+  });
+  const currentUserId = sessionStorage.getItem('user_id')
+  const [ firstName, setFirstName ] = useState()
   // fetches all habits that belong to the current signed in user
   const fetchHabits = () => {
     const filterHabits = getHabitsByUser(currentUserId)
@@ -17,9 +22,31 @@ export const HabitList = () => {
   }
 
   let habitList = { ...habits }
+  let currentUser = { ...user }
+
+  const getCurrentUser = () => {
+    getAllUsers().then(res => res.filter(user => {
+      if (user.id === parseInt(currentUserId)) {
+        setUser(user)
+      }
+    }))
+  }
+
 
   useEffect(() => {
     fetchHabits()
+  }, [])
+
+  useEffect(() => {
+    getCurrentUser()
+    // .then(() => {
+    //   const splitName = user.name.split(' ')
+
+    //   if (splitName !== undefined) {
+    //     return splitName[ 0 ]
+    //   }
+    // }).then((res) => setFirstName(res))
+
   }, [])
   // Returns habit cards for all user habits
   return (
