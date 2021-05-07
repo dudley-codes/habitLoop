@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
 import { addCounter, decreaseCount } from '../../modules/HabitProvider'
+import collapse from '../habits/images/collapse.png'
+import expand from '../habits/images/expand.png'
 import './Habit.css'
 
 export const HabitCard = ({ habit, fetchHabits }) => {
@@ -13,6 +15,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   const history = useHistory();
   const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
+  const [ goal, setGoal ] = useState('')
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -88,13 +91,54 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       .then(() => history.push('/'))
   }
 
+  // Toggles between showing and hiding details
+  const ToggleDetails = () => {
+
+    return (
+      showDetails === 0 ?
+        <>
+          <Link onClick={ () => setShowDetails(habit.id) } to=''>
+            <img src={ expand } alt='info icon' className='info--icon' />
+          </Link>
+        </>
+        :
+        <>
+          <Link onClick={ () => setShowDetails(0) } to=''>
+            <img src={ collapse } alt='info icon' className='info--icon' />
+          </Link>
+        </>
+    )
+  }
+
+  // Checks if goodHabit is true or false and displays data accordingly
+  const GoodOrBadDetails = () => {
+    switch (habit.goodHabit) {
+      case true: setGoal('Goal')
+        break;
+      case false: setGoal('Est. Total')
+        break;
+      default:
+        break;
+    }
+
+    return (
+      <>
+        <div className='details--info'>
+          <div><b>Cue:</b> { habit?.cue }</div>
+          <div><b>Reward:</b> { habit?.reward }</div>
+          <div><b>{ goal }:</b> { habit?.frequency }x per week</div>
+        </div>
+      </>
+    )
+  }
+
   //  Shows and hides details for the habit
   const ShowDetails = () => {
     switch (showDetails) {
       case 0: return null
         break;
       case habit.id: return (
-        <div>{ habit.reward }</div>
+        <GoodOrBadDetails />
       )
         break;
       default:
@@ -115,9 +159,10 @@ export const HabitCard = ({ habit, fetchHabits }) => {
                   habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
-                <ShowDetails />
+                <ToggleDetails />
               </div>
             </div>
+            <ShowDetails />
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
 
@@ -147,8 +192,10 @@ export const HabitCard = ({ habit, fetchHabits }) => {
                   habitId={ habit.id }
                   fetchHabits={ fetchHabits }
                 />
+                <ToggleDetails />
               </div>
             </div>
+            <ShowDetails />
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
                 <div>
