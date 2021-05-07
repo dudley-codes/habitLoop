@@ -4,11 +4,11 @@ import './Habit.css'
 import { getHabitsByUser } from '../../modules/HabitProvider';
 import { HabitDetailsCard } from './HabitDetailsCard';
 import { JournalList } from '../journal/JournalList';
-import { currentUserId } from '../../modules/helpers';
+
 
 export const HabitList = () => {
   const [ habits, setHabits ] = useState([])
-
+  const currentUserId = sessionStorage.getItem('user_id')
   // fetches all habits that belong to the current signed in user
   const fetchHabits = () => {
     const filterHabits = getHabitsByUser(currentUserId)

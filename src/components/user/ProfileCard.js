@@ -3,8 +3,8 @@ import './ProfileCard.css'
 import profilePic from './images/rick-sanchez.jpeg'
 import { getAllUsers } from '../../modules/UserDataManager';
 
-const currentUserId = sessionStorage.getItem('user_id')
 export const ProfileCard = () => {
+  const currentUserId = sessionStorage.getItem('user_id')
   const [ user, setUser ] = useState('');
 
 
@@ -34,9 +34,6 @@ export const ProfileCard = () => {
             <h6>{ user?.tagline }</h6>
           </div>
           <hr></hr>
-          <div className='btn--cont'>
-            <button className='btn-primary btn btn--subscribe'>Message</button>
-          </div>
         </div>
       </section>
     </>

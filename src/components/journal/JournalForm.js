@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom";
-import { currentUserId } from '../../modules/helpers';
-import { addEntry, getEntryByUserId, getHabitsByUserId } from '../../modules/JournalProvider';
+import { addEntry } from '../../modules/JournalProvider';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import Button from 'react-bootstrap/Button';
+import { getHabitsByUser } from '../../modules/HabitProvider';
 
 
 
-export const JournalForm = ({ fetchEntries, userId }) => {
+
+export const JournalForm = ({ fetchEntries }) => {
+  const currentUserId = sessionStorage.getItem('user_id')
   const [ habitSelect, setHabitSelect ] = useState('Select a Habit')
   const [ entry, setEntry ] = useState({})
   const [ habitList, setHabitList ] = useState([ '' ])
@@ -18,7 +20,7 @@ export const JournalForm = ({ fetchEntries, userId }) => {
 
   // fetch list of habits so that we can display them as a dropdown list
   useEffect(() => {
-    getHabitsByUserId(currentUserId)
+    getHabitsByUser(currentUserId)
       .then(res => {
         setHabitList(res)
       })
