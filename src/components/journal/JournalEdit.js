@@ -111,7 +111,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
             <fieldset>
               <div className='habit-form__group'>
                 <label htmlFor='cue'>Entry:</label>
-                <input
+                <textarea
                   type='text'
                   required
                   id='entry'

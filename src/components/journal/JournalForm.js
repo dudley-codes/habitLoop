@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { useHistory } from "react-router-dom";
 import { addEntry } from '../../modules/JournalProvider';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import Button from 'react-bootstrap/Button';
 import { getHabitsByUser } from '../../modules/HabitProvider';
-
-
-
 
 export const JournalForm = ({ fetchEntries }) => {
   const currentUserId = sessionStorage.getItem('user_id')
@@ -15,8 +10,6 @@ export const JournalForm = ({ fetchEntries }) => {
   const [ entry, setEntry ] = useState({})
   const [ habitList, setHabitList ] = useState([ '' ])
   const [ isLoading, setIsLoading ] = useState(false)
-  const history = useHistory()
-  // Set state with empty data
 
   // fetch list of habits so that we can display them as a dropdown list
   useEffect(() => {
@@ -25,10 +18,6 @@ export const JournalForm = ({ fetchEntries }) => {
         setHabitList(res)
       })
   }, [])
-
-  // useEffect(() => {
-
-  // })
 
 
   // Handle input changes and parse user ID
@@ -46,18 +35,14 @@ export const JournalForm = ({ fetchEntries }) => {
   }
 
   // reset form after submittting
-  const resetForm = () => (
-    setEntry({})
-  )
-
-  // const handleReset = () => {
-  //   Array.from(document.querySelectorAll("input")).forEach(
-  //     input => (input.value = "")
-  //   );
-  //   this.setState({
-  //     itemvalues: [ {} ]
-  //   });
-  // };
+  const resetForm = () => {
+    setEntry({
+      habit: '',
+      entry: '',
+      date: ''
+    })
+    setHabitSelect('Select a Habit')
+  }
 
   const handleClickSaveEntry = e => {
     e.preventDefault()
@@ -75,25 +60,14 @@ export const JournalForm = ({ fetchEntries }) => {
       })
 
       .then(() => setIsLoading(false))
-      .then(() => setEntry({
-        habit: '',
-        entry: '',
-        date: Date.now(),
-        userId: currentUserId
-      }))
-    // .then(() => handleReset())
-    // .then(() => history.push('/'))
+      .then(() => resetForm())
   }
-
-  useEffect(() => {
-    resetForm()
-  }, [ habitSelect ])
 
   return (
     <>
       <fieldset>
         <div className='journal-form__entry'>
-          <Dropdown>
+          <Dropdown className='journal--dropdown'>
             <Dropdown.Toggle
               defaultValue={ entry.habit }
               name='habit'
@@ -112,20 +86,28 @@ export const JournalForm = ({ fetchEntries }) => {
               )) }
             </Dropdown.Menu>
           </Dropdown>
-          {/* <option value='0'>Select a Habit</option> */ }
-          {/* { habitList.map(h => (
-              <option key={ h.id } defaultValue={ h.id }>
-                {h.habit }
-              </option>
-            )) } */}
-          {/* </select> */ }
         </div>
         <div className='journal-form__entry'>
-          <label htmlFor='habit'>Entry:</label>
+          {/* <label htmlFor='habit'>Entry:</label> */ }
           <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' value={ entry.entry } />
         </div>
       </fieldset>
-      <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveEntry }>Save Habit</Button>
+      <div className='save--button__cont'>
+        <Button
+          className='btn btn-secondary save--button'
+          type='button'
+          disabled={ isLoading }
+          variant="primary"
+          onClick={ () => resetForm() }>Cancel
+        </Button>
+        <Button
+          className='btn btn-primary save--button'
+          type='button'
+          disabled={ isLoading }
+          variant="primary"
+          onClick={ handleClickSaveEntry }>Save
+        </Button>
+      </div>
     </>
   )
 }

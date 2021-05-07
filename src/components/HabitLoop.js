@@ -12,12 +12,13 @@ import { ProfileCard } from './user/ProfileCard';
 
 export const HabitLoop = () => {
   // const [ user, setUser ] = useState('');
-  const currentUserId = sessionStorage.getItem('user_id')
+  // const currentUserId = sessionStorage.getItem('user_id')
+  // const [ user, setUser ] = useState('');
 
 
   // const getCurrentUser = () => {
   //   getAllUsers().then(res => res.filter(user => {
-  //     if (user.id == currentUserId) {
+  //     if (user.id === parseInt(currentUserId)) {
   //       setUser(user)
   //     }
   //   }))
@@ -27,7 +28,6 @@ export const HabitLoop = () => {
   //   getCurrentUser()
 
   // }, [])
-
   return (
     <>
       <Route
@@ -37,8 +37,10 @@ export const HabitLoop = () => {
               <>
                 <NavBar />
                 <section className='dashboard--container'>
-                  <ProfileCard />
-                  <ApplicationViews />
+                  <ProfileCard
+                  />
+                  <ApplicationViews
+                  />
                 </section>
               </>
             )

@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'
+import React from 'react';
 import { EntryEdit } from './JournalEdit';
 
 
 export const JournalCard = ({ entry, fetchEntries }) => {
-  const [ isLoading, setIsLoading ] = useState(false);
-  const history = useHistory();
-
+  // Returns journal entry card
   return (
     <section className='entry--cont'>
       <div className='entry--habit__title'>

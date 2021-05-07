@@ -3,7 +3,7 @@ import './ProfileCard.css'
 import profilePic from './images/rick-sanchez.jpeg'
 import { getAllUsers } from '../../modules/UserDataManager';
 
-export const ProfileCard = () => {
+export const ProfileCard = ({ }) => {
   const currentUserId = sessionStorage.getItem('user_id')
   const [ user, setUser ] = useState('');
 

@@ -140,3 +140,26 @@ text-align: center;
   height: 25px;
   padding-left: 5px;
 }
+
+.habit-form {
+  margin: 30px 0;
+  width: 400px;
+}
+
+.new-habit__container {
+  margin-left: 50px;
+}
+
+.habit-graphic {
+  margin: 30px 0 0 50px;
+}
+
+.btn-cont {
+  display: flex;
+  margin-top: 5px;
+  justify-content: flex-end;
+}
+
+.habit-form__title {
+  text-align: center;
+}
