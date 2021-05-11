@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
 // import 'papercss/dist/paper.css'
+import 'materialize-css/dist/css/materialize.min.css'
 import logo from './logo.png'
 import { userStorageKey } from "../../auth/authSettings"
 
