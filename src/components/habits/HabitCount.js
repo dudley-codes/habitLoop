@@ -7,6 +7,7 @@ import greenUp from './images/green-up.png'
 import redUp from './images/red-up.png'
 import greenDwn from './images/green-dwn.png'
 import redDwn from './images/red-dwn.png'
+import blackUp from './images/black-up.png'
 
 export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncreaseCount, handleDecreaseCount }) => {
   const [ count, setCount ] = useState({});
@@ -61,15 +62,16 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncrease
       <div className='up-down__cont'>
         <Link onClick={ handleIncreaseCount } to='' disabled={ isLoading }>
           <div className='habit--plus'>
-            <img src={ redOrGreenUp() } alt='add to habit icon' />
+            <img src={ blackUp } alt='black up arrow' />
+            <img src={ redOrGreenUp() } className='img-hvr' alt='add to habit icon' />
           </div>
         </Link>
         <div className='up-down__count'>{ filterHabits() }</div>
-        <Link onClick={ handleDecreaseCount } to='' disabled={ isLoading } >
+        {/* <Link onClick={ handleDecreaseCount } to='' disabled={ isLoading } >
           <div className='habit--plus'>
             <img src={ redOrGreenDwn() } alt='subtract from habit icon' />
           </div>
-        </Link>
+        </Link> */}
       </div>
     </>
   )
