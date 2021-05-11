@@ -55,12 +55,24 @@
 }
 
 .up-down__cont {
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   width: 50px;
   margin-top: 18px;
+  position: relative;
   /* border: black 1px solid; */
+}
 
+.up-down__cont .img-hvr {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  z-index: 99;
+}
+
+.up-down__cont:hover .img-hvr {
+  display: inline;
 }
 
 .up-down__count {
@@ -163,3 +175,4 @@ text-align: center;
 .habit-form__title {
   text-align: center;
 }
+
