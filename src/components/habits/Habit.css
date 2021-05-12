@@ -12,7 +12,7 @@
   /* border: solid black 2px; */
   /* margin: 25px 0 0 500px; */
   width: 100vw;
-  padding-top: 25vh;
+  padding-top: 16vh;
   /* min-height: 600px; */
   /* padding: 70px 50px 0px 40px; */
   /* justify-content: center; */
@@ -29,7 +29,7 @@
 .laptop--screen {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
   /* border: 1px black solid; */
 }
 
@@ -46,13 +46,13 @@
 }
 
 .habit--cont__list {
-  height: 370px;
+  height: 400px;
   color: #66FF66 !important;
   overflow: auto;
 }
 
 .habit--progress {
-  width: 100%;
+  width: 450px;
   font-size: 0.8rem;
 }
 
@@ -126,8 +126,9 @@
 
 .habit--card {
   display: flex;
-padding-bottom: 15px;
+  padding-bottom: 15px;
   align-content: center;
+  width: 500px;
   /* border: black 1px solid; */
   /* flex-wrap: wrap; */
 }

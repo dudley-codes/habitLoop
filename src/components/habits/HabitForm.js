@@ -5,6 +5,7 @@ import { GoodHabit } from './GoodHabit'
 import { BadHabit } from './BadHabit'
 import { HabitGraphic } from './HabitGraphic'
 import './Habit.css'
+import { NavBar } from '../nav/NavBar'
 
 
 export const NewHabit = () => {
@@ -64,15 +65,19 @@ export const NewHabit = () => {
 
   return (
     <>
-      <section className='new-habit__container'>
-        <div className='habit-form'>
-          <h3 className='habit-form__title'>New Habit</h3>
-          <HabitToggle />
-          <form className='habit-form'>
-            <RenderForm />
-          </form>
-        </div>
-        {/* <HabitGraphic /> */ }
+      <section className='dashboard--container'>
+        <section className='habit--container'>
+          <div className='laptop--screen'>
+            <NavBar />
+            <div className='habit-form'>
+              <HabitToggle />
+              <form className='habit-form'>
+                <RenderForm />
+              </form>
+            </div>
+          </div>
+          {/* <HabitGraphic /> */ }
+        </section>
       </section>
     </>
   )

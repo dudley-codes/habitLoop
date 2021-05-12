@@ -8,6 +8,7 @@
   /* border: black 1px solid; */
   /* z-index: 1; */
   width: auto !important;
+  line-height: 10px;
 }
 
 nav img {
@@ -19,11 +20,12 @@ nav img {
 nav ul {
   list-style-type: none !important;
 }
+/* !!! Blue color that I like: #599bd4 !important; */
 
 .btn {
-  background-color: #599bd4 !important;
+  background: transparent !important;
   outline: none !important;
-  border: none !important;
+  border: 1px solid #66FF66 !important;
 }
 
 /* .progress {

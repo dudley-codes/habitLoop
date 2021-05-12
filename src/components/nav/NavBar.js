@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 // import 'papercss/dist/paper.css'
-import 'materialize-css/dist/css/materialize.min.css'
+// import 'materialize-css/dist/css/materialize.min.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
 // import 'mdl-templates/material.css'
@@ -14,7 +14,7 @@ const Logout = () => {
 }
 
 
-export const NavBar = () => {
+export const NavBar = ({ setNavBar }) => {
   const [ isAuthenticated, setIsAuthenticated ] = useState(false)
   const currentUser = sessionStorage.getItem('user_id')
 
@@ -37,7 +37,7 @@ export const NavBar = () => {
             { isAuthenticated
               ?
               <li className="nav-item">
-                <Link className="nav-link" to="/">dashboard</Link>
+                <Link className="nav-link" to="/">myHabits</Link>
               </li>
               : null }
             { isAuthenticated

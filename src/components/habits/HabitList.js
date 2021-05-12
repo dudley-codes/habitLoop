@@ -13,6 +13,8 @@ export const HabitList = () => {
   const [ user, setUser ] = useState({
     name: ''
   });
+  // Sets initial state for navbar
+  const [ navBar, setNavBar ] = useState(0)
   const currentUserId = sessionStorage.getItem('user_id')
   const [ firstName, setFirstName ] = useState()
   // fetches all habits that belong to the current signed in user
@@ -40,15 +42,41 @@ export const HabitList = () => {
 
   useEffect(() => {
     getCurrentUser()
-    // .then(() => {
-    //   const splitName = user.name.split(' ')
-
-    //   if (splitName !== undefined) {
-    //     return splitName[ 0 ]
-    //   }
-    // }).then((res) => setFirstName(res))
-
   }, [])
+  // Renders habit card
+  const RenderProgress = () => {
+    return (
+      <div className='habit--cont__list'>
+        { habits.map(habit =>
+          <HabitCard
+            key={ habit.id }
+            habit={ habit }
+            fetchHabits={ fetchHabits }
+          />
+        ) }
+      </div>
+    )
+  }
+  // Renders journal list
+  const RenderJournal = () => {
+    return (
+      <JournalList
+        fetchHabits={ fetchHabits }
+        habitList={ habitList } />
+    )
+  }
+  // Switch statement for which card to render
+  const RenderScreen = () => {
+    switch (navBar) {
+      case 0:
+        return <RenderProgress />
+        break;
+      case 1:
+        return <RenderJournal />
+
+    }
+  }
+
   // Returns habit cards for all user habits
   return (
     <>
@@ -56,8 +84,11 @@ export const HabitList = () => {
         <div className='habit--container'>
           <div className='laptop--screen'>
 
-            <NavBar />
+            <NavBar
+              setNavBar={ setNavBar }
+            />
             {/* <h3>My Habits</h3> */ }
+            {/* <RenderScreen /> */ }
             <div className='habit--cont__list'>
               { habits.map(habit =>
                 <HabitCard
@@ -69,9 +100,7 @@ export const HabitList = () => {
             </div>
           </div>
         </div>
-        {/* <JournalList
-          fetchHabits={ fetchHabits }
-          habitList={ habitList } /> */}
+
       </section>
     </>
   )
