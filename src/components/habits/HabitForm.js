@@ -72,7 +72,7 @@ export const NewHabit = () => {
             <RenderForm />
           </form>
         </div>
-        <HabitGraphic />
+        {/* <HabitGraphic /> */ }
       </section>
     </>
   )

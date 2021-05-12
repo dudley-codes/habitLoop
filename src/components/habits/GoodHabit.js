@@ -47,7 +47,7 @@ export const GoodHabit = () => {
 we promise we won't make you read too much)</h6> */}
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='habit'>Habit:</label>
+          <label htmlFor='habit'>Good Habit:</label>
           <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' defaultValue={ habit.habit } />
         </div>
       </fieldset>

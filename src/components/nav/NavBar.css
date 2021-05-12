@@ -1,8 +1,12 @@
-/* nav {
+.navbar {
+  display: flex;
   font-family: 'Poppins', sans-serif;
-  color: #599bd4;
+  color: #599bd4 !important;
   font-weight: 900;
-} */
+  background-color: #599bd4 !important;
+  height: 100px;
+  /* border: black 1px solid; */
+}
 
 nav img {
   max-width: 350px;
@@ -12,4 +16,18 @@ nav img {
 
 nav ul {
   list-style-type: none !important;
+}
+
+.btn {
+  background-color: #599bd4 !important;
+  outline: none !important;
+  border: none !important;
+}
+
+/* .progress {
+  background-color: transparent;
+} */
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+  box-shadow: none !important;
 }

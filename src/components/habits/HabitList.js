@@ -54,17 +54,19 @@ export const HabitList = () => {
       <section className='dashboard--container'>
         <div className='habit--container'>
           <h3>My Habits</h3>
-          { habits.map(habit =>
-            <HabitCard
-              key={ habit.id }
-              habit={ habit }
-              fetchHabits={ fetchHabits }
-            />
-          ) }
+          <div className='habit--cont__list'>
+            { habits.map(habit =>
+              <HabitCard
+                key={ habit.id }
+                habit={ habit }
+                fetchHabits={ fetchHabits }
+              />
+            ) }
+          </div>
         </div>
-        <JournalList
+        {/* <JournalList
           fetchHabits={ fetchHabits }
-          habitList={ habitList } />
+          habitList={ habitList } /> */}
       </section>
     </>
   )

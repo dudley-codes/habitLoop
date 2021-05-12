@@ -2,15 +2,32 @@
   display: flex;
 }
 
-.habit--container {
+.habit--container  {
   /* border: solid black 2px; */
-  margin: 30px 0 0 30px;
-  width: 400px;
+  margin: 25px 0 0 500px;
+  /* width: 500px; */
+  min-height: 600px;
+  padding: 70px 50px 0px 40px;
+  justify-content: center;
+  /* background-image: url(./images/clipboard.svg) ;
+  background-repeat: no-repeat; */
+}
+
+.new-habit__container {
+  margin: 0 0 0 500px;
+
+  /* min-height: 600px; */
+  padding: 70px 50px 0px 40px;
   justify-content: center;
 }
 
 .habit--container h3 {
   text-align: center;
+}
+
+.habit--cont__list {
+  height: 450px;
+  overflow: auto;
 }
 
 .habit--progress {
@@ -104,10 +121,10 @@ padding-bottom: 15px;
   height: 500px;
 }
 
-.new-habit__container {
+/* .new-habit__container {
   display: flex;
-  margin-right: 20px;
-}
+  margin-left: 300px;
+} */
 
 /* Progress Bars */
 .bg-good {
@@ -158,9 +175,9 @@ text-align: center;
   width: 400px;
 }
 
-.new-habit__container {
+/* .new-habit__container {
   margin-left: 50px;
-}
+} */
 
 .habit-graphic {
   margin: 30px 0 0 50px;
@@ -176,3 +193,19 @@ text-align: center;
   text-align: center;
 }
 
+/* ! Modal */
+
+.modal {
+  background-color: transparent !important;
+  max-height: 100% !important;
+}
+
+/* Background */
+body {
+  background-image: url('./images/background.svg');
+  background-repeat: no-repeat;
+  background-size: 1550px;
+  background-position-y: 55px;
+  background-attachment: fixed;
+
+}
