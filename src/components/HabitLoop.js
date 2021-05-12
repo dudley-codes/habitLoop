@@ -35,7 +35,7 @@ export const HabitLoop = () => {
           if (sessionStorage.getItem('user_id')) {
             return (
               <>
-                <NavBar />
+                {/* <NavBar /> */ }
                 <section className='dashboard--container'>
                   {/* <ProfileCard
                   /> */}

@@ -5,7 +5,7 @@ import 'materialize-css/dist/css/materialize.min.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
 // import 'mdl-templates/material.css'
-import logo from './logo.png'
+import logo from './images/logo.png'
 import { userStorageKey } from "../../auth/authSettings"
 
 const Logout = () => {
@@ -29,40 +29,43 @@ export const NavBar = () => {
   }, [])
 
   return (
-    <nav className="navbar">
-      <img src={ logo } alt='logo' />
-
-      <ul className="nav nav-pills nav-fill">
-        { isAuthenticated
-          ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/">dashboard</Link>
-          </li>
-          : null }
-        { isAuthenticated
+    <>
+      <nav className="navbar">
+        {/* <img src={ logo } alt='logo' /> */ }
+        <div className='navbar__links'>
+          <ul className="nav nav-pills nav-fill">
+            { isAuthenticated
+              ?
+              <li className="nav-item">
+                <Link className="nav-link" to="/">dashboard</Link>
+              </li>
+              : null }
+            { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="/journal">journal</Link>
+              </li>
+              : null }
+            { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="/new">new</Link>
+              </li>
+              : null }
+            {/* { isAuthenticated
           ? <li className="nav-item">
-            <Link className="nav-link" to="/journal">journal</Link>
-          </li>
-          : null }
-        { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="/new">new</Link>
-          </li>
-          : null }
-        {/* { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="/about">about</Link>
-          </li>
-          : null } */}
-        <li className="nav-item">
           <Link className="nav-link" to="/about">about</Link>
-        </li>
-        { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="" onClick={ Logout }>logout</Link>
           </li>
-          : null }
-      </ul>
-    </nav>
+        : null } */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">about</Link>
+            </li>
+            { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="" onClick={ Logout }>logout</Link>
+              </li>
+              : null }
+          </ul>
+        </div>
+      </nav>
+    </>
   )
 }

@@ -5,6 +5,7 @@ import { getHabitsByUser } from '../../modules/HabitProvider';
 import { HabitDetailsCard } from './HabitDetailsCard';
 import { JournalList } from '../journal/JournalList';
 import { getAllUsers } from '../../modules/UserDataManager';
+import { NavBar } from '../nav/NavBar';
 
 
 export const HabitList = () => {
@@ -53,15 +54,19 @@ export const HabitList = () => {
     <>
       <section className='dashboard--container'>
         <div className='habit--container'>
-          <h3>My Habits</h3>
-          <div className='habit--cont__list'>
-            { habits.map(habit =>
-              <HabitCard
-                key={ habit.id }
-                habit={ habit }
-                fetchHabits={ fetchHabits }
-              />
-            ) }
+          <div className='laptop--screen'>
+
+            <NavBar />
+            {/* <h3>My Habits</h3> */ }
+            <div className='habit--cont__list'>
+              { habits.map(habit =>
+                <HabitCard
+                  key={ habit.id }
+                  habit={ habit }
+                  fetchHabits={ fetchHabits }
+                />
+              ) }
+            </div>
           </div>
         </div>
         {/* <JournalList
