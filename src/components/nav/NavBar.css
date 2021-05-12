@@ -1,21 +1,30 @@
 .navbar {
   display: flex;
+  justify-content: center;
+
+
+
   font-family: 'Poppins', sans-serif;
   /* color: #599bd4 !important; */
   font-weight: 900;
   background-color: transparent !important;
   /* height: 100px; */
-  /* border: black 1px solid; */
   /* z-index: 1; */
-  width: auto !important;
+  /* width: 1000px; */
+  margin-right: 50px;
+
   line-height: 10px;
+  /* width: 550px; */
 }
 
 nav img {
   max-width: 350px;
   padding-left: 100px;
-
 }
+
+/* .navbar__links{
+padding: 0 5px;
+} */
 
 nav ul {
   list-style-type: none !important;
@@ -37,6 +46,8 @@ nav ul {
 }
 
 .navbar__links {
+  display: flex;
+  justify-content: space-between;
   /* display: flex;
   justify-content: center; */
   /* background-image: url(./images/laptop.svg);
@@ -46,6 +57,11 @@ nav ul {
 
 .navbar__links a {
   color: #66FF66 !important;
+  /* margin-top: 100px; */
+}
+
+.navbar__links a:active {
+  color: #217921 !important;
   /* margin-top: 100px; */
 }
 

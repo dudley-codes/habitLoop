@@ -51,13 +51,15 @@
 }
 
 .journal--list {
-  max-width: 550px;
+  width: 550px;
   color: #66FF66 !important;
 }
 
 .laptop--screen_bttm {
   overflow: auto;
   height: 400px;
+
+
 }
 
 .journal--form  {

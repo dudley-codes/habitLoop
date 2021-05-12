@@ -139,9 +139,9 @@
 
 .habit--card {
   display: flex;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   align-content: center;
-  width: 500px;
+  width: 550px;
   /* border: black 1px solid; */
   /* flex-wrap: wrap; */
 }
