@@ -42,25 +42,6 @@
 
 }
 
-.journal--cont  {
-  display: flex;
-  flex-direction: column;
-  /* border: solid black 2px; */
-  /* margin: 25px 0 0 500px; */
-  width: 100vw;
-  padding-top: 16vh;
-  /* min-height: 600px; */
-  /* padding: 70px 50px 0px 40px; */
-  /* justify-content: center; */
-  background-image: url(../habits/images/laptop.svg);
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 1150px;
-  /* border: 1px black solid;  */
-  height: 100%;
-  z-index: 2;
-}
 
 .laptop--screen {
   display: flex;
