@@ -202,10 +202,19 @@ text-align: center;
 
 /* Background */
 body {
-  background-image: url('./images/background.svg');
+  background-image: url('./images/new-background.svg');
   background-repeat: no-repeat;
   background-size: 1550px;
-  background-position-y: 55px;
+  background-position-y: 10px;
   background-attachment: fixed;
+  background-color: #A2D5F2 !important;
 
+}
+
+::after, ::before {
+  box-sizing: unset;
+}
+
+#_x3C_cloud-gr-right_x3E_ {
+  margin-left: 100px;
 }
