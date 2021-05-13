@@ -61,6 +61,7 @@
 .habit--cont__list {
   height: 400px;
   color: #66FF66 !important;
+  font-family: 'New', sans-serif;
   overflow: auto;
 }
 
@@ -231,3 +232,39 @@ text-align: center;
   max-height: 100% !important;
 }
 
+.form-control {
+  font-family: 'New', sans-serif;
+  border: #66FF66 solid 1px !important;
+  background-color: black;
+  border-radius: 4px;
+}
+
+input[type=number], input[type=text] {
+  background-color: rgb(33, 32, 32) !important;
+  color: #66FF66 !important;
+}
+
+textarea[type=text] {
+  background-color: rgb(33, 32, 32) !important;
+  color: #66FF66 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a9a6a6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(85, 84, 84);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
