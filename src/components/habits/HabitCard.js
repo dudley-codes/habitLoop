@@ -168,7 +168,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               <div className='habit--progress'>
 
                 <div>
-                  <progress class="nes-progress is-primary" value={ monthlyPercentage } max="100"></progress>
+                  <progress className="nes-progress is-primary" value={ monthlyPercentage } max="100"></progress>
                   {/* <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } /> */ }
                 </div>
               </div>
@@ -201,7 +201,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
                 <div>
-                  <progress class={ goodOrBadProg() } value={ badHabitFreq() } max="100"></progress>
+                  <progress className={ goodOrBadProg() } value={ badHabitFreq() } max="100"></progress>
                   {/* <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } /> */ }
                 </div>
               </div>

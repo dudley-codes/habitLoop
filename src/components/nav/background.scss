@@ -15,34 +15,112 @@ svg {
   min-width: 1500px;
   bottom: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
+  overflow: visible;
 }
 
 .cloud1 {
-  animation: cloud-anim 18s alternate-reverse infinite linear;
+  animation: cloud-anim1 60s linear infinite;
+  // margin-left: 500px;
 }
 
 .cloud2 {
-  animation: cloud-anim 10s alternate-reverse infinite linear;
+  animation: cloud-anim3 70s  infinite linear;
+
 }
 
 .cloud3 {
-  animation: cloud-anim 14s alternate-reverse infinite linear;
+  animation: cloud-anim4 80s infinite linear;
+
 }
 
 .cloud4 {
-  animation: cloud-anim 12s alternate-reverse infinite linear;
+  animation: cloud-anim5 90s infinite linear;
 }
 
 .cloud5 {
-  animation: cloud-anim 15s alternate-reverse infinite linear;
+  animation: cloud-anim6 100s infinite linear;
 }
 
-@keyframes cloud-anim {
+@keyframes cloud-anim1 {
   from {
-    transform: translateX(0);
+    transform: translateX(65%);
   }
   to {
-    transform: translateX(-200px)
+    transform: translateX(-110%)
+  }
+}
+
+@keyframes cloud-anim3 {
+  from {
+    transform: translateX(35%);
+  }
+  to {
+    transform: translateX(-80%)
+  }
+}
+
+@keyframes cloud-anim4 {
+  from {
+    transform: translateX(15%);
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}
+
+@keyframes cloud-anim5 {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-20%)
+  }
+}
+
+@keyframes cloud-anim6 {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-20%)
+  }
+}
+
+
+.cloud6 {
+  animation: cloud-anim2 55s infinite ease-in-out ;
+  animation-delay: 10s;
+  // margin-left: 500px;
+}
+
+.cloud7 {
+  animation: cloud-anim2 65s  infinite ease-in-out;
+  animation-delay: 20s;
+
+}
+
+.cloud8 {
+  animation: cloud-anim2 75s infinite ease-in-out;
+  animation-delay: 5s;
+
+}
+
+.cloud9 {
+  animation: cloud-anim2 85s infinite ease-in-out;
+  animation-delay: 15s;
+}
+
+.cloud10 {
+  animation: cloud-anim2 105s infinite ease-in-out;
+  animation-delay: 30s;
+}
+
+@keyframes cloud-anim2 {
+  from {
+    transform: translateX(1%);
+  }
+  to {
+    transform: translateX(-120%)
   }
 }
