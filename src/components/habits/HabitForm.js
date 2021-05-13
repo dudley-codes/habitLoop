@@ -66,14 +66,16 @@ export const NewHabit = () => {
   return (
     <>
       <section className='dashboard--container'>
-        <section className='habit--container'>
+        <section className='habit--cont'>
           <div className='laptop--screen'>
             <NavBar />
-            <div className='habit-form'>
-              <HabitToggle />
-              <form className='habit-form'>
-                <RenderForm />
-              </form>
+            <div className='laptop--screen__bttm'>
+              <div className='habit-form'>
+                <HabitToggle />
+                <form className='habit-form'>
+                  <RenderForm />
+                </form>
+              </div>
             </div>
           </div>
           {/* <HabitGraphic /> */ }

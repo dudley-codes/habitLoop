@@ -56,7 +56,7 @@
   font-family: 'New', sans-serif;
 }
 
-.laptop--screen_bttm {
+.laptop--screen__bttm {
   overflow: auto;
   height: 400px;
 

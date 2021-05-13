@@ -40,7 +40,7 @@ export const JournalList = ({ }) => {
         <div className='journal--cont'>
           <div className='laptop--screen'>
             <NavBar />
-            <div className='laptop--screen_bttm'>
+            <div className='laptop--screen__bttm'>
               <div className='journal--form'>
                 <JournalForm
                   userId={ currentUserId }
