@@ -1,19 +1,15 @@
 .navbar {
   display: flex;
   justify-content: center;
-
-
-
+  font-size: 1rem !important;
   font-family: 'New', sans-serif !important;
   /* color: #599bd4 !important; */
-
   background-color: transparent !important;
   /* height: 100px; */
   /* z-index: 1; */
   /* width: 1000px; */
   margin-right: 50px;
-
-  line-height: 10px;
+  line-height: 15px;
   /* width: 550px; */
 }
 

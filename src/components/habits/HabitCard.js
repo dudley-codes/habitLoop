@@ -8,6 +8,7 @@ import { addCounter, decreaseCount } from '../../modules/HabitProvider'
 import collapse from '../habits/images/collapse.png'
 import expand from '../habits/images/expand.png'
 import './Habit.css'
+import "nes.css/css/nes.min.css";
 
 export const HabitCard = ({ habit, fetchHabits }) => {
   const [ isLoading, setIsLoading ] = useState(false);
@@ -54,11 +55,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   // 25% and 50%, set to yellow. Below 50%, set to red.
   const goodOrBadProg = () => {
     if (badHabitFreq() >= 75) {
-      return 'good'
+      return 'nes-progress is-primary'
     } else if (badHabitFreq() >= 25 & badHabitFreq() < 75) {
-      return 'warning'
+      return 'nes-progress is-warning'
     } else {
-      return 'danger'
+      return 'nes-progress is-error'
     }
   }
 
@@ -167,7 +168,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               <div className='habit--progress'>
 
                 <div>
-                  <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } />
+                  <progress class="nes-progress is-primary" value={ monthlyPercentage } max="100"></progress>
+                  {/* <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } /> */ }
                 </div>
               </div>
             </div>
@@ -199,7 +201,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
             <div className='habit--progress__cont'>
               <div className='habit--progress'>
                 <div>
-                  <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } />
+                  <progress class={ goodOrBadProg() } value={ badHabitFreq() } max="100"></progress>
+                  {/* <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } /> */ }
                 </div>
               </div>
             </div>

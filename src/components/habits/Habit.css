@@ -249,6 +249,17 @@ textarea[type=text] {
   color: #66FF66 !important;
 }
 
+textarea[type=text]:focus {
+  outline: #66FF66;
+  box-shadow:#66FF66 0 0 0 2px;
+}
+
+input[type=number]:focus, input[type=text]:focus {
+  border: transparent !important;
+  outline: transparent !important;
+  box-shadow: 0 0 0 2px #66FF66 !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -267,4 +278,15 @@ textarea[type=text] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.nes-progress {
+  background-color: transparent !important;
+  /* border: #66FF66 1px solid !important; */
+  height: 40px !important;
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(102,255,102)" /></svg>') !important;
+}
+/* Changes background color of progress bars */
+progress::-webkit-progress-bar {
+  background: transparent !important;
 }
