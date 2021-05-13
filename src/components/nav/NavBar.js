@@ -7,6 +7,7 @@ import './NavBar.css'
 // import 'mdl-templates/material.css'
 import logo from './images/logo.png'
 import { userStorageKey } from "../../auth/authSettings"
+import './background.scss'
 
 const Logout = () => {
   sessionStorage.setItem(userStorageKey, "")

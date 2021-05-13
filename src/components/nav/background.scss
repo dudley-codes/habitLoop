@@ -1,0 +1,48 @@
+/* Background */
+body {
+  /* background-image: url('./images/new-background.svg'); */
+  background-repeat: no-repeat;
+  /* background-size: 1550px; */
+  /* background-position-y: 10px;
+  background-attachment: fixed; */
+  background-color: #A2D5F2 !important;
+
+}
+
+
+svg {
+  position: absolute;
+  min-width: 1500px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.cloud1 {
+  animation: cloud-anim 18s alternate-reverse infinite linear;
+}
+
+.cloud2 {
+  animation: cloud-anim 10s alternate-reverse infinite linear;
+}
+
+.cloud3 {
+  animation: cloud-anim 14s alternate-reverse infinite linear;
+}
+
+.cloud4 {
+  animation: cloud-anim 12s alternate-reverse infinite linear;
+}
+
+.cloud5 {
+  animation: cloud-anim 15s alternate-reverse infinite linear;
+}
+
+@keyframes cloud-anim {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-200px)
+  }
+}

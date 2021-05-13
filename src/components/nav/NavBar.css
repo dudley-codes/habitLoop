@@ -64,25 +64,8 @@ nav ul {
   /* margin-top: 100px; */
 }
 
-/* Background */
-body {
-  /* background-image: url('./images/new-background.svg'); */
-  background-repeat: no-repeat;
-  /* background-size: 1550px; */
-  /* background-position-y: 10px;
-  background-attachment: fixed; */
-  background-color: #A2D5F2 !important;
-
-}
 
 ::after, ::before {
   box-sizing: unset;
 }
 
-svg {
-  position: absolute;
-  min-width: 1500px;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
