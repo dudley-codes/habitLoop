@@ -82,7 +82,7 @@
 } */
 
 .habit--plus img {
-  width: 20px;
+  width: 40px;
 }
 
 .habit--card__details {
@@ -94,6 +94,7 @@
 
 .habit--card__habit {
   display: flex;
+  padding-bottom: 5px;
   /* margin-bottom: -10px; */
   /* border: black 1px solid; */
 }
@@ -110,7 +111,7 @@
   display: inline-block;
   flex-direction: column;
   width: 50px;
-  margin-top: 18px;
+ 
   position: relative;
   /* border: black 1px solid; */
 }
@@ -118,6 +119,7 @@
 .up-down__cont .img-hvr {
   display: none;
   position: absolute;
+  margin-top: 0px;
   top: 0;
   left: 15px;
   z-index: 99;
@@ -129,12 +131,17 @@
 
 .up-down__count {
   text-align: center;
-  /* border: black 1px solid; */
+  border: #66FF66 1px solid;
+  width: 31px;
+  margin-left: 20px;
 }
 
 .habit--plus, .habit--minus {
   display: flex;
   justify-content: center;
+  /* margin-top: 5px; */
+  margin-left: 20px;
+  margin-bottom: 2px;
 
 }
 
@@ -204,9 +211,15 @@ text-align: center;
 
 .habit-form {
   margin: 30px 0;
-  width: 400px;
+  width: 550px;
+  padding-right: 5px;
+  color: #66FF66;
+  font-family: 'New', sans-serif;
 }
 
+.habit-form:hover, .active {
+  color: #409440  !important;
+}
 /* .new-habit__container {
   margin-left: 50px;
 } */
@@ -290,3 +303,4 @@ input[type=number]:focus, input[type=text]:focus {
 progress::-webkit-progress-bar {
   background: transparent !important;
 }
+

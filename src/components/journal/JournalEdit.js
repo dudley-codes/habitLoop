@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import editIcon from '../habits/images/edit-icon.svg'
+import editIcon from '../habits/images/edit.svg'
 import { Link } from 'react-router-dom'
 import { updateEntry, getEntryById, deleteEntry } from '../../modules/JournalProvider'
 import trashCan from '../habits/images/trashcan.png'
