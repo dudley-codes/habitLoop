@@ -83,7 +83,6 @@ export const HabitList = () => {
       <section className='dashboard-container'>
         <div className='habit-container'>
           <div className='laptop-screen'>
-
             <NavBar
               setNavBar={ setNavBar }
             />
