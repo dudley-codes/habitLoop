@@ -308,3 +308,12 @@ progress::-webkit-progress-bar {
   background: transparent !important;
 }
 
+.modal-header, .modal-body, .modal-footer {
+  background-color: rgb(33, 32, 32) !important;
+  font-family: 'New', sans-serif;
+  color:#66FF66 !important;
+}
+
+/* .modal {
+  top: 25vh;
+} */

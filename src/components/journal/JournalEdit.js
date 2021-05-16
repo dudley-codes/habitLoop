@@ -31,7 +31,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
     //   .then(fetchEntries)
     return (
       <>
-        <Link onClick={ () => confirmDelete() } to=''>
+        <Link onClick={ () => confirmDelete() } to='/journal'>
           <img src={ trashCan } alt='delete icon' className='edit-icon' />
         </Link>
       </>
@@ -82,7 +82,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
 
   return (
     <>
-      <Link onClick={ handleShow } to=''>
+      <Link onClick={ handleShow } to='/journal'>
         <img src={ editIcon } alt='edit icon' className='edit-icon' />
       </Link>
 
@@ -123,7 +123,6 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
               </div>
             </fieldset>
           </form>
-
         </Modal.Body>
         <Modal.Footer>
           <div className='button-container'>
@@ -135,7 +134,6 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
                 Delete
                 </Button> */}
             </div>
-
             <div className='button-container__save'>
               <Button
                 variant="secondary"
@@ -153,14 +151,12 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
           </div>
         </Modal.Footer>
       </Modal>
-
       {/* <Button variant="primary" onClick={ handleShow }>
         Launch demo modal
       </Button> */}
-
       <Modal show={ showConfirm } onHide={ handleCancel }>
         <Modal.Header closeButton>
-          <Modal.Title>Are you sure?</Modal.Title>
+          <Modal.Title>Are you sure you want to delete?</Modal.Title>
         </Modal.Header>
         <Modal.Footer>
           <Button variant="secondary" onClick={ handleCancel }>

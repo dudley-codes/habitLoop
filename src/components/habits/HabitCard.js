@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
@@ -16,7 +16,6 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   const history = useHistory();
   const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
-  const [ goal, setGoal ] = useState('')
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -112,15 +111,18 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   }
 
   // Checks if goodHabit is true or false and displays data accordingly
+  let goal = '';
   const GoodOrBadDetails = () => {
     switch (habit.goodHabit) {
-      case true: setGoal('Goal')
+      case true: goal = 'Goal'
         break;
-      case false: setGoal('Est. Total')
+      case false: goal = 'Est. Total'
         break;
       default:
         break;
     }
+
+
 
     return (
       <>
