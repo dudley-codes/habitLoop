@@ -43,7 +43,7 @@ export const Login = () => {
           <div className='login-signup'>
             <h2 className='login'>Login</h2>
             <h2 className='logout'>
-              <Link to="/register">Sign Up</Link>
+              <Link to="/register">Register</Link>
             </h2>
           </div>
           <fieldset>

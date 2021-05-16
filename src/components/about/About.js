@@ -1,6 +1,10 @@
 import React from 'react'
 import { NavBar } from '../nav/NavBar'
 import Carousel from 'react-bootstrap/Carousel'
+import sleepy from './images/sleepy.svg'
+import coffee from './images/coffee.svg'
+import alert from './images/alert.svg'
+import './About.css'
 
 
 export const About = () => {
@@ -13,48 +17,44 @@ export const About = () => {
             <div className='laptop-screen__bttm'>
               {/*! Start carousel */ }
               <div className='carousel-cont'>
+                <div className='what-is'>
+                  <p>A Habit Loop is a neurological loop that controls all habits. Habit loops consist of three different elements: a cue, a routine, and a reward.</p>
+                </div>
 
                 <Carousel
                   interval={ null }
                 >
                   <Carousel.Item>
-                    <img
-                      className="d-block w-100"
-                      src="holder.js/800x400?text=First slide&bg=373940"
-                      alt="First slide"
-                    />
-                    <Carousel.Caption>
-                      <h3>First slide label</h3>
-                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
+                    <div className='about-slide'>
+                      <h4>Cue: Tired student</h4>
+
+                      <img src={ sleepy } alt='sleepy student' />
+                    </div>
                   </Carousel.Item>
                   <Carousel.Item>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    <img
-                      className="d-block w-100"
-                      src="holder.js/800x400?text=Second slide&bg=282c34"
-                      alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                      <h3>Second slide label</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
+                    <div className='about-slide'>
+                      <h4>Routine: Coffee</h4>
+                      <img src={ coffee } alt='coffee cup' />
+                    </div>
                   </Carousel.Item>
                   <Carousel.Item>
-                    <img
-                      className="d-block w-100"
-                      src="holder.js/800x400?text=Third slide&bg=20232a"
-                      alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                      <h3>Third slide label</h3>
-                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
+                    <div className='about-slide'>
+                      <h4>Reward: Alert student</h4>
+                      <img src={ alert } alt='alert student' />
+                    </div>
                   </Carousel.Item>
                 </Carousel>
                 {/* End carousel */ }
+                <div className='what-is'>
+                  <p>The cue for a habit can be nearly anything related to your environment, from a certain scent, to the time of day, to a specific location.
+                  </p>
+                  <p>
+                    The routine is the habit itself. Pretty self-explanatory.
+                  </p>
+                  <p>
+                    Finally, we have the reward. What does your brain get out of it. This can be anything from the chemicals released in your brain from smoking a cigarette to the feeling of satisfaction you get from having a clean house.
+                  </p>
+                </div>
               </div>
 
             </div>

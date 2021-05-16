@@ -217,9 +217,9 @@ text-align: center;
   font-family: 'New', sans-serif;
 }
 
-.habit-form:hover, .active {
+/* .habit-form:hover, .active {
   color: #409440  !important;
-}
+} */
 /* .new-habit__container {
   margin-left: 50px;
 } */

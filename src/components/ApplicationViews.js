@@ -22,7 +22,7 @@ export const ApplicationViews = () => {
       <Route path='/journal'>
         <JournalList />
       </Route>
-      <Route path='/about'>
+      <Route exact path='/about'>
         <About />
       </Route>
     </>
