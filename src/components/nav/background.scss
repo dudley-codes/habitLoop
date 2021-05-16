@@ -19,104 +19,221 @@ svg {
   overflow: visible;
 }
 
+
+
+
+
+
 .cloud1 {
-  animation: cloud-anim1 60s linear infinite;
+  animation: cloud-anim1 70s linear infinite;
   // margin-left: 500px;
+}
+@keyframes cloud-anim1 {
+  0% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+  
+  50% {
+    opacity: 1;
+    transform: translateX(-60%);
+  }
+  
+  51% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  
+  52% {
+    opacity: 0;
+    transform: translateX(55%)
+  }
+  
+  53% {
+    opacity: 1;
+    transform: translateX(55%);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .cloud2 {
-  animation: cloud-anim3 70s  infinite linear;
-
+  animation: cloud-anim2 70s  infinite linear;
+  
+}
+@keyframes cloud-anim2 {
+  0% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+  
+  50% {
+    opacity: 1;
+    transform: translateX(-75%);
+  }
+  
+  51% {
+    opacity: 0;
+    transform: translateX(-75%);
+  }
+  
+  52% {
+    opacity: 0;
+    transform: translateX(35%)
+  }
+  
+  53% {
+    opacity: 1;
+    transform: translateX(35%);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .cloud3 {
-  animation: cloud-anim4 80s infinite linear;
-
+  animation: cloud-anim3 80s infinite linear;
+  
+}
+@keyframes cloud-anim3 {
+  0% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+  
+  50% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  
+  51% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  52% {
+    opacity: 0;
+    transform: translateX(15%)
+  }
+  
+  53% {
+    opacity: 1;
+    transform: translateX(15%);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .cloud4 {
-  animation: cloud-anim5 90s infinite linear;
+  animation: cloud-anim4 infinite 60s linear;
+  opacity: 0;
 }
-
-.cloud5 {
-  animation: cloud-anim6 100s infinite linear;
-}
-
-@keyframes cloud-anim1 {
-  from {
-    transform: translateX(65%);
-  }
-  to {
-    transform: translateX(-110%)
-  }
-}
-
-@keyframes cloud-anim3 {
-  from {
-    transform: translateX(35%);
-  }
-  to {
-    transform: translateX(-80%)
-  }
-}
-
 @keyframes cloud-anim4 {
-  from {
-    transform: translateX(15%);
+  0% {
+    opacity: 1;
+    transform: translateX(0)
   }
-  to {
-    transform: translateX(-100%)
+  
+  50% {
+    opacity: 1;
+    transform: translateX(-40%);
+  }
+  
+  51% {
+    opacity: 0;
+    transform: translateX(-40%);
+  }
+  
+  52% {
+    opacity: 0;
+    transform: translateX(70%)
+  }
+  
+  53% {
+    opacity: 1;
+    transform: translateX(70%);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
-
+    
+.cloud5 {
+      animation: cloud-anim5 70s infinite linear;
+    }
+    
 @keyframes cloud-anim5 {
-  from {
-    transform: translateX(95%);
+  0% {
+    opacity: 1;
+    transform: translateX(0)
   }
-  to {
-    transform: translateX(-20%)
+  
+  40% {
+    opacity: 1;
+    transform: translateX(-25%);
   }
-}
-
-@keyframes cloud-anim6 {
-  from {
+  
+  51% {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+  
+  52% {
+    opacity: 0;
+    transform: translateX(90%)
+  }
+  
+  53% {
+    opacity: 1;
     transform: translateX(90%);
   }
-  to {
-    transform: translateX(-20%)
+  
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
 
 .cloud6 {
-  animation: cloud-anim2 55s infinite ease-in-out ;
+  animation: cloud-anim9 55s infinite ease-in-out ;
   animation-delay: 10s;
   // margin-left: 500px;
 }
 
 .cloud7 {
-  animation: cloud-anim2 65s  infinite ease-in-out;
+  animation: cloud-anim9 65s  infinite ease-in-out;
   animation-delay: 20s;
 
 }
 
 .cloud8 {
-  animation: cloud-anim2 75s infinite ease-in-out;
+  animation: cloud-anim9 75s infinite ease-in-out;
   animation-delay: 5s;
 
 }
 
 .cloud9 {
-  animation: cloud-anim2 85s infinite ease-in-out;
+  animation: cloud-anim9 85s infinite ease-in-out;
   animation-delay: 15s;
 }
 
 .cloud10 {
-  animation: cloud-anim2 105s infinite ease-in-out;
+  animation: cloud-anim9 105s infinite ease-in-out;
   animation-delay: 30s;
 }
 
-@keyframes cloud-anim2 {
+@keyframes cloud-anim9 {
   from {
     transform: translateX(1%);
   }
