@@ -99,13 +99,13 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       showDetails === 0 ?
         <>
           <Link onClick={ () => setShowDetails(habit.id) } to=''>
-            <img src={ expand } alt='info icon' className='info--icon' />
+            <img src={ expand } alt='info icon' className='info-icon' />
           </Link>
         </>
         :
         <>
           <Link onClick={ () => setShowDetails(0) } to=''>
-            <img src={ collapse } alt='info icon' className='info--icon' />
+            <img src={ collapse } alt='info icon' className='info-icon' />
           </Link>
         </>
     )
@@ -124,7 +124,7 @@ export const HabitCard = ({ habit, fetchHabits }) => {
 
     return (
       <>
-        <div className='details--info'>
+        <div className='details-info'>
           <div><b>Cue:</b> { habit?.cue }</div>
           <div><b>Reward:</b> { habit?.reward }</div>
           <div><b>{ goal }:</b> { habit?.frequency }x per week</div>
@@ -151,10 +151,10 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   return (
     goodHabit ?
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div>{ habit.habit }</div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -164,8 +164,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
             <ShowDetails />
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
 
                 <div>
                   <progress className="nes-progress is-primary" value={ monthlyPercentage } max="100"></progress>
@@ -184,11 +184,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       </>
       :
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
 
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div>{ habit.habit }</div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -198,8 +198,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
             <ShowDetails />
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
                 <div>
                   <progress className={ goodOrBadProg() } value={ badHabitFreq() } max="100"></progress>
                   {/* <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } /> */ }

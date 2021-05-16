@@ -1,4 +1,4 @@
-.dashboard--container {
+.dashboard-container {
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -6,7 +6,7 @@
 
 }
 
-.habit--container  {
+.habit-container  {
   /* display: flex;
   flex-direction: column; */
   /* border: solid black 2px; */
@@ -28,7 +28,7 @@
   background-attachment: scroll; */
 }
 
-.laptop--screen {
+.laptop-screen {
   display: flex;
   /* position: absolute; */
   justify-content: center; 
@@ -54,56 +54,56 @@
   justify-content: center;
 }
 
-.habit--container h3 {
+.habit-container h3 {
   text-align: center;
 }
 
-.habit--cont__list {
+.habit-cont__list {
   height: 400px;
   color: #66FF66 !important;
   font-family: 'New', sans-serif;
   overflow: auto;
 }
 
-.habit--progress {
+.habit-progress {
   width: 450px;
   font-size: 0.8rem;
 }
 
-.habit--progress__cont {
+.habit-progress__cont {
   display: flex;
   /* border: black 1px solid; */
 }
 
-/* .habit--plus, .habit--minus {
+/* .habit-plus, .habit-minus {
   margin: -5px 0 20px 5px;
   padding-bottom: 10px;
   padding-left: 5px;
 } */
 
-.habit--plus img {
+.habit-plus img {
   width: 40px;
 }
 
-.habit--card__details {
+.habit-card__details {
   display: flex;
   justify-content: space-between;
   width: 300px;
   /* border: black 1px solid; */
 }
 
-.habit--card__habit {
+.habit-card__habit {
   display: flex;
   padding-bottom: 5px;
   /* margin-bottom: -10px; */
   /* border: black 1px solid; */
 }
 
-.edit--icon {
+.edit-icon {
   padding-left: 5px;
 }
 
-.habit--card__percent {
+.habit-card__percent {
   margin-right: 35px;
 }
 
@@ -136,7 +136,7 @@
   margin-left: 20px;
 }
 
-.habit--plus, .habit--minus {
+.habit-plus, .habit-minus {
   display: flex;
   justify-content: center;
   /* margin-top: 5px; */
@@ -145,7 +145,7 @@
 
 }
 
-.habit--card {
+.habit-card {
   display: flex;
   padding-bottom: 20px;
   align-content: center;
@@ -187,24 +187,24 @@
 
 /* Details Page */
 
-.details--info {
+.details-info {
   font-size: 15px;
 }
 
-.habit--details {
+.habit-details {
   margin-left: 40px;
 }
 
-.habit--details h3 {
+.habit-details h3 {
 text-align: center;
 }
 
-.habit--details__cont {
+.habit-details__cont {
   display: flex;
   flex-wrap: wrap;
 }
 
-.info--icon {
+.info-icon {
   height: 25px;
   padding-left: 5px;
 }

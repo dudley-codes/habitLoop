@@ -32,15 +32,15 @@ export const Login = () => {
       })
   }
   return (
-    <main className="container--login">
-      <dialog className="dialog dialog--auth" open={ existDialog }>
+    <main className="container-login">
+      <dialog className="dialog dialog-auth" open={ existDialog }>
         <div>User does not exist</div>
-        <button className="button--close" onClick={ e => setExistDialog(false) }>Close</button>
+        <button className="button-close" onClick={ e => setExistDialog(false) }>Close</button>
       </dialog>
 
       <section className='login__container'>
-        <form className="form--login" onSubmit={ handleLogin }>
-          <div className='login--signup'>
+        <form className="form-login" onSubmit={ handleLogin }>
+          <div className='login-signup'>
             <h2 className='login'>Login</h2>
             <h2 className='logout'>
               <Link to="/register">Sign Up</Link>

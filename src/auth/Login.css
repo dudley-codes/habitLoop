@@ -2,21 +2,21 @@
   min-width: 15rem;
   min-height: 5rem;
 }
-.form--login {
+.form-login {
   display: flex;
   flex-direction: column;
   /* color: whitesmoke; */
   /* max-width: 300px; */
 }
 
-.container--login {
+.container-login {
   display: flex;
   justify-content: center;
   /* border: 5px black solid; */
   font-family: 'Poppins', sans-serif;
 }
 
-.login--signup {
+.login-signup {
   display: flex;
   padding-bottom: 20px;
   padding-top: 150px;

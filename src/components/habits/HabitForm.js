@@ -65,11 +65,11 @@ export const NewHabit = () => {
 
   return (
     <>
-      <section className='dashboard--container'>
-        <section className='habit--cont'>
-          <div className='laptop--screen'>
+      <section className='dashboard-container'>
+        <section className='habit-cont'>
+          <div className='laptop-screen'>
             <NavBar />
-            <div className='laptop--screen__bttm'>
+            <div className='laptop-screen__bttm'>
               <div className='habit-form'>
                 <HabitToggle />
                 <form className='habit-form'>

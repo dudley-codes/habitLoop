@@ -32,7 +32,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
     return (
       <>
         <Link onClick={ () => confirmDelete() } to=''>
-          <img src={ trashCan } alt='delete icon' className='edit--icon' />
+          <img src={ trashCan } alt='delete icon' className='edit-icon' />
         </Link>
       </>
     )
@@ -83,7 +83,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
   return (
     <>
       <Link onClick={ handleShow } to=''>
-        <img src={ editIcon } alt='edit icon' className='edit--icon' />
+        <img src={ editIcon } alt='edit icon' className='edit-icon' />
       </Link>
 
       <DeleteButton />
@@ -174,8 +174,8 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
 
       {/* <Modal show={ setShow } onHide={ handleClose }>
         <Modal.Dialog >Are you sure you want to delete this entry?
-        <Button className='delete--button' onClick={ () => deleteConfirmed() }>Yes</Button>
-          <Button className='delete--button' onClick={ () => setShowConfirm(false) }>Cancel</Button>
+        <Button className='delete-button' onClick={ () => deleteConfirmed() }>Yes</Button>
+          <Button className='delete-button' onClick={ () => setShowConfirm(false) }>Cancel</Button>
         </Modal.Dialog>
       </Modal> */}
 

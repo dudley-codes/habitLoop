@@ -93,10 +93,10 @@ export const HabitDetailsCard = ({ habit, fetchHabits }) => {
     goodHabit ?
       // If goodHabit=true, good habit card is displayed
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div><b>{ habit.habit }</b></div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -104,13 +104,13 @@ export const HabitDetailsCard = ({ habit, fetchHabits }) => {
                 />
               </div>
             </div>
-            <div className='details--info'>
-              <div className='details--info__title'><b>Cue:</b> { habit?.cue }</div>
-              <div className='details--info__title'><b>Reward:</b> { habit?.reward }</div>
-              <div className='details--info__title'><b>Goal:</b> { habit?.frequency }x per week</div>
+            <div className='details-info'>
+              <div className='details-info__title'><b>Cue:</b> { habit?.cue }</div>
+              <div className='details-info__title'><b>Reward:</b> { habit?.reward }</div>
+              <div className='details-info__title'><b>Goal:</b> { habit?.frequency }x per week</div>
             </div>
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
 
                 <div>
                   <ProgressBar now={ monthlyPercentage } variant='good'
@@ -131,11 +131,11 @@ export const HabitDetailsCard = ({ habit, fetchHabits }) => {
       // If goodHabit=false, bad habit is displayed
       :
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
 
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div><b>{ habit.habit }</b></div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -143,13 +143,13 @@ export const HabitDetailsCard = ({ habit, fetchHabits }) => {
                 />
               </div>
             </div>
-            <div className='details--info'>
-              <div className='details--info__title'><b>Cue:</b> { habit?.cue }</div>
-              <div className='details--info__title'><b>Reward:</b> { habit?.reward }</div>
-              <div className='details--info__title'><b>Estimated Total:</b> { habit?.frequency }x per week</div>
+            <div className='details-info'>
+              <div className='details-info__title'><b>Cue:</b> { habit?.cue }</div>
+              <div className='details-info__title'><b>Reward:</b> { habit?.reward }</div>
+              <div className='details-info__title'><b>Estimated Total:</b> { habit?.frequency }x per week</div>
             </div>
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
                 <div>
                   <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } />
                 </div>

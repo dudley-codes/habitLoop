@@ -68,7 +68,7 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
   return (
     <>
       <Link onClick={ handleShow } to=''>
-        <img src={ editIcon } alt='edit icon' className='edit--icon' />
+        <img src={ editIcon } alt='edit icon' className='edit-icon' />
       </Link>
 
       <Modal show={ show } onHide={ handleClose }>

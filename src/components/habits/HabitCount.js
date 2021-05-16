@@ -61,14 +61,14 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncrease
     <>
       <div className='up-down__cont'>
         <Link onClick={ handleIncreaseCount } to='' disabled={ isLoading }>
-          <div className='habit--plus'>
+          <div className='habit-plus'>
             <img src={ greenUp } alt='black up arrow' />
             <img src={ redOrGreenUp() } className='img-hvr' alt='add to habit icon' />
           </div>
         </Link>
         <div className='up-down__count'>{ filterHabits() }</div>
         {/* <Link onClick={ handleDecreaseCount } to='' disabled={ isLoading } >
-          <div className='habit--plus'>
+          <div className='habit-plus'>
             <img src={ redOrGreenDwn() } alt='subtract from habit icon' />
           </div>
         </Link> */}

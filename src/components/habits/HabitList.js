@@ -46,7 +46,7 @@ export const HabitList = () => {
   // Renders habit card
   const RenderProgress = () => {
     return (
-      <div className='habit--cont__list'>
+      <div className='habit-cont__list'>
         { habits.map(habit =>
           <HabitCard
             key={ habit.id }
@@ -80,16 +80,16 @@ export const HabitList = () => {
   // Returns habit cards for all user habits
   return (
     <>
-      <section className='dashboard--container'>
-        <div className='habit--container'>
-          <div className='laptop--screen'>
+      <section className='dashboard-container'>
+        <div className='habit-container'>
+          <div className='laptop-screen'>
 
             <NavBar
               setNavBar={ setNavBar }
             />
             {/* <h3>My Habits</h3> */ }
             {/* <RenderScreen /> */ }
-            <div className='habit--cont__list'>
+            <div className='habit-cont__list'>
               { habits.map(habit =>
                 <HabitCard
                   key={ habit.id }

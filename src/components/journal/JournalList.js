@@ -36,12 +36,12 @@ export const JournalList = ({ }) => {
   // Return journal entry cards for current user
   return (
     <>
-      <section className='dashboard--container'>
-        <div className='journal--cont'>
-          <div className='laptop--screen'>
+      <section className='dashboard-container'>
+        <div className='journal-cont'>
+          <div className='laptop-screen'>
             <NavBar />
-            <div className='laptop--screen__bttm'>
-              <div className='journal--form'>
+            <div className='laptop-screen__bttm'>
+              <div className='journal-form'>
                 <JournalForm
                   userId={ currentUserId }
                   fetchHabits={ fetchHabits }
@@ -49,7 +49,7 @@ export const JournalList = ({ }) => {
                   key={ 7 }
                 />
               </div>
-              <div className='journal--list'>
+              <div className='journal-list'>
                 { entries.map(entry =>
                   <JournalCard
                     key={ entry.id }

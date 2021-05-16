@@ -6,11 +6,11 @@ import Carousel from 'react-bootstrap/Carousel'
 export const About = () => {
   return (
     <>
-      <section className='dashboard--container'>
+      <section className='dashboard-container'>
         <div className='about-cont'>
-          <div className='laptop--screen'>
+          <div className='laptop-screen'>
             <NavBar />
-            <div className='laptop--screen__bttm'>
+            <div className='laptop-screen__bttm'>
               {/*! Start carousel */ }
               <div className='carousel-cont'>
 

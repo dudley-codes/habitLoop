@@ -36,7 +36,7 @@ export const HabitLoop = () => {
             return (
               <>
                 {/* <NavBar /> */ }
-                <section className='dashboard--container'>
+                <section className='dashboard-container'>
                   {/* <ProfileCard
                   /> */}
                   <ApplicationViews

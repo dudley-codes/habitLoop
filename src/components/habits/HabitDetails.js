@@ -20,10 +20,10 @@ export const HabitDetails = () => {
   // Returns habit cards for all user habits
   return (
     <>
-      <section className='dashboard--container'>
-        <div className='habit--details'>
+      <section className='dashboard-container'>
+        <div className='habit-details'>
           <h3>Details</h3>
-          <div className='habit--details__cont'>
+          <div className='habit-details__cont'>
             { habitDetails.map(habit =>
               <HabitDetailsCard
                 key={ habit.id }

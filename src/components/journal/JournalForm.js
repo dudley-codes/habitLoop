@@ -67,7 +67,7 @@ export const JournalForm = ({ fetchEntries }) => {
     <>
       <fieldset>
         <div className='journal-form__entry'>
-          <Dropdown className='journal--dropdown'>
+          <Dropdown className='journal-dropdown'>
             <Dropdown.Toggle
               defaultValue={ entry.habit }
               name='habit'
@@ -92,16 +92,16 @@ export const JournalForm = ({ fetchEntries }) => {
           <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' value={ entry.entry } />
         </div>
       </fieldset>
-      <div className='save--button__cont'>
+      <div className='save-button__cont'>
         <Button
-          className='btn btn-secondary save--button'
+          className='btn btn-secondary save-button'
           type='button'
           disabled={ isLoading }
           variant="primary"
           onClick={ () => resetForm() }>Cancel
         </Button>
         <Button
-          className='btn btn-primary save--button'
+          className='btn btn-primary save-button'
           type='button'
           disabled={ isLoading }
           variant="primary"
