@@ -50,16 +50,13 @@
   /* background-attachment: scroll; */
 }
 
-.journal-cont {
-  /* border: 1px blue solid; */
-  height: 500px;
-}
+
 
 .screen-cont {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px purple solid;
+  /* border: 1px purple solid; */
 
 }
 .new-habit__container {
@@ -76,7 +73,7 @@
 
 .habit-cont__list {
   padding-right: 10px;
-
+  height: 400px;
   color: #66FF66 !important;
   font-family: 'New', sans-serif;
   overflow: auto;
@@ -234,9 +231,9 @@ text-align: center;
   font-family: 'New', sans-serif;
 }
 
-.habit-form:hover, .active {
+/* .habit-form:hover, .active {
   color: #409440  !important;
-}
+} */
 /* .new-habit__container {
   margin-left: 50px;
 } */

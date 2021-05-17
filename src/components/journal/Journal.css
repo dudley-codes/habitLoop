@@ -33,6 +33,11 @@
   text-align: center;
 }
 
+.journal-cont {
+  /* border: 1px blue solid; */
+  height: 450px;
+}
+
 .dashboard-container {
   display: flex;
   height: 100vh;
