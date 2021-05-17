@@ -36,10 +36,10 @@ export const JournalList = ({ }) => {
   // Return journal entry cards for current user
   return (
     <>
-      <section className='dashboard-container'>
+      <section className='dashboard-container2'>
         <div className='journal-cont'>
-          <div className='laptop-screen'>
-            <NavBar />
+          <div className='laptop-screen2'>
+            {/* <NavBar /> */ }
             <div className='laptop-screen__bttm'>
               <div className='journal-form'>
                 <JournalForm

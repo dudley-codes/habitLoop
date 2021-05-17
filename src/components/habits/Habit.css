@@ -30,6 +30,7 @@
 
 .laptop-screen {
   display: flex;
+  flex-direction: row;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -42,13 +43,25 @@
   background-repeat: no-repeat;
   background-position-y: center; 
   background-size: 100%;
-  /* border: 1px red solid; */
+  border: 1px red solid;
   min-width: 1500px; 
   height: 100%;
   /* z-index: 2; */
   /* background-attachment: scroll; */
 }
 
+.journal-cont {
+  /* border: 1px blue solid; */
+  height: 500px;
+}
+
+.screen-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px purple solid;
+
+}
 .new-habit__container {
   margin: 0 0 0 500px;
 
@@ -62,15 +75,15 @@
 }
 
 .habit-cont__list {
-  height: 65%;
-  width: 50%;
+  padding-right: 10px;
+
   color: #66FF66 !important;
   font-family: 'New', sans-serif;
   overflow: auto;
 }
 
 .habit-progress {
-  width: 450px;
+  width: 85%;
   font-size: 0.8rem;
 }
 
@@ -153,7 +166,7 @@
   display: flex;
   padding-bottom: 20px;
   align-content: center;
-  width: 550px;
+
   /* border: black 1px solid; */
   /* flex-wrap: wrap; */
 }

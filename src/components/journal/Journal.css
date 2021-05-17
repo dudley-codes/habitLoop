@@ -9,10 +9,9 @@
   height: 20px;
 }
 
-/* .journal-cont {
-  margin: 30px 0 0 30px;
-  max-width: 450px;
-} */
+.journal-cont {
+  padding-left: 15px;
+}
 
 .journal-dropdown {
   width: 242px;
@@ -51,7 +50,7 @@
 }
 
 .journal-list {
-  width: 550px;
+  width: 400px;
   color: #66FF66 !important;
   font-family: 'New', sans-serif;
 }

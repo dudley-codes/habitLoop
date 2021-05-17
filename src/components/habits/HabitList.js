@@ -86,16 +86,19 @@ export const HabitList = () => {
             <NavBar
               setNavBar={ setNavBar }
             />
-            {/* <h3>My Habits</h3> */ }
-            {/* <RenderScreen /> */ }
-            <div className='habit-cont__list'>
-              { habits.map(habit =>
-                <HabitCard
-                  key={ habit.id }
-                  habit={ habit }
-                  fetchHabits={ fetchHabits }
-                />
-              ) }
+            <div className='screen-cont'>
+              {/* <h3>My Habits</h3> */ }
+              {/* <RenderScreen /> */ }
+              <div className='habit-cont__list'>
+                { habits.map(habit =>
+                  <HabitCard
+                    key={ habit.id }
+                    habit={ habit }
+                    fetchHabits={ fetchHabits }
+                  />
+                ) }
+              </div>
+              <RenderJournal />
             </div>
           </div>
         </div>

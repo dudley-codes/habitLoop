@@ -10,7 +10,7 @@ import { ProfileCard } from './user/ProfileCard'
 export const ApplicationViews = () => {
   return (
     <>
-      <Route exact path='/'>
+      <Route path='/'>
         <HabitList />
       </Route>
       <Route path='/new'>
