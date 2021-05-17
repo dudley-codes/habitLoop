@@ -29,24 +29,22 @@
 }
 
 .laptop-screen {
-  /* display: flex; */
+  display: flex;
   /* position: absolute; */
-  /* justify-content: top;  */
-  bottom: 0;
-  left: 0;
+  /* justify-content: center;  */
+
   
   /* padding-top: 125px; */
   padding-bottom: 50px;
   background-image: url(./images/laptop.svg);
   background-repeat: no-repeat;
-  background-position-x: center;
+  /* background-position-x: center; */
   background-position-y: bottom; 
-  background-position-x: center;
   background-size: 1400px;
   /* border: 1px red solid; */
-  width: 100vw; 
+  width: 1400px; 
   height: 100%;
-  z-index: 2;
+  /* z-index: 2; */
   /* background-attachment: scroll; */
 }
 
