@@ -6,17 +6,37 @@ import { BadHabit } from './BadHabit'
 import { HabitGraphic } from './HabitGraphic'
 import './Habit.css'
 import { NavBar } from '../nav/NavBar'
+import goodIcon from './images/good.png'
+import devilIcon from './images/devil.png'
 
 
 export const NewHabit = () => {
   const [ radioValue, setRadioValue ] = useState(1);
 
+  const Good = () => {
+    return (
+      <div className='good-icon'>
+        <div className='good-icon-name'>Good</div>
+        <img src={ goodIcon } alt='smiling icon' className='good-icon' />
+      </div>
+    )
+  }
+
+  const Bad = () => {
+    return (
+      <div className='bad-icon'>
+        <div className='good-icon-name'>Bad</div>
+        <img src={ devilIcon } alt='smiling icon' className='bad-icon' />
+      </div>
+    )
+  }
+
   let currentRadioValue = { ...radioValue }
   // Names toggle buttons
   const HabitToggle = () => {
     const radios = [
-      { name: 'Good 😇', value: '1' },
-      { name: 'Bad 😈', value: '2' }
+      { name: <Good />, value: '1' },
+      { name: <Bad />, value: '2' }
     ];
     // Toggles selected button on radio based on value
     return (

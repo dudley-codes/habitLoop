@@ -259,6 +259,30 @@ text-align: center;
   justify-content: flex-end;
 }
 
+.btn {
+  color: #66FF66;
+}
+
+.good-icon img {
+  width: 30px;
+}
+
+.bad-icon img {
+  width: 40px;
+}
+
+.good-icon, .bad-icon {
+  display: flex;
+}
+
+.good-icon-name {
+  padding-right: 5px;
+}
+
+.btn:hover {
+  color: #347234;
+}
+
 .habit-form__title {
   text-align: center;
 }

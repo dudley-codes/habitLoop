@@ -32,7 +32,12 @@ export const NavBar = ({ setNavBar }) => {
   return (
     <>
       <nav className="navbar">
-        {/* <img src={ logo } alt='logo' /> */ }
+        <div className='habitLoop-logo'>
+
+          <Link to='/' className='logo'>
+            <img src={ logo } alt='logo' />
+          </Link>
+        </div>
         <div className='navbar__links'>
           <ul className="nav nav-pills nav-fill">
             { isAuthenticated

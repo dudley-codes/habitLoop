@@ -1,15 +1,10 @@
-/* .carousel-cont {
-  border: 1px solid red;
-  display: flex;
-  line-height: 20px;
-  margin-top: 100px;
-  padding: 40px;
-  /* height: 100%; 
-} */
+.carousel-cont {
+  height: 425px;
+  overflow: auto;
+}
 
 .about-cont__inner {
   height: 450px;
-  overflow: auto;
   z-index: 1;
 }
 
@@ -36,7 +31,7 @@
 
 .carousel-inner {
   height: 300px;
-  width: 550px;
+  width: 800px;
   margin-bottom: 10px;
   /* border: #66FF66 solid 1px; */
 }
@@ -47,7 +42,7 @@
 }
 
 .what-is {
-  width: 550px;
+  width: 750px;
 }
 
 .about-slide {

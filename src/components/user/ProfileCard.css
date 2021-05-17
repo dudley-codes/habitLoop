@@ -39,7 +39,7 @@ display: block;
 
 .btn-cont{
   display: grid;
-  justify-content: center;
+  justify-content: right;
 }
 
 .pic-cont img {

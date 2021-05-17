@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   font-size: 1rem !important;
   font-family: 'New', sans-serif !important;
   /* color: #599bd4 !important; */
@@ -8,14 +8,15 @@
   /* height: 100px; */
   /* z-index: 1; */
   /* width: 1000px; */
-  margin-right: 50px;
+  margin-right: 60px;
   line-height: 15px;
-  /* width: 550px; */
+
+
 }
 
 nav img {
-  max-width: 350px;
-  padding-left: 100px;
+  max-width: 325px;
+
 }
 
 /* .navbar__links{
@@ -46,8 +47,7 @@ nav ul {
 .navbar__links {
   display: flex;
   justify-content: space-between;
-  /* display: flex;
-  justify-content: center; */
+  justify-content: center;
   /* background-image: url(./images/laptop.svg);
   background-repeat: no-repeat;
   background-position-x: center; */
@@ -69,3 +69,7 @@ nav ul {
   box-sizing: unset;
 }
 
+.habitLoop-logo {
+  display: flex;
+  justify-content: flex-start;
+}
