@@ -1,7 +1,7 @@
 .dashboard-container {
   display: flex;
   height: 100vh;
-  justify-content: center;
+  justify-self: flex-start;
   /* border: 1px black solid; */
 
 }
@@ -30,17 +30,20 @@
 
 .laptop-screen {
   display: flex;
-  /* position: absolute; */
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
   justify-content: center; 
   /* padding-top: 125px; */
   padding-bottom: 50px;
   background-image: url(./images/laptop.svg);
   background-repeat: no-repeat;
-  /* background-position-x: center;*/
   background-position-y: center; 
-  background-size: 1150px;
+  background-size: 100%;
   /* border: 1px red solid; */
-  width: 1200px; 
+  min-width: 1500px; 
   height: 100%;
   /* z-index: 2; */
   /* background-attachment: scroll; */
