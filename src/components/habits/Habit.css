@@ -28,6 +28,13 @@
   background-attachment: scroll; */
 }
 
+.new-cont {
+  height: 450px;
+  width: 500px;
+  font-family: 'New', sans-serif;
+  color: #66FF66
+}
+
 .laptop-screen {
   display: flex;
   flex-direction: row;
@@ -43,7 +50,6 @@
   background-repeat: no-repeat;
   background-position-y: center; 
   background-size: 100%;
-  border: 1px red solid;
   min-width: 1500px; 
   height: 100%;
   /* z-index: 2; */
@@ -80,7 +86,7 @@
 }
 
 .habit-progress {
-  width: 85%;
+  width: 95%;
   font-size: 0.8rem;
 }
 
@@ -101,8 +107,8 @@
 
 .habit-card__details {
   display: flex;
-  justify-content: space-between;
-  width: 300px;
+  /* justify-content: space-between; */
+  width: 350px;
   /* border: black 1px solid; */
 }
 
@@ -122,11 +128,13 @@
 }
 
 .up-down__cont {
-  display: inline-block;
+  display: flex;
   flex-direction: column;
-  width: 50px;
+  justify-content: center;
+  align-items: center;
+  /* width: 50px; */
  
-  position: relative;
+  /* position: relative; */
   /* border: black 1px solid; */
 }
 
@@ -135,28 +143,30 @@
   position: absolute;
   margin-top: 0px;
   top: 0;
-  left: 15px;
+  left: 0;
   z-index: 99;
 }
 
 .up-down__cont:hover .img-hvr {
-  display: inline;
+  display: block;
+  /* left: 20px; */
 }
 
 .up-down__count {
   text-align: center;
   border: #66FF66 1px solid;
   width: 31px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .habit-plus, .habit-minus {
   display: flex;
   justify-content: center;
+  position: relative;
   /* margin-top: 5px; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-bottom: 2px;
-
+  z-index: 1;
 }
 
 .habit-card {
@@ -203,6 +213,7 @@
 
 .details-info {
   font-size: 15px;
+  width: 350px;
 }
 
 .habit-details {

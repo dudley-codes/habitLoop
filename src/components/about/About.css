@@ -7,7 +7,9 @@
   /* height: 100%; 
 } */
 
-.laptop-screen__bttm {
+.about-cont__inner {
+  height: 450px;
+  overflow: auto;
   z-index: 1;
 }
 

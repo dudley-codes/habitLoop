@@ -31,7 +31,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
     //   .then(fetchEntries)
     return (
       <>
-        <Link onClick={ () => confirmDelete() } to='/journal'>
+        <Link onClick={ () => confirmDelete() } to='/'>
           <img src={ trashCan } alt='delete icon' className='edit-icon' />
         </Link>
       </>
@@ -82,7 +82,7 @@ export const EntryEdit = ({ fetchEntries, entryId }) => {
 
   return (
     <>
-      <Link onClick={ handleShow } to='/journal'>
+      <Link onClick={ handleShow } to='/'>
         <img src={ editIcon } alt='edit icon' className='edit-icon' />
       </Link>
 

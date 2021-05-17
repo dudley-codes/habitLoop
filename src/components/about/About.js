@@ -14,10 +14,11 @@ export const About = () => {
         <div className='about-cont'>
           <div className='laptop-screen'>
             <NavBar />
-            <div className='laptop-screen__bttm'>
+            <div className='about-cont__inner'>
               {/*! Start carousel */ }
               <div className='carousel-cont'>
                 <div className='what-is'>
+                  <p>HabitLoop(🧠) is an app that helps you track progress of both and bad habits in your life.</p>
                   <p>A Habit Loop is a neurological loop that controls all habits. Habit loops consist of three different elements: a cue, a routine, and a reward.</p>
                 </div>
 

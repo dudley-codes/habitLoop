@@ -41,11 +41,11 @@ export const NavBar = ({ setNavBar }) => {
                 <Link className="nav-link" to="/">myHabits</Link>
               </li>
               : null }
-            { isAuthenticated
+            {/* { isAuthenticated
               ? <li className="nav-item">
                 <Link className="nav-link" to="/journal">journal</Link>
               </li>
-              : null }
+              : null } */}
             { isAuthenticated
               ? <li className="nav-item">
                 <Link className="nav-link" to="/new">new</Link>

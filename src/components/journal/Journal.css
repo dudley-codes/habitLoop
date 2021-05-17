@@ -1,5 +1,4 @@
 
-
 /* Edit Icon */
 .entry-habit__title {
   display: flex;
@@ -35,6 +34,7 @@
 
 .journal-cont {
   /* border: 1px blue solid; */
+  padding-top: 20px;
   height: 450px;
 }
 
