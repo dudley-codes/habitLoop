@@ -89,7 +89,7 @@ export const JournalForm = ({ fetchEntries }) => {
         </div>
         <div className='journal-form__entry'>
           {/* <label htmlFor='habit'>Entry:</label> */ }
-          <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus rows='3' className='form-control' placeholder='Record your thoughts here thoughts after updating your habit count... ' value={ entry.entry } />
+          <textarea type='text' id='entry' onChange={ handleControlledInputChange } required autoFocus rows='3' className='form-control' placeholder='Record your thoughts after updating your habit count... ' value={ entry.entry } />
         </div>
       </fieldset>
       <div className='save-button__cont'>
