@@ -62,7 +62,8 @@
 }
 
 .habit-cont__list {
-  height: 400px;
+  height: 65%;
+  width: 50%;
   color: #66FF66 !important;
   font-family: 'New', sans-serif;
   overflow: auto;
