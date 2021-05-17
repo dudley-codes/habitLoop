@@ -31,18 +31,16 @@
 .laptop-screen {
   display: flex;
   /* position: absolute; */
-  /* justify-content: center;  */
-
-  
+  justify-content: center; 
   /* padding-top: 125px; */
   padding-bottom: 50px;
   background-image: url(./images/laptop.svg);
   background-repeat: no-repeat;
-  /* background-position-x: center; */
-  background-position-y: bottom; 
-  background-size: 1400px;
+  /* background-position-x: center;*/
+  background-position-y: center; 
+  background-size: 1150px;
   /* border: 1px red solid; */
-  width: 1400px; 
+  width: 1200px; 
   height: 100%;
   /* z-index: 2; */
   /* background-attachment: scroll; */
@@ -68,7 +66,7 @@
 }
 
 .habit-progress {
-  width: 45vw;
+  width: 450px;
   font-size: 0.8rem;
 }
 
@@ -151,7 +149,7 @@
   display: flex;
   padding-bottom: 20px;
   align-content: center;
-  width: 50vw;
+  width: 550px;
   /* border: black 1px solid; */
   /* flex-wrap: wrap; */
 }
@@ -219,9 +217,9 @@ text-align: center;
   font-family: 'New', sans-serif;
 }
 
-/* .habit-form:hover, .active {
+.habit-form:hover, .active {
   color: #409440  !important;
-} */
+}
 /* .new-habit__container {
   margin-left: 50px;
 } */
@@ -311,3 +309,4 @@ progress::-webkit-progress-bar {
   font-family: 'New', sans-serif;
   color:#66FF66 !important;
 }
+
