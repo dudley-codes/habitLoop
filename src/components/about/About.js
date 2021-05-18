@@ -20,6 +20,7 @@ export const About = () => {
                 <div className='what-is'>
                   <p>HabitLoop(🧠) is an app that helps you track progress of both and bad habits in your life.</p>
                   <p>A Habit Loop is a neurological loop that controls all habits. Habit loops consist of three different elements: a cue, a routine, and a reward.</p>
+                  <p>For example:</p>
                 </div>
 
                 <Carousel
@@ -27,20 +28,20 @@ export const About = () => {
                 >
                   <Carousel.Item>
                     <div className='about-slide'>
-                      <h4>Cue: Tired student</h4>
+                      <h6>Cue: Tired student</h6>
 
                       <img src={ sleepy } alt='sleepy student' />
                     </div>
                   </Carousel.Item>
                   <Carousel.Item>
                     <div className='about-slide'>
-                      <h4>Routine: Coffee</h4>
+                      <h6>Habit: Drink Coffee</h6>
                       <img src={ coffee } alt='coffee cup' />
                     </div>
                   </Carousel.Item>
                   <Carousel.Item>
                     <div className='about-slide'>
-                      <h4>Reward: Alert student</h4>
+                      <h6>Reward: Alert student</h6>
                       <img src={ alert } alt='alert student' />
                     </div>
                   </Carousel.Item>
@@ -55,6 +56,8 @@ export const About = () => {
                   <p>
                     Finally, we have the reward. What does your brain get out of it. This can be anything from the chemicals released in your brain from smoking a cigarette to the feeling of satisfaction you get from having a clean house.
                   </p>
+
+
                 </div>
               </div>
 

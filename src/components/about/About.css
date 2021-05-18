@@ -46,7 +46,7 @@
 }
 
 .about-slide {
-  margin-left: 60px;
+  /* margin-left: 60px; */
   display: flex;
   flex-direction: column;
   justify-content: center;

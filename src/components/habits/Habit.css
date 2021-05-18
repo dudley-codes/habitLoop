@@ -28,11 +28,13 @@
   background-attachment: scroll; */
 }
 
-.new-cont {
+.new-cont, .instructions {
   height: 450px;
-  width: 500px;
+  width: 400px;
+  padding-right: 10px;
   font-family: 'New', sans-serif;
-  color: #66FF66
+  color: #66FF66;
+  overflow: auto;
 }
 
 .laptop-screen {

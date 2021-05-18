@@ -67,6 +67,19 @@ export const NewHabit = () => {
     HabitToggle()
   }, [])
 
+  const FormInstructions = () => {
+    return (
+      <>
+        <div className='instructions'>
+          <h4>Instructions:</h4>
+          <p><b>Habit.</b>This part is pretty easy. What is the habit you are trying to form or break?</p>
+          <p><b>Cue.</b>What cues or triggers the habit? If this is a habit you are trying to break, ask yourself, "After I do (cue), I do (habit)." This can be more than one thing, but try to narrow it down as best as possible.</p>
+          <p><b>Reward.</b>This is the thing that tricks your brain into continuing the habit. If you're a smoker, it could be the feeling of relaxation after a cigarette. If you're a runner, it could be the runner's high you get.</p>
+        </div>
+      </>
+    )
+  }
+
 
   // switch statement that checks to see if the radioValue is 1 or 2 and then renders the GoodHabit form or BadHabitForm
   // TODO refactor code so that the goodhabit form and bad habit form are the same form and lines of code change 
@@ -96,6 +109,7 @@ export const NewHabit = () => {
                   <RenderForm />
                 </form>
               </div>
+              <FormInstructions />
             </div>
           </div>
           {/* <HabitGraphic /> */ }
