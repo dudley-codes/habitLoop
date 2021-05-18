@@ -4,7 +4,7 @@ import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/help
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
-import { addCounter, decreaseCount } from '../../modules/HabitProvider'
+import { addCounter, decreaseCount, getHabitsByUser } from '../../modules/HabitProvider'
 import collapse from '../habits/images/collapse.png'
 import expand from '../habits/images/expand.png'
 import './Habit.css'
@@ -16,6 +16,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   const history = useHistory();
   const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
+
+  const currentUserId = sessionStorage.getItem('user_id')
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -109,6 +111,9 @@ export const HabitCard = ({ habit, fetchHabits }) => {
         </>
     )
   }
+  // Fetch habits by user
+  // console.log('user', getHabitsByUser(currentUserId))
+  console.log('cue', habit)
 
   // Checks if goodHabit is true or false and displays data accordingly
   let goal = '';
@@ -122,14 +127,13 @@ export const HabitCard = ({ habit, fetchHabits }) => {
         break;
     }
 
-
-
     return (
       <>
         <div className='details-info'>
           <div><b>Cue:</b> { habit?.cue }</div>
           <div><b>Reward:</b> { habit?.reward }</div>
           <div><b>{ goal }:</b> { habit?.frequency }x per week</div>
+          <div><b>Total:</b> { habit.count.length }</div>
         </div>
       </>
     )
