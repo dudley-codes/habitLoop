@@ -1,15 +1,75 @@
-/* nav {
-  font-family: 'Poppins', sans-serif;
-  color: #599bd4;
-  font-weight: 900;
-} */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem !important;
+  font-family: 'New', sans-serif !important;
+  /* color: #599bd4 !important; */
+  background-color: transparent !important;
+  /* height: 100px; */
+  /* z-index: 1; */
+  /* width: 1000px; */
+  margin-right: 60px;
+  line-height: 15px;
 
-nav img {
-  max-width: 350px;
-  padding-left: 100px;
 
 }
 
+nav img {
+  max-width: 325px;
+
+}
+
+/* .navbar__links{
+padding: 0 5px;
+} */
+
 nav ul {
   list-style-type: none !important;
+}
+/* !!! Blue color that I like: #599bd4 !important; */
+
+.btn {
+  background: transparent !important;
+  outline: none !important;
+  font-family: 'New', sans-serif !important;
+  color: #66FF66;
+  border: 1px solid #66FF66 !important;
+}
+
+/* .progress {
+  background-color: transparent;
+} */
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+  box-shadow: none !important;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  /* background-image: url(./images/laptop.svg);
+  background-repeat: no-repeat;
+  background-position-x: center; */
+}
+
+.navbar__links a {
+  color: #66FF66 !important;
+  font-family: 'New', sans-serif !important;
+  /* margin-top: 100px; */
+}
+
+.navbar__links a:active {
+  color: #217921 !important;
+  /* margin-top: 100px; */
+}
+
+
+::after, ::before {
+  box-sizing: unset;
+}
+
+.habitLoop-logo {
+  display: flex;
+  justify-content: flex-start;
 }

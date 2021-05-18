@@ -6,9 +6,7 @@ import { Register } from "../auth/Register"
 import { NavBar } from './nav/NavBar'
 import { getAllUsers } from '../modules/UserDataManager';
 import { ProfileCard } from './user/ProfileCard';
-
-
-
+import { About } from './about/About';
 
 export const HabitLoop = () => {
   // const [ user, setUser ] = useState('');
@@ -35,10 +33,10 @@ export const HabitLoop = () => {
           if (sessionStorage.getItem('user_id')) {
             return (
               <>
-                <NavBar />
-                <section className='dashboard--container'>
-                  <ProfileCard
-                  />
+                {/* <NavBar /> */ }
+                <section className='dashboard-container'>
+                  {/* <ProfileCard
+                  /> */}
                   <ApplicationViews
                   />
                 </section>
@@ -50,13 +48,27 @@ export const HabitLoop = () => {
         } } />
 
       <Route path="/login">
-        <NavBar />
-        <Login />
+        <section className='dashboard-container'>
+          <div className='laptop-screen'>
+
+            <div className='laptop-screen__bttm'>
+              <Login />
+            </div>
+          </div>
+        </section>
       </Route>
       <Route path="/register">
-        <NavBar />
-        <Register />
+        <section className='dashboard-container'>
+          <div className='laptop-screen'>
+
+            <div className='laptop-screen__bttm'>
+              <Register />
+            </div>
+          </div>
+        </section>
+
       </Route>
+
     </>
   )
 }

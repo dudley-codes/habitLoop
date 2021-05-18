@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+// import 'papercss/dist/paper.css'
+// import 'materialize-css/dist/css/materialize.min.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 import './NavBar.css'
-// import 'papercss/dist/paper.css'
-import logo from './logo.png'
+// import 'mdl-templates/material.css'
+import logo from './images/logo.png'
 import { userStorageKey } from "../../auth/authSettings"
+import './background.scss'
 
 const Logout = () => {
   sessionStorage.setItem(userStorageKey, "")
@@ -12,7 +15,7 @@ const Logout = () => {
 }
 
 
-export const NavBar = () => {
+export const NavBar = ({ setNavBar }) => {
   const [ isAuthenticated, setIsAuthenticated ] = useState(false)
   const currentUser = sessionStorage.getItem('user_id')
 
@@ -27,40 +30,48 @@ export const NavBar = () => {
   }, [])
 
   return (
-    <nav className="navbar">
-      <img src={ logo } alt='logo' />
+    <>
+      <nav className="navbar">
+        <div className='habitLoop-logo'>
 
-      <ul className="nav nav-pills nav-fill">
-        { isAuthenticated
-          ?
-          <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
-          </li>
-          : null }
-        {/* { isAuthenticated
+          <Link to='/' className='logo'>
+            <img src={ logo } alt='logo' />
+          </Link>
+        </div>
+        <div className='navbar__links'>
+          <ul className="nav nav-pills nav-fill">
+            { isAuthenticated
+              ?
+              <li className="nav-item">
+                <Link className="nav-link" to="/">myHabits</Link>
+              </li>
+              : null }
+            {/* { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="/journal">journal</Link>
+              </li>
+              : null } */}
+            { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="/new">new</Link>
+              </li>
+              : null }
+            {/* { isAuthenticated
           ? <li className="nav-item">
-            <Link className="nav-link" to="/social">Social</Link>
+          <Link className="nav-link" to="/about">about</Link>
           </li>
-          : null } */}
-        {/* { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="/details">Details</Link>
-          </li>
-          : null } */}
-        { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="/new">New Habit</Link>
-          </li>
-          : null }
-        {/* <li className="nav-item">
-          <Link className="nav-link" to="/about">About</Link>
-        </li> */}
-        { isAuthenticated
-          ? <li className="nav-item">
-            <Link className="nav-link" to="" onClick={ Logout }>Logout</Link>
-          </li>
-          : null }
-      </ul>
-    </nav>
+        : null } */}
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">about</Link>
+            </li>
+            { isAuthenticated
+              ? <li className="nav-item">
+                <Link className="nav-link" to="" onClick={ Logout }>logout</Link>
+              </li>
+              : null }
+          </ul>
+        </div>
+      </nav>
+    </>
   )
 }

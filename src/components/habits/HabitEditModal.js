@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
-import editIcon from './images/edit-icon.svg';
+import editIcon from './images/edit.svg';
 import { Link } from 'react-router-dom';
 import { updateHabit, getHabitById, deleteHabit } from '../../modules/HabitProvider';
+import trashCan from './images/trashcan.png'
 
 export const HabitEditModal = ({ habitId, fetchHabits }) => {
   const [ show, setShow ] = useState(false);
   const [ habit, setHabit ] = useState({ habit: '' });
   const [ habits, setHabits ] = useState({})
   const [ isLoading, setIsLoading ] = useState(false);
+  const [ showConfirm, setShowConfirm ] = useState(false)
 
   // When called, closes the Modal
   const handleClose = () => {
@@ -19,10 +21,29 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
   };
 
   // Deletes a habit, fetches updated habit list, and then closes the modal.
-  const handleDelete = (id) => {
-    deleteHabit(id)
-      .then(fetchHabits())
-      .then(handleClose)
+  const handleDelete = () => {
+    deleteHabit(habitId)
+      .then(() => {
+        fetchHabits()
+        setShowConfirm(false)
+      })
+
+  }
+  // Activates confirm delete modal
+  const confirmDelete = () => {
+    setShowConfirm(true)
+  }
+
+  const handleCancel = () => setShowConfirm(false)
+
+  const DeleteButton = () => {
+    return (
+      <>
+        <Link onClick={ () => confirmDelete() } to='/'>
+          <img src={ trashCan } alt='delete icon' className='edit-icon' />
+        </Link>
+      </>
+    )
   }
 
   // Executes the modal
@@ -68,8 +89,9 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
   return (
     <>
       <Link onClick={ handleShow } to=''>
-        <img src={ editIcon } alt='edit icon' className='edit--icon' />
+        <img src={ editIcon } alt='edit icon' className='edit-icon' />
       </Link>
+      <DeleteButton />
 
       <Modal show={ show } onHide={ handleClose }>
         <Modal.Header closeButton>
@@ -139,12 +161,13 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
         <Modal.Footer>
           <div className='button-container'>
             <div className='button-container__delete'>
-              <Button
+
+              {/* <Button
                 variant='danger'
                 onClick={ () => handleDelete(habitId) }
                 disabled={ isLoading }>
                 Delete
-                </Button>
+                </Button> */}
             </div>
 
             <div className='button-container__save'>
@@ -164,6 +187,22 @@ export const HabitEditModal = ({ habitId, fetchHabits }) => {
           </div>
         </Modal.Footer>
       </Modal>
+
+      {/* Delete modal */ }
+      <Modal show={ showConfirm } onHide={ handleCancel }>
+        <Modal.Header closeButton>
+          <Modal.Title>Are you sure you want to delete?</Modal.Title>
+        </Modal.Header>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={ handleCancel }>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={ () => handleDelete() }>
+            Yes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
+
   );
 }

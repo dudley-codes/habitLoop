@@ -1,4 +1,4 @@
-.profile--cont__outer {
+.profile-cont__outer {
   display: flex;
   justify-content: flex-start;
   padding-left: 100px;
@@ -11,38 +11,38 @@ display: block;
   width: 100%;
 }
 
-.profile--cont__inner {
+.profile-cont__inner {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-.pic--cont {
+.pic-cont {
   display: flex;
   justify-content: center;
   /* border: 5px black solid; */
   /* width: 100px; */
 }
 
-.bio--cont {
+.bio-cont {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* border: 5px black solid; */
 }
 
-.btn--subscribe{
+.btn-subscribe{
   display: grid;
   justify-content: center;
   border: 5px black solid;
 }
 
-.btn--cont{
+.btn-cont{
   display: grid;
-  justify-content: center;
+  justify-content: right;
 }
 
-.pic--cont img {
+.pic-cont img {
   border-radius: 50%;
   object-fit:fill;
   width: 150px;
@@ -51,7 +51,7 @@ display: block;
 
 html {
   color: #41403e;
-  color: var(--primary);
+  color: var(-primary);
   font-family: "Poppins", sans-serif;
   font-size: 20px;
 }

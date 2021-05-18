@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useHistory, Link } from 'react-router-dom'
 import { getCurrentMonth, getCurrentYear, daysInMonth } from '../../modules/helpers';
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { HabitEditModal } from './HabitEditModal';
 import { IncreaseCount } from './HabitCount';
-import { addCounter, decreaseCount } from '../../modules/HabitProvider'
+import { addCounter, decreaseCount, getHabitsByUser } from '../../modules/HabitProvider'
 import collapse from '../habits/images/collapse.png'
 import expand from '../habits/images/expand.png'
 import './Habit.css'
+import "nes.css/css/nes.min.css";
 
 export const HabitCard = ({ habit, fetchHabits }) => {
   const [ isLoading, setIsLoading ] = useState(false);
@@ -15,7 +16,8 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   const history = useHistory();
   const goodHabit = habit.goodHabit
   const [ count, setCount ] = useState({});
-  const [ goal, setGoal ] = useState('')
+
+  const currentUserId = sessionStorage.getItem('user_id')
 
   // Fetches habits and then creats a new array with only habit counts from the current month.
   const filterHabits = () => {
@@ -54,11 +56,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   // 25% and 50%, set to yellow. Below 50%, set to red.
   const goodOrBadProg = () => {
     if (badHabitFreq() >= 75) {
-      return 'good'
+      return 'nes-progress is-primary'
     } else if (badHabitFreq() >= 25 & badHabitFreq() < 75) {
-      return 'warning'
+      return 'nes-progress is-warning'
     } else {
-      return 'danger'
+      return 'nes-progress is-error'
     }
   }
 
@@ -98,24 +100,28 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       showDetails === 0 ?
         <>
           <Link onClick={ () => setShowDetails(habit.id) } to=''>
-            <img src={ expand } alt='info icon' className='info--icon' />
+            <img src={ expand } alt='info icon' className='info-icon' />
           </Link>
         </>
         :
         <>
           <Link onClick={ () => setShowDetails(0) } to=''>
-            <img src={ collapse } alt='info icon' className='info--icon' />
+            <img src={ collapse } alt='info icon' className='info-icon' />
           </Link>
         </>
     )
   }
+  // Fetch habits by user
+  // console.log('user', getHabitsByUser(currentUserId))
+  console.log('cue', habit)
 
   // Checks if goodHabit is true or false and displays data accordingly
+  let goal = '';
   const GoodOrBadDetails = () => {
     switch (habit.goodHabit) {
-      case true: setGoal('Goal')
+      case true: goal = 'Goal'
         break;
-      case false: setGoal('Est. Total')
+      case false: goal = 'Est. Total'
         break;
       default:
         break;
@@ -123,10 +129,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
 
     return (
       <>
-        <div className='details--info'>
+        <div className='details-info'>
           <div><b>Cue:</b> { habit?.cue }</div>
           <div><b>Reward:</b> { habit?.reward }</div>
           <div><b>{ goal }:</b> { habit?.frequency }x per week</div>
+          <div><b>Total:</b> { habit.count.length }</div>
         </div>
       </>
     )
@@ -150,10 +157,10 @@ export const HabitCard = ({ habit, fetchHabits }) => {
   return (
     goodHabit ?
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div>{ habit.habit }</div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -163,11 +170,12 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
             <ShowDetails />
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
 
                 <div>
-                  <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } />
+                  <progress className="nes-progress is-primary" value={ monthlyPercentage } max="100"></progress>
+                  {/* <ProgressBar now={ monthlyPercentage } variant='good' style={ progStyle } /> */ }
                 </div>
               </div>
             </div>
@@ -182,11 +190,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
       </>
       :
       <>
-        <div className='habit--card'>
-          <div className='habit--card__outer'>
+        <div className='habit-card'>
+          <div className='habit-card__outer'>
 
-            <div className='habit--card__details'>
-              <div className='habit--card__habit'>
+            <div className='habit-card__details'>
+              <div className='habit-card__habit'>
                 <div>{ habit.habit }</div>
                 <HabitEditModal
                   habitId={ habit.id }
@@ -196,10 +204,11 @@ export const HabitCard = ({ habit, fetchHabits }) => {
               </div>
             </div>
             <ShowDetails />
-            <div className='habit--progress__cont'>
-              <div className='habit--progress'>
+            <div className='habit-progress__cont'>
+              <div className='habit-progress'>
                 <div>
-                  <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } />
+                  <progress className={ goodOrBadProg() } value={ badHabitFreq() } max="100"></progress>
+                  {/* <ProgressBar now={ badHabitFreq() } style={ progStyle } variant={ goodOrBadProg() } /> */ }
                 </div>
               </div>
             </div>

@@ -47,30 +47,30 @@ export const GoodHabit = () => {
 we promise we won't make you read too much)</h6> */}
       <fieldset>
         <div className='habit-form__group'>
-          <label htmlFor='habit'>Habit:</label>
+          <label htmlFor='habit'>Good Habit:</label>
           <input type='text' id='habit' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. Work Out' defaultValue={ habit.habit } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='cue'>Cue:</label>
-          <input type='text' id='cue' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. after waking up' defaultValue={ habit.cue } />
+          <input type='text' id='cue' onChange={ handleControlledInputChange } required className='form-control' placeholder='e.g. after waking up' defaultValue={ habit.cue } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='reward'>Reward:</label>
-          <input type='text' id='reward' onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. endorphins from working out' defaultValue={ habit.reward } />
+          <input type='text' id='reward' onChange={ handleControlledInputChange } required className='form-control' placeholder='e.g. endorphins from working out' defaultValue={ habit.reward } />
         </div>
       </fieldset>
       <fieldset>
         <div className='habit-form__group'>
           <label htmlFor='frequency'>Weekly Goal:</label>
-          <input type='number' id='frequency' min={ 0 } onChange={ handleControlledInputChange } required autoFocus className='form-control' placeholder='e.g. 5' defaultValue={ habit.frequency } />
+          <input type='number' id='frequency' min={ 0 } onChange={ handleControlledInputChange } required className='form-control' placeholder='e.g. 5' defaultValue={ habit.frequency } />
         </div>
       </fieldset>
       <div className='btn-cont'>
-        <Button className='btn btn-primary' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveHabit }>Save Habit</Button>
+        <Button className='btn' type='button' disabled={ isLoading } variant="primary" onClick={ handleClickSaveHabit }>Save Habit</Button>
       </div>
     </>
   )

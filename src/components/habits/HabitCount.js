@@ -3,11 +3,11 @@ import { useHistory } from 'react-router-dom'
 import { addCounter, decreaseCount } from '../../modules/HabitProvider'
 import plusIcon from './images/plus.svg';
 import { Link } from 'react-router-dom';
-import greenUp from './images/green-up.png'
+import blueUp from './images/blue-up.png'
 import redUp from './images/red-up.png'
 import greenDwn from './images/green-dwn.png'
 import redDwn from './images/red-dwn.png'
-import blackUp from './images/black-up.png'
+import greenUp from './images/green-up.png'
 
 export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncreaseCount, handleDecreaseCount }) => {
   const [ count, setCount ] = useState({});
@@ -17,7 +17,7 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncrease
   // Checks to see if it is a good or bad habit and then chooses a colored arrow to increase the habit.
   const redOrGreenUp = () => {
     if (habit.goodHabit === true) {
-      return greenUp
+      return blueUp
     } else { return redUp }
   }
 
@@ -61,14 +61,14 @@ export const IncreaseCount = ({ habit, fetchHabits, filterHabits, handleIncrease
     <>
       <div className='up-down__cont'>
         <Link onClick={ handleIncreaseCount } to='' disabled={ isLoading }>
-          <div className='habit--plus'>
-            <img src={ blackUp } alt='black up arrow' />
+          <div className='habit-plus'>
+            <img src={ greenUp } alt='black up arrow' />
             <img src={ redOrGreenUp() } className='img-hvr' alt='add to habit icon' />
           </div>
         </Link>
         <div className='up-down__count'>{ filterHabits() }</div>
         {/* <Link onClick={ handleDecreaseCount } to='' disabled={ isLoading } >
-          <div className='habit--plus'>
+          <div className='habit-plus'>
             <img src={ redOrGreenDwn() } alt='subtract from habit icon' />
           </div>
         </Link> */}
